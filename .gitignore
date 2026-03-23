@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+.env
+
+# Data files — only keep master CSV; cache, test files, and generated JSON excluded
+data/mreit.json
+data/company_tickers.json
+data/test_*.csv
+data/mreit_history_*.csv
+data/quality_test.csv
+
+# Node / Next.js
+web/node_modules/
+web/.next/
+web/.env*
+
+# OS
+.DS_Store
+Thumbs.db
