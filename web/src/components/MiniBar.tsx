@@ -13,7 +13,7 @@ export default function MiniBar({ slices, allLabels }: Props) {
       display: "flex",
       height: "13px",
       width: "100%",
-      border: "1px solid #808080",
+      border: "1px solid #006600",
       overflow: "hidden",
       boxSizing: "border-box",
     }}>

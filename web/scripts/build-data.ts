@@ -4,7 +4,7 @@ import Papa from "papaparse";
 import type { SiteData, TickerData, PeriodSnapshot, CouponSlice, DataMode } from "../src/types/mreit";
 
 // Tickers where the "value" column already contains percentage weights (not dollar UPB)
-const PCT_VALUE_TICKERS = new Set(["ADAM", "NYMT"]);
+const PCT_VALUE_TICKERS = new Set(["ADAM"]);
 
 interface RawRow {
   ticker: string;
@@ -115,7 +115,8 @@ function buildTickerData(ticker: string, rows: RawRow[]): TickerData {
 }
 
 function main() {
-  const csvPath = path.join(process.cwd(), "..", "data", "mreit_master.csv");
+  // CSV lives in web/data/ (self-contained for Vercel deployment)
+  const csvPath = path.join(process.cwd(), "data", "mreit_master.csv");
   if (!fs.existsSync(csvPath)) {
     console.error(`CSV not found at ${csvPath}`);
     process.exit(1);
@@ -149,7 +150,7 @@ function main() {
     generatedAt: new Date().toISOString(),
   };
 
-  const outPath = path.join(process.cwd(), "..", "data", "mreit.json");
+  const outPath = path.join(process.cwd(), "data", "mreit.json");
   fs.writeFileSync(outPath, JSON.stringify(siteData, null, 2));
   console.log(`✓ Built ${tickers.length} tickers → ${outPath}`);
   tickers.forEach((t) =>

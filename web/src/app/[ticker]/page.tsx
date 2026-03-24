@@ -10,7 +10,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ ticker: string }> }) {
   const { ticker } = await params;
-  return { title: `${ticker.toUpperCase()} - mREIT Coupon Data` };
+  return { title: `${ticker.toUpperCase()} — mREIT Coupon Data Center` };
 }
 
 export default async function TickerPage({ params }: { params: Promise<{ ticker: string }> }) {
@@ -22,111 +22,113 @@ export default async function TickerPage({ params }: { params: Promise<{ ticker:
   const earliest = td.periods[0];
 
   return (
-    <div className="w95-detail-page">
+    <>
+      <Link href="/" className="back-lnk">← Back to Main Page</Link>
 
-      {/* Back nav */}
-      <div>
-        <Link href="/" className="w95-back">← Back to Overview</Link>
+      {/* Ticker header */}
+      <div className="detail-header">
+        <h1 className="detail-ticker rainbow">{td.ticker}</h1>
+        <p className="detail-sub">
+          Coupon Rate Distribution &nbsp;·&nbsp;
+          {td.dataMode === "pct" ? "% Portfolio Weight" : "$ Unpaid Principal Balance"} &nbsp;·&nbsp;
+          {td.periods.length} quarters
+          {td.hasShorts && " · ⚠ short positions excluded"}
+        </p>
       </div>
 
-      {/* Header panel */}
-      <div className="w95-panel">
-        <div className="w95-panel-hdr">
-          <span>{td.ticker} — Coupon Rate Distribution</span>
-          {td.hasShorts && (
-            <span className="w95-panel-hdr-sub">⚠ Short positions excluded from data</span>
-          )}
+      <hr className="ruled" />
+
+      {/* Info box */}
+      <div className="detail-infobox">
+        <div className="detail-infobox-item">
+          <span className="detail-infobox-label">PERIOD RANGE</span>
+          <span className="detail-infobox-val">
+            {formatPeriod(earliest.period)} – {formatPeriod(latest.period)}
+          </span>
         </div>
-        <div className="w95-panel-body">
-          <div className="w95-info-grid">
-            <span className="w95-info-label">Period range:</span>
-            <span className="w95-info-val">{formatPeriod(earliest.period)} – {formatPeriod(latest.period)}</span>
-
-            <span className="w95-info-label">Quarters tracked:</span>
-            <span className="w95-info-val">{td.periods.length}</span>
-
-            <span className="w95-info-label">Data mode:</span>
-            <span className="w95-info-val">
-              {td.dataMode === "pct" ? "% of Portfolio Weight" : "$ Unpaid Principal Balance (UPB)"}
-            </span>
-
-            <span className="w95-info-label">Latest filing:</span>
-            <span className="w95-info-val">
-              {latest.filing_type ?? "—"} &nbsp;
-              <span style={{ fontWeight: "normal", color: "#444" }}>
-                filed {latest.filing_date ?? "—"}
-              </span>
-            </span>
-          </div>
+        <div className="detail-infobox-item">
+          <span className="detail-infobox-label">QUARTERS TRACKED</span>
+          <span className="detail-infobox-val">{td.periods.length}</span>
         </div>
-      </div>
-
-      {/* Chart panel */}
-      <div className="w95-panel">
-        <div className="w95-panel-hdr">
-          <span>Chart 1 — Distribution Over Time</span>
-          <span className="w95-panel-hdr-sub">{td.allLabels.length} coupon buckets</span>
+        <div className="detail-infobox-item">
+          <span className="detail-infobox-label">COUPON BUCKETS</span>
+          <span className="detail-infobox-val">{td.allLabels.length}</span>
         </div>
-        <div className="w95-panel-body-flush">
-          <CouponChart periods={td.periods} allLabels={td.allLabels} dataMode={td.dataMode} />
+        <div className="detail-infobox-item">
+          <span className="detail-infobox-label">LATEST FILING</span>
+          <span className="detail-infobox-val">{latest.filing_type ?? "—"}</span>
+        </div>
+        <div className="detail-infobox-item">
+          <span className="detail-infobox-label">FILED ON</span>
+          <span className="detail-infobox-val">{latest.filing_date ?? "—"}</span>
         </div>
       </div>
 
-      {/* Data table panel */}
-      <div className="w95-panel">
-        <div className="w95-panel-hdr">
-          <span>Historical Data — All Periods</span>
-          <span className="w95-panel-hdr-sub">most recent first</span>
+      {/* Chart */}
+      <div className="chart-frame">
+        <div className="chart-frame-title">
+          ★ COUPON DISTRIBUTION CHART — {td.ticker} ★
         </div>
-        <div className="w95-panel-body" style={{ padding: 0 }}>
-          <div className="w95-list-scroll">
-            <table className="w95-list">
-              <thead>
-                <tr>
-                  <th>Period</th>
-                  <th>Filed</th>
-                  <th>Type</th>
-                  {td.allLabels.map((label) => (
-                    <th key={label} className="right">{label}</th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {[...td.periods].reverse().map((period) => (
-                  <tr key={period.period}>
-                    <td className="bold">{formatPeriod(period.period)}</td>
-                    <td className="muted">{period.filing_date ?? "—"}</td>
-                    <td className="muted">{period.filing_type ?? "—"}</td>
-                    {td.allLabels.map((label) => {
-                      const slice = period.slices.find((s) => s.label === label);
-                      return (
-                        <td key={label} className="right">
-                          {slice ? (
-                            <>
-                              {formatPct(slice.displayPct)}
-                              {td.dataMode === "value" && slice.rawValue != null && (
-                                <span className="muted" style={{ marginLeft: "4px" }}>
-                                  ({formatLargeValue(slice.rawValue)})
-                                </span>
-                              )}
-                            </>
-                          ) : "—"}
-                        </td>
-                      );
-                    })}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
+        <CouponChart periods={td.periods} allLabels={td.allLabels} dataMode={td.dataMode} />
       </div>
 
-      {/* Footer note */}
-      <div style={{ fontSize: "10px", color: "#808080", padding: "2px 0 4px" }}>
-        Data sourced from public SEC EDGAR filings. Not financial advice.
+      {/* Data table */}
+      <h2 className="section-hd" style={{ fontSize: "16px", marginTop: "16px" }}>
+        HISTORICAL DATA — ALL PERIODS (most recent first)
+      </h2>
+
+      <div className="data-tbl-wrap">
+        <table className="data-tbl">
+          <thead>
+            <tr>
+              <th>PERIOD</th>
+              <th>FILED</th>
+              <th>TYPE</th>
+              {td.allLabels.map((label) => (
+                <th key={label}>{label}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {[...td.periods].reverse().map((period) => (
+              <tr key={period.period}>
+                <td>{formatPeriod(period.period)}</td>
+                <td className="muted">{period.filing_date ?? "—"}</td>
+                <td className="muted">{period.filing_type ?? "—"}</td>
+                {td.allLabels.map((label) => {
+                  const slice = period.slices.find((s) => s.label === label);
+                  return (
+                    <td key={label}>
+                      {slice ? (
+                        <>
+                          {formatPct(slice.displayPct)}
+                          {td.dataMode === "value" && slice.rawValue != null && (
+                            <span className="muted" style={{ marginLeft: "4px" }}>
+                              ({formatLargeValue(slice.rawValue)})
+                            </span>
+                          )}
+                        </>
+                      ) : (
+                        <span className="muted">—</span>
+                      )}
+                    </td>
+                  );
+                })}
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
 
-    </div>
+      <p style={{
+        fontFamily: '"Comic Sans MS", cursive',
+        fontSize: "11px",
+        color: "#557755",
+        textAlign: "center",
+        marginTop: "8px",
+      }}>
+        ★ Data sourced from SEC EDGAR public 10-Q/10-K filings. Not investment advice. ★
+      </p>
+    </>
   );
 }

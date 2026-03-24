@@ -1,23 +1,23 @@
-// Excel 95-era chart color palette
+// Vivid colors for dark 90s background
 const PALETTE = [
-  "#003366", // dark navy
-  "#990000", // dark red
-  "#336600", // forest green
-  "#663399", // purple
-  "#cc6600", // amber
-  "#006666", // dark teal
-  "#993300", // rust
-  "#003399", // royal blue
-  "#996633", // brown
-  "#336633", // dark green
-  "#993366", // dark rose
-  "#006699", // steel blue
-  "#cc3300", // red-orange
-  "#669900", // olive
-  "#6600cc", // violet
-  "#cc9900", // gold
-  "#009966", // emerald
-  "#cc0066", // magenta
+  "#00ff88", // mint green
+  "#ff4444", // red
+  "#44aaff", // sky blue
+  "#ffff00", // yellow
+  "#ff8800", // orange
+  "#ff44ff", // magenta
+  "#00ffff", // cyan
+  "#ff4488", // hot pink
+  "#88ff00", // lime
+  "#ffaa44", // amber
+  "#8888ff", // periwinkle
+  "#ff0088", // deep pink
+  "#44ffcc", // aqua
+  "#ffcc00", // gold
+  "#aa88ff", // lavender
+  "#00ff44", // green
+  "#ff6644", // coral
+  "#4488ff", // blue
 ];
 
 export function buildColorMap(labels: string[]): Record<string, string> {

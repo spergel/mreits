@@ -25,19 +25,21 @@ function CustomTooltip({ active, payload, label, dataMode }: any) {
   if (!active || !payload?.length) return null;
   return (
     <div style={{
-      background: "#ffffe1",
-      border: "1px solid #000000",
+      background: "#000033",
+      border: "1px solid #00ff00",
       padding: "4px 8px",
-      fontFamily: '"MS Sans Serif", Arial, sans-serif',
+      fontFamily: '"Courier New", monospace',
       fontSize: "11px",
-      boxShadow: "2px 2px 0 #808080",
-      maxWidth: "260px",
+      boxShadow: "2px 2px 4px #000000",
+      maxWidth: "280px",
+      color: "#ccffcc",
     }}>
       <div style={{
         fontWeight: "bold",
         marginBottom: "3px",
         paddingBottom: "2px",
-        borderBottom: "1px solid #c0c0c0",
+        borderBottom: "1px solid #006600",
+        color: "#ffff00",
       }}>
         {label}
       </div>
@@ -91,62 +93,50 @@ export default function CouponChart({ periods, allLabels, dataMode }: Props) {
   });
 
   return (
-    <div style={{ background: "#c0c0c0", padding: "8px" }}>
-      {/* plot area with sunken inset border */}
-      <div style={{
-        background: "#ffffff",
-        border: "2px solid",
-        borderColor: "#808080 #ffffff #ffffff #808080",
-        padding: "8px 4px 4px 4px",
-      }}>
-        <ResponsiveContainer width="100%" height={300}>
-          <BarChart data={chartData} margin={{ top: 4, right: 16, left: 0, bottom: 4 }}>
-            <CartesianGrid
-              stroke="#c0c0c0"
-              strokeWidth={1}
-              vertical={false}
+    <div style={{ background: "#000011", padding: "8px" }}>
+      <ResponsiveContainer width="100%" height={320}>
+        <BarChart data={chartData} margin={{ top: 8, right: 16, left: 0, bottom: 4 }}>
+          <CartesianGrid stroke="#003300" strokeWidth={1} vertical={false} />
+          <XAxis
+            dataKey="period"
+            tick={{ fill: "#aaaaaa", fontSize: 11, fontFamily: '"Courier New", monospace' }}
+            axisLine={{ stroke: "#006600" }}
+            tickLine={{ stroke: "#006600" }}
+          />
+          <YAxis
+            tickFormatter={(v) => `${v}%`}
+            tick={{ fill: "#aaaaaa", fontSize: 11, fontFamily: '"Courier New", monospace' }}
+            axisLine={{ stroke: "#006600" }}
+            tickLine={{ stroke: "#006600" }}
+            domain={[0, 100]}
+            width={44}
+          />
+          <Tooltip
+            content={<CustomTooltip dataMode={dataMode} />}
+            cursor={{ fill: "rgba(0,255,0,0.05)" }}
+          />
+          <Legend
+            wrapperStyle={{
+              fontSize: "11px",
+              fontFamily: '"Courier New", monospace',
+              paddingTop: "6px",
+            }}
+            formatter={(value) => <span style={{ color: "#ccffcc" }}>{value}</span>}
+            iconType="square"
+            iconSize={10}
+          />
+          {allLabels.map((label) => (
+            <Bar
+              key={label}
+              dataKey={label}
+              stackId="a"
+              fill={colorMap[label]}
+              radius={0}
+              maxBarSize={44}
             />
-            <XAxis
-              dataKey="period"
-              tick={{ fill: "#000000", fontSize: 11, fontFamily: '"MS Sans Serif", Arial, sans-serif' }}
-              axisLine={{ stroke: "#000000" }}
-              tickLine={{ stroke: "#000000" }}
-            />
-            <YAxis
-              tickFormatter={(v) => `${v}%`}
-              tick={{ fill: "#000000", fontSize: 11, fontFamily: '"MS Sans Serif", Arial, sans-serif' }}
-              axisLine={{ stroke: "#000000" }}
-              tickLine={{ stroke: "#000000" }}
-              domain={[0, 100]}
-              width={44}
-            />
-            <Tooltip
-              content={<CustomTooltip dataMode={dataMode} />}
-              cursor={{ fill: "rgba(0,0,0,0.06)" }}
-            />
-            <Legend
-              wrapperStyle={{
-                fontSize: "11px",
-                fontFamily: '"MS Sans Serif", Arial, sans-serif',
-                paddingTop: "6px",
-              }}
-              formatter={(value) => <span style={{ color: "#000000" }}>{value}</span>}
-              iconType="square"
-              iconSize={10}
-            />
-            {allLabels.map((label) => (
-              <Bar
-                key={label}
-                dataKey={label}
-                stackId="a"
-                fill={colorMap[label]}
-                radius={0}
-                maxBarSize={40}
-              />
-            ))}
-          </BarChart>
-        </ResponsiveContainer>
-      </div>
+          ))}
+        </BarChart>
+      </ResponsiveContainer>
     </div>
   );
 }

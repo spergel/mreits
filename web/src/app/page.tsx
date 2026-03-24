@@ -5,77 +5,100 @@ import { formatPeriod, formatPct } from "@/lib/formatters";
 
 export default function Home() {
   const tickers = getAllTickers();
-
-  // Summary stats for the info bar
-  const latestPeriods = tickers.map((td) => td.latestPeriod.period).sort();
-  const mostRecent = latestPeriods[latestPeriods.length - 1];
+  const latestPeriod = tickers
+    .map((t) => t.latestPeriod.period)
+    .sort()
+    .at(-1)!;
 
   return (
-    <div className="w95-page">
-      {/* Info bar */}
-      <div className="w95-infobar">
-        <span><strong>{tickers.length}</strong> mREITs tracked</span>
-        <span className="w95-infobar-sep">|</span>
-        <span>Latest data: <strong>{formatPeriod(mostRecent)}</strong></span>
-        <span className="w95-infobar-sep">|</span>
-        <span>Source: SEC EDGAR 10-Q / 10-K filings</span>
-        <span className="w95-infobar-sep">|</span>
-        <span style={{ color: "#808080" }}>Click a ticker to view historical breakdown</span>
+    <>
+      <h2 className="section-hd">★ COUPON DISTRIBUTION TRACKER ★</h2>
+
+      {/* Summary bar */}
+      <div className="info-bar">
+        <div className="info-bar-item">
+          <span className="info-bar-label">TICKERS TRACKED</span>
+          <span className="info-bar-val">{tickers.length}</span>
+        </div>
+        <div className="info-bar-item">
+          <span className="info-bar-label">LATEST PERIOD</span>
+          <span className="info-bar-val">{formatPeriod(latestPeriod)}</span>
+        </div>
+        <div className="info-bar-item">
+          <span className="info-bar-label">DATA SOURCE</span>
+          <span className="info-bar-val">SEC EDGAR</span>
+        </div>
+        <div className="info-bar-item">
+          <span className="info-bar-label">FILING TYPES</span>
+          <span className="info-bar-val">10-Q / 10-K</span>
+        </div>
       </div>
 
-      {/* Card grid */}
-      <div className="w95-card-grid">
-        {tickers.map((td) => {
-          const latest = td.latestPeriod;
-          // Show up to 4 top buckets
-          const topSlices = [...latest.slices]
-            .sort((a, b) => b.displayPct - a.displayPct)
-            .slice(0, 4);
+      <p style={{
+        fontFamily: '"Comic Sans MS", cursive',
+        fontSize: "12px",
+        color: "#aaaaaa",
+        textAlign: "center",
+        margin: "4px 0 10px",
+      }}>
+        Click any ticker name below to view the full historical coupon breakdown and chart.
+      </p>
 
-          return (
-            <Link
-              key={td.ticker}
-              href={`/${td.ticker.toLowerCase()}`}
-              className="w95-card"
-            >
-              {/* Card title bar */}
-              <div className="w95-card-hdr">
-                <span className="w95-card-ticker">{td.ticker}</span>
-                <span className="w95-card-period">{formatPeriod(latest.period)}</span>
-              </div>
+      {/* Main ticker table */}
+      <table className="ticker-tbl">
+        <thead>
+          <tr>
+            <th>TICKER</th>
+            <th>PERIOD</th>
+            <th>MODE</th>
+            <th>DISTRIBUTION</th>
+            <th className="r">QTR</th>
+            <th className="r">TOP BUCKET</th>
+            <th>NOTES</th>
+          </tr>
+        </thead>
+        <tbody>
+          {tickers.map((td) => {
+            const latest = td.latestPeriod;
+            const top = [...latest.slices].sort((a, b) => b.displayPct - a.displayPct)[0];
+            return (
+              <tr key={td.ticker}>
+                <td className="td-ticker">
+                  <Link href={`/${td.ticker.toLowerCase()}`} style={{ color: "#00ffff", textDecoration: "underline" }}>
+                    {td.ticker}
+                  </Link>
+                </td>
+                <td>{formatPeriod(latest.period)}</td>
+                <td style={{ color: "#aaaacc", fontSize: "11px" }}>
+                  {td.dataMode === "pct" ? "% wt" : "$ UPB"}
+                </td>
+                <td style={{ padding: "3px 8px", minWidth: "130px" }}>
+                  <div className="mini-bar-wrap">
+                    <MiniBar slices={latest.slices} allLabels={td.allLabels} />
+                  </div>
+                </td>
+                <td className="td-num">{td.periods.length}</td>
+                <td className="td-num" style={{ fontSize: "11px" }}>
+                  {top ? `${top.label}: ${formatPct(top.displayPct)}` : "—"}
+                </td>
+                <td className="td-warn">
+                  {td.hasShorts ? "⚠ shorts excl." : ""}
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
 
-              {/* Card body */}
-              <div className="w95-card-body">
-                {/* Distribution bar */}
-                <div className="w95-card-bar">
-                  <MiniBar slices={latest.slices} allLabels={td.allLabels} />
-                </div>
-
-                {/* Top buckets */}
-                <div className="w95-card-buckets">
-                  {topSlices.map((s) => (
-                    <>
-                      <span key={`${s.label}-l`} className="w95-card-bucket-label" title={s.label}>
-                        {s.label}
-                      </span>
-                      <span key={`${s.label}-v`} className="w95-card-bucket-val">
-                        {formatPct(s.displayPct)}
-                      </span>
-                    </>
-                  ))}
-                </div>
-
-                {/* Meta row */}
-                <div className="w95-card-meta">
-                  <span>{td.periods.length} quarters</span>
-                  <span>{td.dataMode === "pct" ? "% weight" : "$ UPB"}</span>
-                  {td.hasShorts && <span className="w95-card-warn">⚠ shorts</span>}
-                </div>
-              </div>
-            </Link>
-          );
-        })}
-      </div>
-    </div>
+      <p style={{
+        fontFamily: '"Comic Sans MS", cursive',
+        fontSize: "11px",
+        color: "#557755",
+        textAlign: "center",
+        marginTop: "8px",
+      }}>
+        ★ All data extracted directly from SEC EDGAR public filings. Not investment advice. ★
+      </p>
+    </>
   );
 }
