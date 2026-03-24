@@ -10,13 +10,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ ticker: string }> }) {
   const { ticker } = await params;
-  return { title: `${ticker.toUpperCase()} - mREIT Coupon Data.xls - Microsoft Excel` };
-}
-
-// A=0, B=1 … Z=25, AA=26 …
-function colLetter(idx: number): string {
-  if (idx < 26) return String.fromCharCode(65 + idx);
-  return String.fromCharCode(64 + Math.floor(idx / 26)) + String.fromCharCode(65 + (idx % 26));
+  return { title: `${ticker.toUpperCase()} - mREIT Coupon Data` };
 }
 
 export default async function TickerPage({ params }: { params: Promise<{ ticker: string }> }) {
@@ -26,123 +20,113 @@ export default async function TickerPage({ params }: { params: Promise<{ ticker:
 
   const latest = td.latestPeriod;
   const earliest = td.periods[0];
-  // Coupon columns start at D (index 3)
-  const totalCols = 3 + td.allLabels.length;
 
   return (
-    <table className="xl-table">
-      <thead>
-        <tr>
-          <th className="xl-corner-hdr" />
-          {/* A, B, C fixed cols */}
-          <th className="xl-col-hdr" style={{ minWidth: 90 }}>A</th>
-          <th className="xl-col-hdr" style={{ minWidth: 90 }}>B</th>
-          <th className="xl-col-hdr" style={{ minWidth: 75 }}>C</th>
-          {/* D+ for each coupon bucket */}
-          {td.allLabels.map((_, i) => (
-            <th key={i} className="xl-col-hdr" style={{ minWidth: 80 }}>
-              {colLetter(3 + i)}
-            </th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
+    <div className="w95-detail-page">
 
-        {/* Row 1: ticker title */}
-        <tr>
-          <td className="xl-row-hdr">1</td>
-          <td className="xl-cell xl-cell-title" colSpan={totalCols}>
-            {td.ticker} &mdash; Coupon Rate Distribution by Quarter &nbsp;|&nbsp;
-            {td.dataMode === "pct" ? "% Portfolio Weight" : "$ UPB (thousands)"} &nbsp;|&nbsp;
-            {formatPeriod(earliest.period)} &ndash; {formatPeriod(latest.period)} &nbsp;({td.periods.length} quarters)
-            {td.hasShorts && " | ⚠ Short positions excluded"}
-          </td>
-        </tr>
+      {/* Back nav */}
+      <div>
+        <Link href="/" className="w95-back">← Back to Overview</Link>
+      </div>
 
-        {/* Row 2: nav */}
-        <tr>
-          <td className="xl-row-hdr">2</td>
-          <td className="xl-cell" colSpan={totalCols}>
-            <Link href="/" className="xl-cell-blue">← Back to Overview</Link>
-            <span style={{ color: "#808080", marginLeft: "12px" }}>
-              Latest filing: {latest.filing_type ?? "—"} dated {latest.filing_date ?? "—"}
+      {/* Header panel */}
+      <div className="w95-panel">
+        <div className="w95-panel-hdr">
+          <span>{td.ticker} — Coupon Rate Distribution</span>
+          {td.hasShorts && (
+            <span className="w95-panel-hdr-sub">⚠ Short positions excluded from data</span>
+          )}
+        </div>
+        <div className="w95-panel-body">
+          <div className="w95-info-grid">
+            <span className="w95-info-label">Period range:</span>
+            <span className="w95-info-val">{formatPeriod(earliest.period)} – {formatPeriod(latest.period)}</span>
+
+            <span className="w95-info-label">Quarters tracked:</span>
+            <span className="w95-info-val">{td.periods.length}</span>
+
+            <span className="w95-info-label">Data mode:</span>
+            <span className="w95-info-val">
+              {td.dataMode === "pct" ? "% of Portfolio Weight" : "$ Unpaid Principal Balance (UPB)"}
             </span>
-          </td>
-        </tr>
 
-        {/* Row 3: empty */}
-        <tr>
-          <td className="xl-row-hdr">3</td>
-          <td className="xl-cell" colSpan={totalCols} style={{ height: "17px" }} />
-        </tr>
+            <span className="w95-info-label">Latest filing:</span>
+            <span className="w95-info-val">
+              {latest.filing_type ?? "—"} &nbsp;
+              <span style={{ fontWeight: "normal", color: "#444" }}>
+                filed {latest.filing_date ?? "—"}
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
 
-        {/* Row 4: embedded chart */}
-        <tr>
-          <td className="xl-row-hdr" style={{ verticalAlign: "top", paddingTop: "4px" }}>4</td>
-          <td colSpan={totalCols} style={{ padding: 0, background: "#c0c0c0" }}>
-            <div className="xl-chart-wrap">
-              <div className="xl-chart-obj">
-                <div className="xl-chart-obj-title">
-                  <span>Chart 1 — Coupon Distribution Over Time</span>
-                  <span style={{ fontSize: "9px", color: "#808080", fontWeight: "normal" }}>
-                    Double-click chart object to edit
-                  </span>
-                </div>
-                <CouponChart periods={td.periods} allLabels={td.allLabels} dataMode={td.dataMode} />
-              </div>
-            </div>
-          </td>
-        </tr>
+      {/* Chart panel */}
+      <div className="w95-panel">
+        <div className="w95-panel-hdr">
+          <span>Chart 1 — Distribution Over Time</span>
+          <span className="w95-panel-hdr-sub">{td.allLabels.length} coupon buckets</span>
+        </div>
+        <div className="w95-panel-body-flush">
+          <CouponChart periods={td.periods} allLabels={td.allLabels} dataMode={td.dataMode} />
+        </div>
+      </div>
 
-        {/* Row 5: empty spacer */}
-        <tr>
-          <td className="xl-row-hdr">5</td>
-          <td className="xl-cell" colSpan={totalCols} style={{ height: "17px" }} />
-        </tr>
+      {/* Data table panel */}
+      <div className="w95-panel">
+        <div className="w95-panel-hdr">
+          <span>Historical Data — All Periods</span>
+          <span className="w95-panel-hdr-sub">most recent first</span>
+        </div>
+        <div className="w95-panel-body" style={{ padding: 0 }}>
+          <div className="w95-list-scroll">
+            <table className="w95-list">
+              <thead>
+                <tr>
+                  <th>Period</th>
+                  <th>Filed</th>
+                  <th>Type</th>
+                  {td.allLabels.map((label) => (
+                    <th key={label} className="right">{label}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {[...td.periods].reverse().map((period) => (
+                  <tr key={period.period}>
+                    <td className="bold">{formatPeriod(period.period)}</td>
+                    <td className="muted">{period.filing_date ?? "—"}</td>
+                    <td className="muted">{period.filing_type ?? "—"}</td>
+                    {td.allLabels.map((label) => {
+                      const slice = period.slices.find((s) => s.label === label);
+                      return (
+                        <td key={label} className="right">
+                          {slice ? (
+                            <>
+                              {formatPct(slice.displayPct)}
+                              {td.dataMode === "value" && slice.rawValue != null && (
+                                <span className="muted" style={{ marginLeft: "4px" }}>
+                                  ({formatLargeValue(slice.rawValue)})
+                                </span>
+                              )}
+                            </>
+                          ) : "—"}
+                        </td>
+                      );
+                    })}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
 
-        {/* Row 6: data table header */}
-        <tr>
-          <td className="xl-row-hdr">6</td>
-          <td className="xl-cell xl-cell-gray">Period</td>
-          <td className="xl-cell xl-cell-gray">Filed</td>
-          <td className="xl-cell xl-cell-gray">Type</td>
-          {td.allLabels.map((label) => (
-            <td key={label} className="xl-cell xl-cell-gray xl-cell-right">{label}</td>
-          ))}
-        </tr>
+      {/* Footer note */}
+      <div style={{ fontSize: "10px", color: "#808080", padding: "2px 0 4px" }}>
+        Data sourced from public SEC EDGAR filings. Not financial advice.
+      </div>
 
-        {/* Data rows — most recent first */}
-        {[...td.periods].reverse().map((period, i) => (
-          <tr key={period.period}>
-            <td className="xl-row-hdr">{7 + i}</td>
-            <td className="xl-cell xl-cell-bold">{formatPeriod(period.period)}</td>
-            <td className="xl-cell">{period.filing_date ?? "—"}</td>
-            <td className="xl-cell">{period.filing_type ?? "—"}</td>
-            {td.allLabels.map((label) => {
-              const slice = period.slices.find((s) => s.label === label);
-              return (
-                <td key={label} className="xl-cell xl-cell-right">
-                  {slice ? formatPct(slice.displayPct) : "—"}
-                  {td.dataMode === "value" && slice?.rawValue != null && (
-                    <span style={{ color: "#808080", marginLeft: "4px" }}>
-                      ({formatLargeValue(slice.rawValue)})
-                    </span>
-                  )}
-                </td>
-              );
-            })}
-          </tr>
-        ))}
-
-        {/* Trailing empty rows */}
-        {Array.from({ length: 8 }).map((_, i) => (
-          <tr key={`empty-${i}`}>
-            <td className="xl-row-hdr">{7 + td.periods.length + i}</td>
-            <td className="xl-cell" colSpan={totalCols} style={{ height: "17px" }} />
-          </tr>
-        ))}
-
-      </tbody>
-    </table>
+    </div>
   );
 }

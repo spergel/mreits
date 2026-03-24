@@ -170,11 +170,11 @@ a { color: inherit; text-decoration: none; }
   white-space: nowrap;
 }
 
-/* ── Main spreadsheet area ─────────────────────────────────── */
+/* ── Main content area ─────────────────────────────────────── */
 .excel-content {
   flex: 1;
   overflow: auto;
-  background: #ffffff;
+  background: #c0c0c0;
 }
 
 /* ── Spreadsheet table ─────────────────────────────────────── */
@@ -327,6 +327,212 @@ a { color: inherit; text-decoration: none; }
   border-color: #808080 #ffffff #ffffff #808080;
   padding: 0 8px;
   font-size: 11px;
+}
+
+/* ── Win95 card grid (home page) ──────────────────────────── */
+.w95-page {
+  padding: 10px;
+  background: #c0c0c0;
+  min-height: 100%;
+}
+.w95-infobar {
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  padding: 4px 10px;
+  font-size: 11px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.w95-infobar-sep {
+  color: #808080;
+}
+.w95-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 8px;
+}
+.w95-card {
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  display: block;
+  text-decoration: none;
+  color: #000;
+  cursor: default;
+}
+.w95-card:hover .w95-card-hdr {
+  background: #1084d0;
+}
+.w95-card-hdr {
+  background: #000080;
+  color: #ffffff;
+  padding: 3px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  user-select: none;
+  transition: none;
+}
+.w95-card-ticker {
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+.w95-card-period {
+  font-size: 10px;
+  color: #b0b8ff;
+}
+.w95-card-body {
+  padding: 6px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.w95-card-bar {
+  /* wraps the MiniBar */
+}
+.w95-card-buckets {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px 8px;
+  font-size: 11px;
+}
+.w95-card-bucket-label {
+  color: #444;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.w95-card-bucket-val {
+  font-weight: bold;
+  text-align: right;
+  font-family: "Courier New", monospace;
+}
+.w95-card-meta {
+  border-top: 1px solid #808080;
+  padding-top: 4px;
+  font-size: 10px;
+  color: #444;
+  display: flex;
+  justify-content: space-between;
+}
+.w95-card-warn {
+  color: #cc6600;
+  font-weight: bold;
+}
+
+/* ── Win95 panels (ticker detail page) ─────────────────────── */
+.w95-detail-page {
+  padding: 10px;
+  background: #c0c0c0;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.w95-panel {
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+}
+.w95-panel-hdr {
+  background: #000080;
+  color: #ffffff;
+  padding: 3px 8px;
+  font-size: 11px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+.w95-panel-hdr-sub {
+  font-weight: normal;
+  font-size: 10px;
+  color: #b0b8ff;
+}
+.w95-panel-body {
+  padding: 8px;
+}
+.w95-panel-body-flush {
+  /* no padding, used for chart */
+}
+
+/* Info grid inside a panel */
+.w95-info-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2px 12px;
+  font-size: 11px;
+}
+.w95-info-label {
+  color: #444;
+  white-space: nowrap;
+}
+.w95-info-val {
+  font-weight: bold;
+}
+
+/* Win95 list / data table */
+.w95-list {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 11px;
+  font-family: "MS Sans Serif", Arial, sans-serif;
+}
+.w95-list th {
+  background: #c0c0c0;
+  border: 1px solid #808080;
+  padding: 2px 6px;
+  font-weight: bold;
+  text-align: left;
+  white-space: nowrap;
+  user-select: none;
+}
+.w95-list th.right { text-align: right; }
+.w95-list td {
+  border-right: 1px solid #d4d0c8;
+  border-bottom: 1px solid #d4d0c8;
+  padding: 2px 6px;
+  white-space: nowrap;
+  background: #ffffff;
+}
+.w95-list td.right {
+  text-align: right;
+  font-family: "Courier New", monospace;
+}
+.w95-list td.bold { font-weight: bold; }
+.w95-list td.muted { color: #808080; }
+.w95-list-scroll {
+  overflow-x: auto;
+  border: 2px solid;
+  border-color: #808080 #ffffff #ffffff #808080;
+}
+
+/* Back link */
+.w95-back {
+  font-size: 11px;
+  color: #0000cc;
+  text-decoration: underline;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 2px;
+}
+
+/* Badge */
+.w95-badge {
+  display: inline-block;
+  background: #c0c0c0;
+  border: 1px solid;
+  border-color: #808080 #ffffff #ffffff #808080;
+  padding: 1px 6px;
+  font-size: 10px;
 }
 
 /* ── Win95 scrollbars (Chromium) ───────────────────────────── */
