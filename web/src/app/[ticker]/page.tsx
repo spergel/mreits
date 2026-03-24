@@ -4,13 +4,19 @@ import { getAllTickers, getTickerData } from "@/lib/data";
 import { formatPeriod, formatLargeValue, formatPct } from "@/lib/formatters";
 import CouponChart from "@/components/CouponChart";
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   return getAllTickers().map((td) => ({ ticker: td.ticker.toLowerCase() }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ ticker: string }> }) {
   const { ticker } = await params;
-  return { title: `${ticker.toUpperCase()} — mREIT Coupon Tracker` };
+  return { title: `${ticker.toUpperCase()} - mREIT Coupon Data.xls - Microsoft Excel` };
+}
+
+// A=0, B=1 … Z=25, AA=26 …
+function colLetter(idx: number): string {
+  if (idx < 26) return String.fromCharCode(65 + idx);
+  return String.fromCharCode(64 + Math.floor(idx / 26)) + String.fromCharCode(65 + (idx % 26));
 }
 
 export default async function TickerPage({ params }: { params: Promise<{ ticker: string }> }) {
@@ -20,87 +26,123 @@ export default async function TickerPage({ params }: { params: Promise<{ ticker:
 
   const latest = td.latestPeriod;
   const earliest = td.periods[0];
+  // Coupon columns start at D (index 3)
+  const totalCols = 3 + td.allLabels.length;
 
   return (
-    <div>
-      {/* Breadcrumb */}
-      <div className="text-sm text-slate-500 mb-6">
-        <Link href="/" className="hover:text-slate-300 transition-colors">Home</Link>
-        <span className="mx-2">/</span>
-        <span className="text-slate-200">{td.ticker}</span>
-      </div>
+    <table className="xl-table">
+      <thead>
+        <tr>
+          <th className="xl-corner-hdr" />
+          {/* A, B, C fixed cols */}
+          <th className="xl-col-hdr" style={{ minWidth: 90 }}>A</th>
+          <th className="xl-col-hdr" style={{ minWidth: 90 }}>B</th>
+          <th className="xl-col-hdr" style={{ minWidth: 75 }}>C</th>
+          {/* D+ for each coupon bucket */}
+          {td.allLabels.map((_, i) => (
+            <th key={i} className="xl-col-hdr" style={{ minWidth: 80 }}>
+              {colLetter(3 + i)}
+            </th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
 
-      {/* Header */}
-      <div className="flex items-start justify-between mb-6 flex-wrap gap-4">
-        <div>
-          <h1 className="text-3xl font-bold text-white">{td.ticker}</h1>
-          <p className="text-slate-400 mt-1 text-sm">
-            {formatPeriod(earliest.period)} – {formatPeriod(latest.period)} · {td.periods.length} quarters
-          </p>
-        </div>
-        <div className="flex gap-2 items-center flex-wrap">
-          <span className={`text-sm px-3 py-1 rounded-full font-medium ${
-            td.dataMode === "pct"
-              ? "bg-blue-900/50 text-blue-300"
-              : "bg-amber-900/50 text-amber-300"
-          }`}>
-            {td.dataMode === "pct" ? "% of Portfolio" : "$ UPB (thousands)"}
-          </span>
-          {td.hasShorts && (
-            <span className="text-sm px-3 py-1 rounded-full bg-orange-900/40 text-orange-300">
-              ⚠ Short positions excluded
+        {/* Row 1: ticker title */}
+        <tr>
+          <td className="xl-row-hdr">1</td>
+          <td className="xl-cell xl-cell-title" colSpan={totalCols}>
+            {td.ticker} &mdash; Coupon Rate Distribution by Quarter &nbsp;|&nbsp;
+            {td.dataMode === "pct" ? "% Portfolio Weight" : "$ UPB (thousands)"} &nbsp;|&nbsp;
+            {formatPeriod(earliest.period)} &ndash; {formatPeriod(latest.period)} &nbsp;({td.periods.length} quarters)
+            {td.hasShorts && " | ⚠ Short positions excluded"}
+          </td>
+        </tr>
+
+        {/* Row 2: nav */}
+        <tr>
+          <td className="xl-row-hdr">2</td>
+          <td className="xl-cell" colSpan={totalCols}>
+            <Link href="/" className="xl-cell-blue">← Back to Overview</Link>
+            <span style={{ color: "#808080", marginLeft: "12px" }}>
+              Latest filing: {latest.filing_type ?? "—"} dated {latest.filing_date ?? "—"}
             </span>
-          )}
-        </div>
-      </div>
+          </td>
+        </tr>
 
-      {/* Chart */}
-      <div className="bg-slate-900 border border-slate-800 rounded-xl p-6 mb-6">
-        <h2 className="text-sm font-medium text-slate-400 uppercase tracking-wide mb-4">
-          Coupon Distribution Over Time
-        </h2>
-        <CouponChart
-          periods={td.periods}
-          allLabels={td.allLabels}
-          dataMode={td.dataMode}
-        />
-      </div>
+        {/* Row 3: empty */}
+        <tr>
+          <td className="xl-row-hdr">3</td>
+          <td className="xl-cell" colSpan={totalCols} style={{ height: "17px" }} />
+        </tr>
 
-      {/* Latest period table */}
-      <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
-        <h2 className="text-sm font-medium text-slate-400 uppercase tracking-wide mb-4">
-          Latest Period — {formatPeriod(latest.period)}
-          <span className="ml-2 text-slate-600 normal-case">filed {latest.filing_date}</span>
-        </h2>
-        <div className="overflow-x-auto">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="border-b border-slate-800">
-                <th className="text-left py-2 pr-6 text-slate-400 font-medium">Coupon Bucket</th>
-                <th className="text-right py-2 pr-6 text-slate-400 font-medium">% of Portfolio</th>
-                {td.dataMode === "value" && (
-                  <th className="text-right py-2 text-slate-400 font-medium">UPB</th>
-                )}
-              </tr>
-            </thead>
-            <tbody>
-              {latest.slices.map((s) => (
-                <tr key={s.label} className="border-b border-slate-800/50">
-                  <td className="py-2 pr-6 text-slate-200">{s.label}</td>
-                  <td className="py-2 pr-6 text-right font-mono text-slate-200">
-                    {formatPct(s.displayPct)}
-                  </td>
-                  {td.dataMode === "value" && (
-                    <td className="py-2 text-right font-mono text-slate-400">
-                      {s.rawValue != null ? formatLargeValue(s.rawValue) : "—"}
-                    </td>
+        {/* Row 4: embedded chart */}
+        <tr>
+          <td className="xl-row-hdr" style={{ verticalAlign: "top", paddingTop: "4px" }}>4</td>
+          <td colSpan={totalCols} style={{ padding: 0, background: "#c0c0c0" }}>
+            <div className="xl-chart-wrap">
+              <div className="xl-chart-obj">
+                <div className="xl-chart-obj-title">
+                  <span>Chart 1 — Coupon Distribution Over Time</span>
+                  <span style={{ fontSize: "9px", color: "#808080", fontWeight: "normal" }}>
+                    Double-click chart object to edit
+                  </span>
+                </div>
+                <CouponChart periods={td.periods} allLabels={td.allLabels} dataMode={td.dataMode} />
+              </div>
+            </div>
+          </td>
+        </tr>
+
+        {/* Row 5: empty spacer */}
+        <tr>
+          <td className="xl-row-hdr">5</td>
+          <td className="xl-cell" colSpan={totalCols} style={{ height: "17px" }} />
+        </tr>
+
+        {/* Row 6: data table header */}
+        <tr>
+          <td className="xl-row-hdr">6</td>
+          <td className="xl-cell xl-cell-gray">Period</td>
+          <td className="xl-cell xl-cell-gray">Filed</td>
+          <td className="xl-cell xl-cell-gray">Type</td>
+          {td.allLabels.map((label) => (
+            <td key={label} className="xl-cell xl-cell-gray xl-cell-right">{label}</td>
+          ))}
+        </tr>
+
+        {/* Data rows — most recent first */}
+        {[...td.periods].reverse().map((period, i) => (
+          <tr key={period.period}>
+            <td className="xl-row-hdr">{7 + i}</td>
+            <td className="xl-cell xl-cell-bold">{formatPeriod(period.period)}</td>
+            <td className="xl-cell">{period.filing_date ?? "—"}</td>
+            <td className="xl-cell">{period.filing_type ?? "—"}</td>
+            {td.allLabels.map((label) => {
+              const slice = period.slices.find((s) => s.label === label);
+              return (
+                <td key={label} className="xl-cell xl-cell-right">
+                  {slice ? formatPct(slice.displayPct) : "—"}
+                  {td.dataMode === "value" && slice?.rawValue != null && (
+                    <span style={{ color: "#808080", marginLeft: "4px" }}>
+                      ({formatLargeValue(slice.rawValue)})
+                    </span>
                   )}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
+                </td>
+              );
+            })}
+          </tr>
+        ))}
+
+        {/* Trailing empty rows */}
+        {Array.from({ length: 8 }).map((_, i) => (
+          <tr key={`empty-${i}`}>
+            <td className="xl-row-hdr">{7 + td.periods.length + i}</td>
+            <td className="xl-cell" colSpan={totalCols} style={{ height: "17px" }} />
+          </tr>
+        ))}
+
+      </tbody>
+    </table>
   );
 }

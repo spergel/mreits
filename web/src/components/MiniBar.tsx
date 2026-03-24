@@ -9,11 +9,22 @@ interface Props {
 export default function MiniBar({ slices, allLabels }: Props) {
   const colorMap = buildColorMap(allLabels);
   return (
-    <div className="flex h-2.5 w-full rounded overflow-hidden gap-px">
+    <div style={{
+      display: "flex",
+      height: "13px",
+      width: "100%",
+      border: "1px solid #808080",
+      overflow: "hidden",
+      boxSizing: "border-box",
+    }}>
       {slices.map((slice) => (
         <div
           key={slice.label}
-          style={{ width: `${slice.displayPct}%`, background: colorMap[slice.label] }}
+          style={{
+            width: `${slice.displayPct}%`,
+            background: colorMap[slice.label],
+            flexShrink: 0,
+          }}
           title={`${slice.label}: ${slice.displayPct.toFixed(1)}%`}
         />
       ))}

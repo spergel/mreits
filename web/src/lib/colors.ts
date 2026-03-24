@@ -1,8 +1,23 @@
+// Excel 95-era chart color palette
 const PALETTE = [
-  "#3b82f6", "#10b981", "#f59e0b", "#ef4444", "#8b5cf6",
-  "#06b6d4", "#f97316", "#84cc16", "#ec4899", "#6366f1",
-  "#14b8a6", "#a855f7", "#fb923c", "#22c55e", "#e11d48",
-  "#0ea5e9", "#d97706", "#16a34a",
+  "#003366", // dark navy
+  "#990000", // dark red
+  "#336600", // forest green
+  "#663399", // purple
+  "#cc6600", // amber
+  "#006666", // dark teal
+  "#993300", // rust
+  "#003399", // royal blue
+  "#996633", // brown
+  "#336633", // dark green
+  "#993366", // dark rose
+  "#006699", // steel blue
+  "#cc3300", // red-orange
+  "#669900", // olive
+  "#6600cc", // violet
+  "#cc9900", // gold
+  "#009966", // emerald
+  "#cc0066", // magenta
 ];
 
 export function buildColorMap(labels: string[]): Record<string, string> {

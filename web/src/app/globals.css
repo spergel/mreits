@@ -1,18 +1,348 @@
 @import "tailwindcss";
 
-:root {
-  --background: #0f172a;
-  --foreground: #e2e8f0;
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #008080;
+  font-family: "MS Sans Serif", "Microsoft Sans Serif", Arial, sans-serif;
+  font-size: 11px;
+  color: #000000;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+a { color: inherit; text-decoration: none; }
+
+/* ── Excel app window ──────────────────────────────────────── */
+.excel-app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
+/* ── Title bar ─────────────────────────────────────────────── */
+.w95-titlebar {
+  background: linear-gradient(90deg, #000080, #1084d0);
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 11px;
+  padding: 2px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  user-select: none;
+  gap: 6px;
 }
+.w95-titlebar-btns { display: flex; gap: 2px; }
+.w95-titlebar-btn {
+  background: #c0c0c0;
+  color: #000;
+  font-size: 9px;
+  width: 16px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  border-color: #ffffff #404040 #404040 #ffffff;
+  cursor: default;
+  font-family: "MS Sans Serif", Arial, sans-serif;
+  padding: 0;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* ── Menu bar ──────────────────────────────────────────────── */
+.w95-menubar {
+  background: #c0c0c0;
+  border-bottom: 1px solid #808080;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.w95-menu-item {
+  padding: 3px 8px;
+  font-size: 11px;
+  cursor: default;
+  white-space: nowrap;
+}
+.w95-menu-item:hover {
+  background: #000080;
+  color: #ffffff;
+}
+
+/* ── Toolbar ───────────────────────────────────────────────── */
+.w95-toolbar {
+  background: #c0c0c0;
+  border-bottom: 1px solid #808080;
+  display: flex;
+  align-items: center;
+  padding: 2px 4px;
+  gap: 1px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+.w95-toolbtn {
+  background: #c0c0c0;
+  width: 22px;
+  height: 22px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  border: 1px solid transparent;
+  flex-shrink: 0;
+}
+.w95-toolbtn:hover {
+  border-color: #ffffff #808080 #808080 #ffffff;
+}
+.w95-toolsep {
+  width: 2px;
+  height: 18px;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #ffffff;
+  margin: 0 2px;
+  flex-shrink: 0;
+}
+.w95-tool-fake-select {
+  background: #ffffff;
+  border: 1px solid;
+  border-color: #808080 #ffffff #ffffff #808080;
+  font-size: 11px;
+  font-family: "MS Sans Serif", Arial, sans-serif;
+  padding: 1px 4px 1px 4px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  cursor: default;
+}
+
+/* ── Formula bar ───────────────────────────────────────────── */
+.w95-formulabar {
+  background: #c0c0c0;
+  border-bottom: 1px solid #808080;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 4px;
+  flex-shrink: 0;
+}
+.w95-namebox {
+  width: 64px;
+  height: 20px;
+  background: #ffffff;
+  border: 1px solid;
+  border-color: #808080 #ffffff #ffffff #808080;
+  padding: 1px 4px;
+  font-size: 11px;
+  font-family: "MS Sans Serif", Arial, sans-serif;
+  text-align: center;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.w95-formula-sep {
+  width: 2px;
+  height: 18px;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #ffffff;
+  margin: 0 1px;
+  flex-shrink: 0;
+}
+.w95-formulainput {
+  flex: 1;
+  height: 20px;
+  background: #ffffff;
+  border: 1px solid;
+  border-color: #808080 #ffffff #ffffff #808080;
+  padding: 1px 6px;
+  font-size: 11px;
+  font-family: "MS Sans Serif", Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* ── Main spreadsheet area ─────────────────────────────────── */
+.excel-content {
+  flex: 1;
+  overflow: auto;
+  background: #ffffff;
+}
+
+/* ── Spreadsheet table ─────────────────────────────────────── */
+.xl-table {
+  border-collapse: collapse;
+  font-family: "MS Sans Serif", Arial, sans-serif;
+  font-size: 11px;
+  min-width: 100%;
+}
+
+.xl-corner-hdr {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: #c0c0c0;
+  border-right: 2px solid #808080;
+  border-bottom: 2px solid #808080;
+  width: 36px;
+  min-width: 36px;
+  z-index: 3;
+}
+.xl-col-hdr {
+  position: sticky;
+  top: 0;
+  background: #c0c0c0;
+  border-right: 1px solid #808080;
+  border-bottom: 2px solid #808080;
+  padding: 1px 4px;
+  text-align: center;
+  font-weight: normal;
+  white-space: nowrap;
+  z-index: 2;
+  user-select: none;
+}
+.xl-row-hdr {
+  position: sticky;
+  left: 0;
+  background: #c0c0c0;
+  border-right: 2px solid #808080;
+  border-bottom: 1px solid #808080;
+  padding: 1px 6px 1px 4px;
+  text-align: right;
+  font-size: 11px;
+  min-width: 36px;
+  user-select: none;
+  z-index: 1;
+}
+.xl-cell {
+  border-right: 1px solid #d4d0c8;
+  border-bottom: 1px solid #d4d0c8;
+  padding: 1px 4px;
+  font-size: 11px;
+  white-space: nowrap;
+  background: #ffffff;
+  overflow: hidden;
+  max-width: 0; /* makes overflow: hidden work with table-layout: auto */
+}
+.xl-cell-bold { font-weight: bold; }
+.xl-cell-center { text-align: center; }
+.xl-cell-right { text-align: right; }
+.xl-cell-gray {
+  background: #c0c0c0;
+  font-weight: bold;
+  border-bottom: 2px solid #808080;
+}
+.xl-cell-title {
+  background: #c0c0c0;
+  font-size: 12px;
+  font-weight: bold;
+  border-bottom: 2px solid #808080;
+  padding: 3px 8px;
+}
+.xl-cell-blue {
+  color: #0000cc;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ── Embedded chart object ─────────────────────────────────── */
+.xl-chart-wrap {
+  background: #c0c0c0;
+  padding: 8px;
+}
+.xl-chart-obj {
+  border: 2px solid #000000;
+  background: #c0c0c0;
+}
+.xl-chart-obj-title {
+  background: #c0c0c0;
+  border-bottom: 1px solid #808080;
+  padding: 2px 6px;
+  font-size: 11px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+.xl-chart-inner {
+  background: #c0c0c0;
+  padding: 8px;
+}
+
+/* ── Sheet tabs ────────────────────────────────────────────── */
+.w95-sheettabs {
+  background: #c0c0c0;
+  border-top: 2px solid #ffffff;
+  display: flex;
+  align-items: flex-end;
+  padding: 2px 4px 0;
+  flex-shrink: 0;
+  overflow-x: auto;
+  gap: 2px;
+}
+.w95-sheettab {
+  background: #c0c0c0;
+  border: 1px solid #808080;
+  border-bottom: none;
+  padding: 2px 12px 3px;
+  font-size: 11px;
+  cursor: default;
+  white-space: nowrap;
+  color: #000;
+  text-decoration: none;
+  display: inline-block;
+}
+.w95-sheettab.active {
+  background: #ffffff;
+  position: relative;
+  z-index: 1;
+  font-weight: bold;
+}
+.w95-sheettab:not(.active):hover {
+  background: #d4d0c8;
+}
+
+/* ── Status bar ────────────────────────────────────────────── */
+.w95-statusbar {
+  background: #c0c0c0;
+  border-top: 1px solid #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 1px 8px;
+  font-size: 11px;
+  flex-shrink: 0;
+  gap: 4px;
+}
+.w95-status-item {
+  border: 1px solid;
+  border-color: #808080 #ffffff #ffffff #808080;
+  padding: 0 8px;
+  font-size: 11px;
+}
+
+/* ── Win95 scrollbars (Chromium) ───────────────────────────── */
+::-webkit-scrollbar { width: 16px; height: 16px; }
+::-webkit-scrollbar-track { background: #c0c0c0; }
+::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
+  border: 1px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+}
+::-webkit-scrollbar-button {
+  background: #c0c0c0;
+  border: 1px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+::-webkit-scrollbar-corner { background: #c0c0c0; }
