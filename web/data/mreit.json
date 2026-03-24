@@ -1,0 +1,5112 @@
+{
+  "tickers": [
+    {
+      "ticker": "AGNC",
+      "dataMode": "value",
+      "hasShorts": false,
+      "periods": [
+        {
+          "period": "2021-03-31",
+          "filing_date": "2021-05-07",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.0%",
+              "displayPct": 19.877282688093498,
+              "rawValue": 13606
+            },
+            {
+              "label": "2.5%",
+              "displayPct": 27.862673484295108,
+              "rawValue": 19072
+            },
+            {
+              "label": "3.0%",
+              "displayPct": 6.017531044558071,
+              "rawValue": 4119
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 16.91015339663988,
+              "rawValue": 11575
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 18.401753104455807,
+              "rawValue": 12596
+            },
+            {
+              "label": "≥ 4.5%",
+              "displayPct": 10.930606281957633,
+              "rawValue": 7482
+            }
+          ]
+        },
+        {
+          "period": "2021-06-30",
+          "filing_date": "2021-08-05",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.0%",
+              "displayPct": 20.12423217613362,
+              "rawValue": 14579
+            },
+            {
+              "label": "2.5%",
+              "displayPct": 35.94727034301884,
+              "rawValue": 26042
+            },
+            {
+              "label": "3.0%",
+              "displayPct": 5.40409966181241,
+              "rawValue": 3915
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 14.132100213955415,
+              "rawValue": 10238
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 15.305404099661812,
+              "rawValue": 11088
+            },
+            {
+              "label": "≥ 4.5%",
+              "displayPct": 9.086893505417903,
+              "rawValue": 6583
+            }
+          ]
+        },
+        {
+          "period": "2021-09-30",
+          "filing_date": "2021-11-05",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.0%",
+              "displayPct": 23.803423616194603,
+              "rawValue": 16909
+            },
+            {
+              "label": "2.5%",
+              "displayPct": 37.365561123937155,
+              "rawValue": 26543
+            },
+            {
+              "label": "3.0%",
+              "displayPct": 5.086153499633989,
+              "rawValue": 3613
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 12.897685680500029,
+              "rawValue": 9162
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 13.697280252266456,
+              "rawValue": 9730
+            },
+            {
+              "label": "≥ 4.5%",
+              "displayPct": 7.149895827467763,
+              "rawValue": 5079
+            }
+          ]
+        },
+        {
+          "period": "2022-03-31",
+          "filing_date": "2022-05-09",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.0%",
+              "displayPct": 10.299625468164795,
+              "rawValue": 6490
+            },
+            {
+              "label": "2.5%",
+              "displayPct": 18.48854186504158,
+              "rawValue": 11650
+            },
+            {
+              "label": "3.0%",
+              "displayPct": 20.50720497682981,
+              "rawValue": 12922
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 26.548911318479018,
+              "rawValue": 16729
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 17.422078334285533,
+              "rawValue": 10978
+            },
+            {
+              "label": "≥ 4.5%",
+              "displayPct": 6.733638037199263,
+              "rawValue": 4243
+            }
+          ]
+        },
+        {
+          "period": "2022-06-30",
+          "filing_date": "2022-08-04",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.0%",
+              "displayPct": 10.73150355918339,
+              "rawValue": 6166
+            },
+            {
+              "label": "2.5%",
+              "displayPct": 9.946568738360861,
+              "rawValue": 5715
+            },
+            {
+              "label": "3.0%",
+              "displayPct": 10.668848008075605,
+              "rawValue": 6130
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 18.29542092347321,
+              "rawValue": 10512
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 20.298658126947107,
+              "rawValue": 11663
+            },
+            {
+              "label": "≥ 4.5%",
+              "displayPct": 30.059000643959834,
+              "rawValue": 17271
+            }
+          ]
+        },
+        {
+          "period": "2022-09-30",
+          "filing_date": "2022-11-07",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "≤ 2.5%",
+              "displayPct": 14.066496163682865,
+              "rawValue": 8580
+            },
+            {
+              "label": "3.0% - 4.0%",
+              "displayPct": 46.01613220539052,
+              "rawValue": 28068
+            },
+            {
+              "label": "≥ 4.5%",
+              "displayPct": 39.91737163092662,
+              "rawValue": 24348
+            }
+          ]
+        },
+        {
+          "period": "2023-03-31",
+          "filing_date": "2023-05-08",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "≤ 2.5%",
+              "displayPct": 11.204991550760433,
+              "rawValue": 6034
+            },
+            {
+              "label": "3.0% - 4.0%",
+              "displayPct": 30.866650572877013,
+              "rawValue": 16622
+            },
+            {
+              "label": "≥ 4.5%",
+              "displayPct": 57.928357876362554,
+              "rawValue": 31195
+            }
+          ]
+        },
+        {
+          "period": "2023-06-30",
+          "filing_date": "2023-08-03",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "≤ 2.5%",
+              "displayPct": 8.338890190495071,
+              "rawValue": 4627
+            },
+            {
+              "label": "3.0% - 4.0%",
+              "displayPct": 27.294681637140233,
+              "rawValue": 15145
+            },
+            {
+              "label": "≥ 4.5%",
+              "displayPct": 64.36642817236469,
+              "rawValue": 35715
+            }
+          ]
+        },
+        {
+          "period": "2023-09-30",
+          "filing_date": "2023-11-06",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "≤ 2.5%",
+              "displayPct": 5.262004685577523,
+              "rawValue": 3122
+            },
+            {
+              "label": "3.0% - 4.0%",
+              "displayPct": 23.57452259358514,
+              "rawValue": 13987
+            },
+            {
+              "label": "4.5% - 5.5%",
+              "displayPct": 51.56832010247594,
+              "rawValue": 30596
+            },
+            {
+              "label": "≥ 6.0%",
+              "displayPct": 19.595152618361396,
+              "rawValue": 11626
+            }
+          ]
+        },
+        {
+          "period": "2024-03-31",
+          "filing_date": "2024-05-07",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "≤ 3.0%",
+              "displayPct": 6.51970284237726,
+              "rawValue": 4037
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 8.979328165374676,
+              "rawValue": 5560
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 10.23578811369509,
+              "rawValue": 6338
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 12.386950904392764,
+              "rawValue": 7670
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 18.42377260981912,
+              "rawValue": 11408
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 21.87015503875969,
+              "rawValue": 13542
+            },
+            {
+              "label": "6.0%",
+              "displayPct": 14.773901808785531,
+              "rawValue": 9148
+            },
+            {
+              "label": "≥ 6.5%",
+              "displayPct": 6.810400516795865,
+              "rawValue": 4217
+            }
+          ]
+        },
+        {
+          "period": "2024-06-30",
+          "filing_date": "2024-08-05",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "≤ 3.0%",
+              "displayPct": 5.857075132663516,
+              "rawValue": 3830
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 8.132617638512945,
+              "rawValue": 5318
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 9.597651052897188,
+              "rawValue": 6276
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 10.704837057087367,
+              "rawValue": 7000
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 17.89848755945008,
+              "rawValue": 11704
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 24.46208193788136,
+              "rawValue": 15996
+            },
+            {
+              "label": "6.0%",
+              "displayPct": 16.28817421357679,
+              "rawValue": 10651
+            },
+            {
+              "label": "≥ 6.5%",
+              "displayPct": 7.059075407930755,
+              "rawValue": 4616
+            }
+          ]
+        },
+        {
+          "period": "2024-09-30",
+          "filing_date": "2024-11-01",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "≤ 3.0%",
+              "displayPct": 6.107760582612654,
+              "rawValue": 4294
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 7.582783340919436,
+              "rawValue": 5331
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 9.089098771051434,
+              "rawValue": 6390
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 17.81690942193901,
+              "rawValue": 12526
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 16.350421028675466,
+              "rawValue": 11495
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 18.802628584433318,
+              "rawValue": 13219
+            },
+            {
+              "label": "6.0%",
+              "displayPct": 17.72445380063723,
+              "rawValue": 12461
+            },
+            {
+              "label": "≥ 6.5%",
+              "displayPct": 6.525944469731453,
+              "rawValue": 4588
+            }
+          ]
+        },
+        {
+          "period": "2025-03-31",
+          "filing_date": "2025-05-02",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "≤ 3.0%",
+              "displayPct": 5.154254952032576,
+              "rawValue": 3734
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 6.777555386845193,
+              "rawValue": 4910
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 8.254537925322659,
+              "rawValue": 5980
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 11.327213748360826,
+              "rawValue": 8206
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 16.58223479881289,
+              "rawValue": 12013
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 27.092276899717028,
+              "rawValue": 19627
+            },
+            {
+              "label": "6.0%",
+              "displayPct": 18.405687072951896,
+              "rawValue": 13334
+            },
+            {
+              "label": "≥ 6.5%",
+              "displayPct": 6.406239215956933,
+              "rawValue": 4641
+            }
+          ]
+        },
+        {
+          "period": "2025-06-30",
+          "filing_date": "2025-08-01",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "≤ 3.0%",
+              "displayPct": 3.1034005212202094,
+              "rawValue": 2465
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 5.939896007755354,
+              "rawValue": 4718
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 7.911468103589369,
+              "rawValue": 6284
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 11.639325687091615,
+              "rawValue": 9245
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 16.89181533193166,
+              "rawValue": 13417
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 26.7836684334437,
+              "rawValue": 21274
+            },
+            {
+              "label": "6.0%",
+              "displayPct": 21.119490362462074,
+              "rawValue": 16775
+            },
+            {
+              "label": "≥ 6.5%",
+              "displayPct": 6.610935552506011,
+              "rawValue": 5251
+            }
+          ]
+        },
+        {
+          "period": "2025-09-30",
+          "filing_date": "2025-10-31",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "≤ 3.0%",
+              "displayPct": 2.403290659518418,
+              "rawValue": 2080
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 4.707214493691362,
+              "rawValue": 4074
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 5.762120441835744,
+              "rawValue": 4987
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 12.468225724453482,
+              "rawValue": 10791
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 24.340250496834127,
+              "rawValue": 21066
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 26.93649766603503,
+              "rawValue": 23313
+            },
+            {
+              "label": "6.0%",
+              "displayPct": 17.803993159865044,
+              "rawValue": 15409
+            },
+            {
+              "label": "≥ 6.5%",
+              "displayPct": 5.578407357766788,
+              "rawValue": 4828
+            }
+          ]
+        }
+      ],
+      "allLabels": [
+        "2.0%",
+        "≤ 2.5%",
+        "2.5%",
+        "≤ 3.0%",
+        "3.0%",
+        "3.0% - 4.0%",
+        "3.5%",
+        "4.0%",
+        "≥ 4.5%",
+        "4.5%",
+        "4.5% - 5.5%",
+        "5.0%",
+        "5.5%",
+        "≥ 6.0%",
+        "6.0%",
+        "≥ 6.5%"
+      ],
+      "latestPeriod": {
+        "period": "2025-09-30",
+        "filing_date": "2025-10-31",
+        "filing_type": "10-Q",
+        "slices": [
+          {
+            "label": "≤ 3.0%",
+            "displayPct": 2.403290659518418,
+            "rawValue": 2080
+          },
+          {
+            "label": "3.5%",
+            "displayPct": 4.707214493691362,
+            "rawValue": 4074
+          },
+          {
+            "label": "4.0%",
+            "displayPct": 5.762120441835744,
+            "rawValue": 4987
+          },
+          {
+            "label": "4.5%",
+            "displayPct": 12.468225724453482,
+            "rawValue": 10791
+          },
+          {
+            "label": "5.0%",
+            "displayPct": 24.340250496834127,
+            "rawValue": 21066
+          },
+          {
+            "label": "5.5%",
+            "displayPct": 26.93649766603503,
+            "rawValue": 23313
+          },
+          {
+            "label": "6.0%",
+            "displayPct": 17.803993159865044,
+            "rawValue": 15409
+          },
+          {
+            "label": "≥ 6.5%",
+            "displayPct": 5.578407357766788,
+            "rawValue": 4828
+          }
+        ]
+      }
+    },
+    {
+      "ticker": "DX",
+      "dataMode": "value",
+      "hasShorts": false,
+      "periods": [
+        {
+          "period": "2021-03-31",
+          "filing_date": "2021-05-03",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.0%",
+              "displayPct": 18.231965219347767,
+              "rawValue": 664474
+            },
+            {
+              "label": "2.5%",
+              "displayPct": 22.230779889451526,
+              "rawValue": 810213
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 6.718735209099602,
+              "rawValue": 244868
+            },
+            {
+              "label": "TBA 2.0%",
+              "displayPct": 28.39852876414267,
+              "rawValue": 1035000
+            },
+            {
+              "label": "TBA 2.5%",
+              "displayPct": 24.419990917958433,
+              "rawValue": 890000
+            }
+          ]
+        },
+        {
+          "period": "2021-06-30",
+          "filing_date": "2021-08-02",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.0%",
+              "displayPct": 22.16377914229063,
+              "rawValue": 907767
+            },
+            {
+              "label": "2.5%",
+              "displayPct": 30.37512546624857,
+              "rawValue": 1244081
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 5.099832190800012,
+              "rawValue": 208875
+            },
+            {
+              "label": "TBA 2.0%",
+              "displayPct": 22.340377999195745,
+              "rawValue": 915000
+            },
+            {
+              "label": "TBA 2.5%",
+              "displayPct": 20.020885201465042,
+              "rawValue": 820000
+            }
+          ]
+        },
+        {
+          "period": "2021-09-30",
+          "filing_date": "2021-11-02",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.0%",
+              "displayPct": 22.718890942927526,
+              "rawValue": 880915
+            },
+            {
+              "label": "2.5%",
+              "displayPct": 31.196846592198597,
+              "rawValue": 1209644
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 4.691142852426952,
+              "rawValue": 181897
+            },
+            {
+              "label": "TBA 2.0%",
+              "displayPct": 36.49299953371489,
+              "rawValue": 1415000
+            },
+            {
+              "label": "TBA 2.5%",
+              "displayPct": 4.900120078732035,
+              "rawValue": 190000
+            }
+          ]
+        },
+        {
+          "period": "2022-03-31",
+          "filing_date": "2022-05-02",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.0%",
+              "displayPct": 34.54957603234155,
+              "rawValue": 1311069
+            },
+            {
+              "label": "2.5%",
+              "displayPct": 30.72167920549117,
+              "rawValue": 1165810
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 4.291933032689663,
+              "rawValue": 162868
+            },
+            {
+              "label": "TBA 2.0%",
+              "displayPct": 25.429890319433678,
+              "rawValue": 965000
+            },
+            {
+              "label": "TBA 2.5%",
+              "displayPct": 5.006921410043938,
+              "rawValue": 190000
+            }
+          ]
+        },
+        {
+          "period": "2022-06-30",
+          "filing_date": "2022-08-01",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.0%",
+              "displayPct": 21.518149551205738,
+              "rawValue": 1248457
+            },
+            {
+              "label": "2.5%",
+              "displayPct": 18.87509201760326,
+              "rawValue": 1095110
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 2.332209961634843,
+              "rawValue": 135312
+            },
+            {
+              "label": "TBA 2.5%",
+              "displayPct": 6.084235813949239,
+              "rawValue": 353000
+            },
+            {
+              "label": "TBA 3.0%",
+              "displayPct": 17.580511417077123,
+              "rawValue": 1020000
+            },
+            {
+              "label": "TBA 3.5%",
+              "displayPct": 13.788636405550683,
+              "rawValue": 800000
+            },
+            {
+              "label": "TBA 4.0%",
+              "displayPct": 13.788636405550683,
+              "rawValue": 800000
+            },
+            {
+              "label": "TBA 4.5%",
+              "displayPct": 6.032528427428425,
+              "rawValue": 350000
+            }
+          ]
+        },
+        {
+          "period": "2022-09-30",
+          "filing_date": "2022-10-31",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.0%",
+              "displayPct": 18.203112234484763,
+              "rawValue": 1216522
+            },
+            {
+              "label": "2.5%",
+              "displayPct": 10.072251506948032,
+              "rawValue": 673133
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 4.98977711354287,
+              "rawValue": 333469
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 12.19534092548246,
+              "rawValue": 815020
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 1.883872079848644,
+              "rawValue": 125900
+            },
+            {
+              "label": "TBA 2.5%",
+              "displayPct": 5.985296520567573,
+              "rawValue": 400000
+            },
+            {
+              "label": "TBA 3.5%",
+              "displayPct": 11.970593041135146,
+              "rawValue": 800000
+            },
+            {
+              "label": "TBA 4.0%",
+              "displayPct": 23.02842836288374,
+              "rawValue": 1539000
+            },
+            {
+              "label": "TBA 4.5%",
+              "displayPct": 11.671328215106769,
+              "rawValue": 780000
+            }
+          ]
+        },
+        {
+          "period": "2023-03-31",
+          "filing_date": "2023-04-28",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.0%",
+              "displayPct": 15.020556682442448,
+              "rawValue": 1051974
+            },
+            {
+              "label": "2.5%",
+              "displayPct": 9.27022563661177,
+              "rawValue": 649246
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 4.559822558863618,
+              "rawValue": 319350
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 12.985920592978259,
+              "rawValue": 909477
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 4.590735400072134,
+              "rawValue": 321515
+            },
+            {
+              "label": "TBA 4.0%",
+              "displayPct": 7.810311381551273,
+              "rawValue": 547000
+            },
+            {
+              "label": "TBA 4.5%",
+              "displayPct": 6.568086353772553,
+              "rawValue": 460000
+            },
+            {
+              "label": "TBA 5.0%",
+              "displayPct": 33.48296195564486,
+              "rawValue": 2345000
+            },
+            {
+              "label": "TBA 5.5%",
+              "displayPct": 5.711379438063088,
+              "rawValue": 400000
+            }
+          ]
+        },
+        {
+          "period": "2023-06-30",
+          "filing_date": "2023-07-28",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.0%",
+              "displayPct": 10.203372076794135,
+              "rawValue": 738366
+            },
+            {
+              "label": "2.5%",
+              "displayPct": 8.76469116933762,
+              "rawValue": 634256
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 5.0904098533957765,
+              "rawValue": 368367
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 15.440344697498373,
+              "rawValue": 1117339
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 21.480400028190463,
+              "rawValue": 1554427
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 8.950955504671464,
+              "rawValue": 647735
+            },
+            {
+              "label": "TBA 4.0%",
+              "displayPct": 4.933330938065277,
+              "rawValue": 357000
+            },
+            {
+              "label": "TBA 4.5%",
+              "displayPct": 6.080295834030034,
+              "rawValue": 440000
+            },
+            {
+              "label": "TBA 5.0%",
+              "displayPct": 15.228377293411585,
+              "rawValue": 1102000
+            },
+            {
+              "label": "TBA 5.5%",
+              "displayPct": 3.8278226046052715,
+              "rawValue": 277000
+            }
+          ]
+        },
+        {
+          "period": "2023-09-30",
+          "filing_date": "2023-11-06",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.0%",
+              "displayPct": 9.58396489383138,
+              "rawValue": 721068
+            },
+            {
+              "label": "2.5%",
+              "displayPct": 8.23196909177037,
+              "rawValue": 619348
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 4.801087019511165,
+              "rawValue": 361219
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 18.030482906530466,
+              "rawValue": 1356558
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 25.036338542300772,
+              "rawValue": 1883657
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 12.119608298691652,
+              "rawValue": 911842
+            },
+            {
+              "label": "TBA 4.0%",
+              "displayPct": 3.4823328759337837,
+              "rawValue": 262000
+            },
+            {
+              "label": "TBA 4.5%",
+              "displayPct": 3.6285376913355836,
+              "rawValue": 273000
+            },
+            {
+              "label": "TBA 5.0%",
+              "displayPct": 9.769139938211186,
+              "rawValue": 735000
+            },
+            {
+              "label": "TBA 5.5%",
+              "displayPct": 2.6582693709418197,
+              "rawValue": 200000
+            },
+            {
+              "label": "TBA 6.0%",
+              "displayPct": 2.6582693709418197,
+              "rawValue": 200000
+            }
+          ]
+        },
+        {
+          "period": "2024-03-31",
+          "filing_date": "2024-04-26",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.0%",
+              "displayPct": 8.30633187603608,
+              "rawValue": 696233
+            },
+            {
+              "label": "2.5%",
+              "displayPct": 7.142927873032008,
+              "rawValue": 598717
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 4.151024432844127,
+              "rawValue": 347937
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 16.263210671018875,
+              "rawValue": 1363175
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 24.311452399827964,
+              "rawValue": 2037775
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 10.559803768929802,
+              "rawValue": 885118
+            },
+            {
+              "label": "TBA 4.0%",
+              "displayPct": 3.125762426546074,
+              "rawValue": 262000
+            },
+            {
+              "label": "TBA 4.5%",
+              "displayPct": 2.6604771798464677,
+              "rawValue": 223000
+            },
+            {
+              "label": "TBA 5.0%",
+              "displayPct": 6.1799425074460554,
+              "rawValue": 518000
+            },
+            {
+              "label": "TBA 5.5%",
+              "displayPct": 14.912988676269439,
+              "rawValue": 1250000
+            },
+            {
+              "label": "TBA 6.0%",
+              "displayPct": 2.3860781882031104,
+              "rawValue": 200000
+            }
+          ]
+        },
+        {
+          "period": "2024-06-30",
+          "filing_date": "2024-07-26",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.0%",
+              "displayPct": 7.50724828626131,
+              "rawValue": 682622
+            },
+            {
+              "label": "2.5%",
+              "displayPct": 6.418556404660855,
+              "rawValue": 583629
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 3.7453429011555137,
+              "rawValue": 340558
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 15.2636156870258,
+              "rawValue": 1387896
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 21.954320317339832,
+              "rawValue": 1996271
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 11.810843675996024,
+              "rawValue": 1073941
+            },
+            {
+              "label": "6.0%",
+              "displayPct": 3.177467455433886,
+              "rawValue": 288922
+            },
+            {
+              "label": "TBA 4.0%",
+              "displayPct": 2.881388310075654,
+              "rawValue": 262000
+            },
+            {
+              "label": "TBA 4.5%",
+              "displayPct": 2.012572750930705,
+              "rawValue": 183000
+            },
+            {
+              "label": "TBA 5.0%",
+              "displayPct": 3.0243579590488734,
+              "rawValue": 275000
+            },
+            {
+              "label": "TBA 5.5%",
+              "displayPct": 21.797372635763153,
+              "rawValue": 1982000
+            },
+            {
+              "label": "TBA 6.0%",
+              "displayPct": 0.4069136163083939,
+              "rawValue": 37000
+            }
+          ]
+        },
+        {
+          "period": "2024-09-30",
+          "filing_date": "2024-10-28",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.0%",
+              "displayPct": 7.219146394174534,
+              "rawValue": 668416
+            },
+            {
+              "label": "2.5%",
+              "displayPct": 6.172557229590361,
+              "rawValue": 571513
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 3.5827234539094888,
+              "rawValue": 331722
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 14.632904824680681,
+              "rawValue": 1354851
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 22.280243060378226,
+              "rawValue": 2062913
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 21.06143104594978,
+              "rawValue": 1950064
+            },
+            {
+              "label": "6.0%",
+              "displayPct": 3.407033682279191,
+              "rawValue": 315455
+            },
+            {
+              "label": "TBA 4.0%",
+              "displayPct": 4.989775280826065,
+              "rawValue": 462000
+            },
+            {
+              "label": "TBA 4.5%",
+              "displayPct": 1.9764694294181164,
+              "rawValue": 183000
+            },
+            {
+              "label": "TBA 5.0%",
+              "displayPct": 8.283890996522926,
+              "rawValue": 767000
+            },
+            {
+              "label": "TBA 5.5%",
+              "displayPct": 6.393824602270628,
+              "rawValue": 592000
+            }
+          ]
+        },
+        {
+          "period": "2025-03-31",
+          "filing_date": "2025-04-30",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.0%",
+              "displayPct": 5.6767464929839395,
+              "rawValue": 643738
+            },
+            {
+              "label": "2.5%",
+              "displayPct": 4.868689004702064,
+              "rawValue": 552105
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 2.80086854297181,
+              "rawValue": 317616
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 14.470572123537831,
+              "rawValue": 1640950
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 21.21237988552115,
+              "rawValue": 2405465
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 23.233886050781173,
+              "rawValue": 2634702
+            },
+            {
+              "label": "6.0%",
+              "displayPct": 2.613203930789228,
+              "rawValue": 296335
+            },
+            {
+              "label": "TBA 4.0%",
+              "displayPct": 11.30520336535269,
+              "rawValue": 1282000
+            },
+            {
+              "label": "TBA 4.5%",
+              "displayPct": 3.412725196873238,
+              "rawValue": 387000
+            },
+            {
+              "label": "TBA 5.0%",
+              "displayPct": 4.841307837424826,
+              "rawValue": 549000
+            },
+            {
+              "label": "TBA 5.5%",
+              "displayPct": 5.5644175690620505,
+              "rawValue": 631000
+            }
+          ]
+        },
+        {
+          "period": "2025-06-30",
+          "filing_date": "2025-07-28",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.0%",
+              "displayPct": 4.481969247633813,
+              "rawValue": 629325
+            },
+            {
+              "label": "2.5%",
+              "displayPct": 3.8530371310667895,
+              "rawValue": 541015
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 2.20102026449049,
+              "rawValue": 309051
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 12.986533047138716,
+              "rawValue": 1823473
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 20.429475671736324,
+              "rawValue": 2868556
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 26.91572359491074,
+              "rawValue": 3779307
+            },
+            {
+              "label": "6.0%",
+              "displayPct": 2.054900909540817,
+              "rawValue": 288534
+            },
+            {
+              "label": "TBA 4.0%",
+              "displayPct": 9.130234100769155,
+              "rawValue": 1282000
+            },
+            {
+              "label": "TBA 4.5% (1)",
+              "displayPct": 6.196024701770019,
+              "rawValue": 870000
+            },
+            {
+              "label": "TBA 5.0%",
+              "displayPct": 6.56636181038156,
+              "rawValue": 922000
+            },
+            {
+              "label": "TBA 5.5%",
+              "displayPct": 5.184719520561579,
+              "rawValue": 728000
+            }
+          ]
+        },
+        {
+          "period": "2025-09-30",
+          "filing_date": "2025-10-27",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.0%",
+              "displayPct": 6.4651407949460795,
+              "rawValue": 655356
+            },
+            {
+              "label": "2.5%",
+              "displayPct": 5.54047677744858,
+              "rawValue": 561625
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 3.2023536507660286,
+              "rawValue": 324615
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 13.05516366516609,
+              "rawValue": 1323371
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 23.24471825966534,
+              "rawValue": 2356262
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 21.634756578604037,
+              "rawValue": 2193064
+            },
+            {
+              "label": "6.0%",
+              "displayPct": 2.993756488141234,
+              "rawValue": 303470
+            },
+            {
+              "label": "TBA 4.0%",
+              "displayPct": 4.557667965602037,
+              "rawValue": 462000
+            },
+            {
+              "label": "TBA 4.5%",
+              "displayPct": 3.778326473648442,
+              "rawValue": 383000
+            },
+            {
+              "label": "TBA 5.0%",
+              "displayPct": 7.004208345405728,
+              "rawValue": 710000
+            },
+            {
+              "label": "TBA 5.5%",
+              "displayPct": 8.523431000606406,
+              "rawValue": 864000
+            }
+          ]
+        }
+      ],
+      "allLabels": [
+        "2.0%",
+        "TBA 2.0%",
+        "2.5%",
+        "TBA 2.5%",
+        "TBA 3.0%",
+        "TBA 3.5%",
+        "4.0%",
+        "TBA 4.0%",
+        "4.5%",
+        "TBA 4.5%",
+        "TBA 4.5% (1)",
+        "5.0%",
+        "TBA 5.0%",
+        "5.5%",
+        "TBA 5.5%",
+        "6.0%",
+        "TBA 6.0%"
+      ],
+      "latestPeriod": {
+        "period": "2025-09-30",
+        "filing_date": "2025-10-27",
+        "filing_type": "10-Q",
+        "slices": [
+          {
+            "label": "2.0%",
+            "displayPct": 6.4651407949460795,
+            "rawValue": 655356
+          },
+          {
+            "label": "2.5%",
+            "displayPct": 5.54047677744858,
+            "rawValue": 561625
+          },
+          {
+            "label": "4.0%",
+            "displayPct": 3.2023536507660286,
+            "rawValue": 324615
+          },
+          {
+            "label": "4.5%",
+            "displayPct": 13.05516366516609,
+            "rawValue": 1323371
+          },
+          {
+            "label": "5.0%",
+            "displayPct": 23.24471825966534,
+            "rawValue": 2356262
+          },
+          {
+            "label": "5.5%",
+            "displayPct": 21.634756578604037,
+            "rawValue": 2193064
+          },
+          {
+            "label": "6.0%",
+            "displayPct": 2.993756488141234,
+            "rawValue": 303470
+          },
+          {
+            "label": "TBA 4.0%",
+            "displayPct": 4.557667965602037,
+            "rawValue": 462000
+          },
+          {
+            "label": "TBA 4.5%",
+            "displayPct": 3.778326473648442,
+            "rawValue": 383000
+          },
+          {
+            "label": "TBA 5.0%",
+            "displayPct": 7.004208345405728,
+            "rawValue": 710000
+          },
+          {
+            "label": "TBA 5.5%",
+            "displayPct": 8.523431000606406,
+            "rawValue": 864000
+          }
+        ]
+      }
+    },
+    {
+      "ticker": "IVR",
+      "dataMode": "value",
+      "hasShorts": false,
+      "periods": [
+        {
+          "period": "2021-03-31",
+          "filing_date": "2021-05-05",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.0%",
+              "displayPct": 45.95693137012362,
+              "rawValue": 4135167
+            },
+            {
+              "label": "2.5%",
+              "displayPct": 47.28886171223165,
+              "rawValue": 4255013
+            },
+            {
+              "label": "3.0%",
+              "displayPct": 6.7542069176447255,
+              "rawValue": 607738
+            }
+          ]
+        },
+        {
+          "period": "2021-06-30",
+          "filing_date": "2021-08-04",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.0%",
+              "displayPct": 45.043359640303,
+              "rawValue": 3893021
+            },
+            {
+              "label": "2.5%",
+              "displayPct": 29.705501554467688,
+              "rawValue": 2567396
+            },
+            {
+              "label": "3.0%",
+              "displayPct": 25.251138805229306,
+              "rawValue": 2182413
+            }
+          ]
+        },
+        {
+          "period": "2021-09-30",
+          "filing_date": "2021-11-03",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.0%",
+              "displayPct": 43.886011633402504,
+              "rawValue": 3829453
+            },
+            {
+              "label": "2.5%",
+              "displayPct": 28.120821351772218,
+              "rawValue": 2453797
+            },
+            {
+              "label": "3.0%",
+              "displayPct": 25.10849300726068,
+              "rawValue": 2190944
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 2.8846740075645996,
+              "rawValue": 251714
+            }
+          ]
+        },
+        {
+          "period": "2022-03-31",
+          "filing_date": "2022-05-04",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.0%",
+              "displayPct": 31.335039827487996,
+              "rawValue": 1911141
+            },
+            {
+              "label": "2.5%",
+              "displayPct": 31.778780774854592,
+              "rawValue": 1938205
+            },
+            {
+              "label": "3.0%",
+              "displayPct": 32.99910117208341,
+              "rawValue": 2012633
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 3.8870782255739993,
+              "rawValue": 237075
+            }
+          ]
+        },
+        {
+          "period": "2022-06-30",
+          "filing_date": "2022-08-04",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.0%",
+              "displayPct": 26.499690870462345,
+              "rawValue": 2408404
+            },
+            {
+              "label": "2.5%",
+              "displayPct": 31.66190658159287,
+              "rawValue": 2877568
+            },
+            {
+              "label": "3.0%",
+              "displayPct": 7.002457962178917,
+              "rawValue": 636413
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 9.902730099600337,
+              "rawValue": 900002
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 10.030331994890643,
+              "rawValue": 911599
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 11.134175863073274,
+              "rawValue": 1011921
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 3.7687066282016146,
+              "rawValue": 342516
+            }
+          ]
+        },
+        {
+          "period": "2022-09-30",
+          "filing_date": "2022-11-02",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.0%",
+              "displayPct": 24.636415536382792,
+              "rawValue": 2408404
+            },
+            {
+              "label": "2.5%",
+              "displayPct": 29.435659873591792,
+              "rawValue": 2877568
+            },
+            {
+              "label": "3.0%",
+              "displayPct": 2.059148371553437,
+              "rawValue": 201298
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 2.425123946517258,
+              "rawValue": 237075
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 8.755058031633048,
+              "rawValue": 855876
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 15.84073674257904,
+              "rawValue": 1548557
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 15.201923854944086,
+              "rawValue": 1486108
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 1.6459336427985507,
+              "rawValue": 160903
+            }
+          ]
+        },
+        {
+          "period": "2023-03-31",
+          "filing_date": "2023-05-09",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.0%",
+              "displayPct": 17.089819377244996,
+              "rawValue": 1911141
+            },
+            {
+              "label": "2.5%",
+              "displayPct": 17.33183128093277,
+              "rawValue": 1938205
+            },
+            {
+              "label": "3.0%",
+              "displayPct": 17.99738190048915,
+              "rawValue": 2012633
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 6.886492357408231,
+              "rawValue": 770111
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 12.929743490095296,
+              "rawValue": 1445923
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 13.769157450007919,
+              "rawValue": 1539794
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 13.995574143821637,
+              "rawValue": 1565114
+            }
+          ]
+        },
+        {
+          "period": "2023-06-30",
+          "filing_date": "2023-08-03",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "3.0%",
+              "displayPct": 9.196172135416216,
+              "rawValue": 636413
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 13.005034960346293,
+              "rawValue": 900002
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 12.598614070954156,
+              "rawValue": 871876
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 20.235485979736467,
+              "rawValue": 1400379
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 22.949168344312447,
+              "rawValue": 1588177
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 22.01552450923442,
+              "rawValue": 1523565
+            }
+          ]
+        },
+        {
+          "period": "2023-09-30",
+          "filing_date": "2023-11-06",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "3.0%",
+              "displayPct": 3.6379592743310596,
+              "rawValue": 201298
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 22.028017082855392,
+              "rawValue": 1218869
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 23.74062195082941,
+              "rawValue": 1313632
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 25.746362863024686,
+              "rawValue": 1424615
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 24.847038828959455,
+              "rawValue": 1374853
+            }
+          ]
+        },
+        {
+          "period": "2024-03-31",
+          "filing_date": "2024-05-08",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "4.0%",
+              "displayPct": 16.450235445850037,
+              "rawValue": 764780
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 19.20546382359242,
+              "rawValue": 892872
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 21.54213375113894,
+              "rawValue": 1001505
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 21.35854793622442,
+              "rawValue": 992970
+            },
+            {
+              "label": "6.0%",
+              "displayPct": 21.443619043194182,
+              "rawValue": 996925
+            }
+          ]
+        },
+        {
+          "period": "2024-06-30",
+          "filing_date": "2024-08-08",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "4.0%",
+              "displayPct": 12.894915266677614,
+              "rawValue": 562192
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 19.920909143455336,
+              "rawValue": 868511
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 20.100573513072632,
+              "rawValue": 876344
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 22.150118950519705,
+              "rawValue": 965700
+            },
+            {
+              "label": "6.0%",
+              "displayPct": 24.933483126274716,
+              "rawValue": 1087049
+            }
+          ]
+        },
+        {
+          "period": "2024-09-30",
+          "filing_date": "2024-11-05",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "4.0%",
+              "displayPct": 11.298473280350459,
+              "rawValue": 577105
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 13.780161141341482,
+              "rawValue": 703865
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 22.465089762469816,
+              "rawValue": 1147475
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 24.681360754326604,
+              "rawValue": 1260678
+            },
+            {
+              "label": "6.0%",
+              "displayPct": 27.774915061511635,
+              "rawValue": 1418691
+            }
+          ]
+        },
+        {
+          "period": "2025-03-31",
+          "filing_date": "2025-05-07",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "4.0%",
+              "displayPct": 6.9109675478070285,
+              "rawValue": 369321
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 12.30456528312959,
+              "rawValue": 657554
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 18.589389489190086,
+              "rawValue": 993414
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 26.477642897134423,
+              "rawValue": 1414961
+            },
+            {
+              "label": "6.0%",
+              "displayPct": 27.541736651906145,
+              "rawValue": 1471826
+            },
+            {
+              "label": "6.5%",
+              "displayPct": 8.175698130832727,
+              "rawValue": 436908
+            }
+          ]
+        },
+        {
+          "period": "2025-06-30",
+          "filing_date": "2025-08-08",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "4.0%",
+              "displayPct": 8.043538485261102,
+              "rawValue": 369321
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 13.947939725459346,
+              "rawValue": 640423
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 21.068669139048385,
+              "rawValue": 967373
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 22.549092632424443,
+              "rawValue": 1035347
+            },
+            {
+              "label": "6.0%",
+              "displayPct": 27.42599189288785,
+              "rawValue": 1259271
+            },
+            {
+              "label": "6.5%",
+              "displayPct": 6.964768124918873,
+              "rawValue": 319789
+            }
+          ]
+        },
+        {
+          "period": "2025-09-30",
+          "filing_date": "2025-11-05",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "4.0%",
+              "displayPct": 7.173956115678077,
+              "rawValue": 369321
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 14.488294665195568,
+              "rawValue": 745869
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 24.055939301642553,
+              "rawValue": 1238419
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 23.780593930164258,
+              "rawValue": 1224244
+            },
+            {
+              "label": "6.0%",
+              "displayPct": 26.04244689282218,
+              "rawValue": 1340686
+            },
+            {
+              "label": "6.5%",
+              "displayPct": 4.458769094497366,
+              "rawValue": 229541
+            }
+          ]
+        }
+      ],
+      "allLabels": [
+        "2.0%",
+        "2.5%",
+        "3.0%",
+        "3.5%",
+        "4.0%",
+        "4.5%",
+        "5.0%",
+        "5.5%",
+        "6.0%",
+        "6.5%"
+      ],
+      "latestPeriod": {
+        "period": "2025-09-30",
+        "filing_date": "2025-11-05",
+        "filing_type": "10-Q",
+        "slices": [
+          {
+            "label": "4.0%",
+            "displayPct": 7.173956115678077,
+            "rawValue": 369321
+          },
+          {
+            "label": "4.5%",
+            "displayPct": 14.488294665195568,
+            "rawValue": 745869
+          },
+          {
+            "label": "5.0%",
+            "displayPct": 24.055939301642553,
+            "rawValue": 1238419
+          },
+          {
+            "label": "5.5%",
+            "displayPct": 23.780593930164258,
+            "rawValue": 1224244
+          },
+          {
+            "label": "6.0%",
+            "displayPct": 26.04244689282218,
+            "rawValue": 1340686
+          },
+          {
+            "label": "6.5%",
+            "displayPct": 4.458769094497366,
+            "rawValue": 229541
+          }
+        ]
+      }
+    },
+    {
+      "ticker": "NLY",
+      "dataMode": "value",
+      "hasShorts": false,
+      "periods": [
+        {
+          "period": "2021-03-31",
+          "filing_date": "2021-05-07",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "ARM",
+              "displayPct": 2.4147146376025943,
+              "rawValue": 53319
+            },
+            {
+              "label": "Fixed",
+              "displayPct": 49.89758102828376,
+              "rawValue": 1101782
+            },
+            {
+              "label": "Floater",
+              "displayPct": 47.57788076285038,
+              "rawValue": 1050561
+            },
+            {
+              "label": "Interest-Only",
+              "displayPct": 0.10982357126326997,
+              "rawValue": 2425
+            }
+          ]
+        },
+        {
+          "period": "2021-06-30",
+          "filing_date": "2021-08-06",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "ARM",
+              "displayPct": 2.0772717708913033,
+              "rawValue": 50055
+            },
+            {
+              "label": "Fixed",
+              "displayPct": 58.779673902984285,
+              "rawValue": 1416385
+            },
+            {
+              "label": "Floater",
+              "displayPct": 39.07387418343984,
+              "rawValue": 941544
+            },
+            {
+              "label": "Interest-Only",
+              "displayPct": 0.06918014268456303,
+              "rawValue": 1667
+            }
+          ]
+        },
+        {
+          "period": "2021-09-30",
+          "filing_date": "2021-11-05",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "ARM",
+              "displayPct": 1.7957002438103682,
+              "rawValue": 45524
+            },
+            {
+              "label": "Fixed",
+              "displayPct": 62.680959479198016,
+              "rawValue": 1589067
+            },
+            {
+              "label": "Floater",
+              "displayPct": 35.4685904321096,
+              "rawValue": 899188
+            },
+            {
+              "label": "Interest-Only",
+              "displayPct": 0.05474984488201369,
+              "rawValue": 1388
+            }
+          ]
+        },
+        {
+          "period": "2022-03-31",
+          "filing_date": "2022-05-04",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "ARM",
+              "displayPct": 1.3735210840131902,
+              "rawValue": 35480
+            },
+            {
+              "label": "Fixed",
+              "displayPct": 60.293433345902,
+              "rawValue": 1557465
+            },
+            {
+              "label": "Floater",
+              "displayPct": 37.992607452474545,
+              "rawValue": 981403
+            },
+            {
+              "label": "Interest-Only",
+              "displayPct": 0.34043811761025916,
+              "rawValue": 8794
+            }
+          ]
+        },
+        {
+          "period": "2022-06-30",
+          "filing_date": "2022-08-01",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "ARM",
+              "displayPct": 1.0097006655589613,
+              "rawValue": 30214
+            },
+            {
+              "label": "Fixed",
+              "displayPct": 61.85561153492948,
+              "rawValue": 1850950
+            },
+            {
+              "label": "Floater",
+              "displayPct": 36.39828203177947,
+              "rawValue": 1089172
+            },
+            {
+              "label": "Interest-Only",
+              "displayPct": 0.7364057677320868,
+              "rawValue": 22036
+            }
+          ]
+        },
+        {
+          "period": "2022-09-30",
+          "filing_date": "2022-11-03",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "ARM",
+              "displayPct": 0.9047451901474105,
+              "rawValue": 29075
+            },
+            {
+              "label": "Fixed",
+              "displayPct": 61.84582955254088,
+              "rawValue": 1987485
+            },
+            {
+              "label": "Floater",
+              "displayPct": 36.37564211236453,
+              "rawValue": 1168972
+            },
+            {
+              "label": "Interest-Only",
+              "displayPct": 0.8737831449471809,
+              "rawValue": 28080
+            }
+          ]
+        },
+        {
+          "period": "2023-03-31",
+          "filing_date": "2023-05-04",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "ARM",
+              "displayPct": 0.3067719104443103,
+              "rawValue": 9553
+            },
+            {
+              "label": "Fixed",
+              "displayPct": 60.1139034822931,
+              "rawValue": 1871971
+            },
+            {
+              "label": "Floater",
+              "displayPct": 37.5012523923906,
+              "rawValue": 1167804
+            },
+            {
+              "label": "Interest-Only",
+              "displayPct": 2.078072214871999,
+              "rawValue": 64712
+            }
+          ]
+        },
+        {
+          "period": "2023-06-30",
+          "filing_date": "2023-08-03",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "ARM",
+              "displayPct": 0.10668812145912118,
+              "rawValue": 3278
+            },
+            {
+              "label": "Fixed",
+              "displayPct": 61.38316365105108,
+              "rawValue": 1886002
+            },
+            {
+              "label": "Floater",
+              "displayPct": 36.421430447514034,
+              "rawValue": 1119051
+            },
+            {
+              "label": "Interest-Only",
+              "displayPct": 2.0887177799757657,
+              "rawValue": 64176
+            }
+          ]
+        },
+        {
+          "period": "2023-09-30",
+          "filing_date": "2023-11-02",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "ARM",
+              "displayPct": 0.03452789341777569,
+              "rawValue": 1052
+            },
+            {
+              "label": "Fixed",
+              "displayPct": 63.82080679740003,
+              "rawValue": 1944500
+            },
+            {
+              "label": "Floater",
+              "displayPct": 33.69348026724327,
+              "rawValue": 1026577
+            },
+            {
+              "label": "Interest-Only",
+              "displayPct": 2.4511850419389183,
+              "rawValue": 74683
+            }
+          ]
+        },
+        {
+          "period": "2024-03-31",
+          "filing_date": "2024-05-02",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "ARM",
+              "displayPct": 0.04167066203595939,
+              "rawValue": 1169
+            },
+            {
+              "label": "Fixed",
+              "displayPct": 64.18982287651617,
+              "rawValue": 1800737
+            },
+            {
+              "label": "Floater",
+              "displayPct": 32.555017571901494,
+              "rawValue": 913276
+            },
+            {
+              "label": "Interest-Only",
+              "displayPct": 3.2134888895463676,
+              "rawValue": 90149
+            }
+          ]
+        },
+        {
+          "period": "2024-06-30",
+          "filing_date": "2024-07-29",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "ARM",
+              "displayPct": 0.04887270117294482,
+              "rawValue": 1242
+            },
+            {
+              "label": "Fixed",
+              "displayPct": 61.33295767199098,
+              "rawValue": 1558652
+            },
+            {
+              "label": "Floater",
+              "displayPct": 34.60084933042039,
+              "rawValue": 879310
+            },
+            {
+              "label": "Interest-Only",
+              "displayPct": 4.017320296415687,
+              "rawValue": 102092
+            }
+          ]
+        },
+        {
+          "period": "2024-09-30",
+          "filing_date": "2024-10-31",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "ARM",
+              "displayPct": 0.053651735169142116,
+              "rawValue": 1311
+            },
+            {
+              "label": "Fixed",
+              "displayPct": 60.10492167706075,
+              "rawValue": 1468686
+            },
+            {
+              "label": "Floater",
+              "displayPct": 35.481517161393505,
+              "rawValue": 867004
+            },
+            {
+              "label": "Interest-Only",
+              "displayPct": 4.359909426376601,
+              "rawValue": 106536
+            }
+          ]
+        },
+        {
+          "period": "2025-03-31",
+          "filing_date": "2025-05-08",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "ARM",
+              "displayPct": 0.06554857260759117,
+              "rawValue": 1293
+            },
+            {
+              "label": "Fixed",
+              "displayPct": 65.50411313490991,
+              "rawValue": 1292123
+            },
+            {
+              "label": "Floater",
+              "displayPct": 28.344916284891436,
+              "rawValue": 559127
+            },
+            {
+              "label": "Interest-Only",
+              "displayPct": 6.085422007591061,
+              "rawValue": 120040
+            }
+          ]
+        },
+        {
+          "period": "2025-06-30",
+          "filing_date": "2025-07-30",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "ARM",
+              "displayPct": 0.07528721527900421,
+              "rawValue": 1313
+            },
+            {
+              "label": "Fixed",
+              "displayPct": 67.04346589540754,
+              "rawValue": 1169230
+            },
+            {
+              "label": "Floater",
+              "displayPct": 25.872827106608533,
+              "rawValue": 451219
+            },
+            {
+              "label": "Interest-Only",
+              "displayPct": 7.008419782704927,
+              "rawValue": 122226
+            }
+          ]
+        },
+        {
+          "period": "2025-09-30",
+          "filing_date": "2025-10-30",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "ARM",
+              "displayPct": 0.07564877420330951,
+              "rawValue": 1320
+            },
+            {
+              "label": "Fixed",
+              "displayPct": 70.88358914463015,
+              "rawValue": 1236852
+            },
+            {
+              "label": "Floater",
+              "displayPct": 21.06520351239551,
+              "rawValue": 367568
+            },
+            {
+              "label": "Interest-Only",
+              "displayPct": 7.9755585687710395,
+              "rawValue": 139166
+            }
+          ]
+        }
+      ],
+      "allLabels": [
+        "ARM",
+        "Fixed",
+        "Floater",
+        "Interest-Only"
+      ],
+      "latestPeriod": {
+        "period": "2025-09-30",
+        "filing_date": "2025-10-30",
+        "filing_type": "10-Q",
+        "slices": [
+          {
+            "label": "ARM",
+            "displayPct": 0.07564877420330951,
+            "rawValue": 1320
+          },
+          {
+            "label": "Fixed",
+            "displayPct": 70.88358914463015,
+            "rawValue": 1236852
+          },
+          {
+            "label": "Floater",
+            "displayPct": 21.06520351239551,
+            "rawValue": 367568
+          },
+          {
+            "label": "Interest-Only",
+            "displayPct": 7.9755585687710395,
+            "rawValue": 139166
+          }
+        ]
+      }
+    },
+    {
+      "ticker": "TWO",
+      "dataMode": "value",
+      "hasShorts": false,
+      "periods": [
+        {
+          "period": "2021-03-31",
+          "filing_date": "2021-05-06",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "≤ 2.5%",
+              "displayPct": 13.428440341205414,
+              "rawValue": 1353071
+            },
+            {
+              "label": "3.0%",
+              "displayPct": 20.726836486006224,
+              "rawValue": 2088469
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 17.951790955263807,
+              "rawValue": 1808851
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 23.067033777454284,
+              "rawValue": 2324271
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 20.195999289014793,
+              "rawValue": 2034981
+            },
+            {
+              "label": "≥ 5.0%",
+              "displayPct": 4.629899151055477,
+              "rawValue": 466516
+            }
+          ]
+        },
+        {
+          "period": "2021-06-30",
+          "filing_date": "2021-08-05",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "≤ 2.5%",
+              "displayPct": 0,
+              "rawValue": 0
+            },
+            {
+              "label": "3.0%",
+              "displayPct": 19.017184442060834,
+              "rawValue": 1278481
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 17.93907181373384,
+              "rawValue": 1206002
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 30.28458371381903,
+              "rawValue": 2035962
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 26.664958044805065,
+              "rawValue": 1792623
+            },
+            {
+              "label": "≥ 5.0%",
+              "displayPct": 6.094201985581234,
+              "rawValue": 409699
+            }
+          ]
+        },
+        {
+          "period": "2021-09-30",
+          "filing_date": "2021-11-09",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "≤ 2.5%",
+              "displayPct": 14.443794575530678,
+              "rawValue": 1878319
+            },
+            {
+              "label": "3.0%",
+              "displayPct": 18.14604548699618,
+              "rawValue": 2359772
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 25.5841514965936,
+              "rawValue": 3327048
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 20.321920418519,
+              "rawValue": 2642730
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 17.505605055300034,
+              "rawValue": 2276487
+            },
+            {
+              "label": "≥ 5.0%",
+              "displayPct": 3.998482967060515,
+              "rawValue": 519976
+            }
+          ]
+        },
+        {
+          "period": "2022-03-31",
+          "filing_date": "2022-05-05",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "≤ 2.5%",
+              "displayPct": 19.573099214607538,
+              "rawValue": 1243928
+            },
+            {
+              "label": "3.0%",
+              "displayPct": 20.717562397585382,
+              "rawValue": 1316662
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 11.64260850874877,
+              "rawValue": 739922
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 22.371789566304876,
+              "rawValue": 1421793
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 20.57346206170792,
+              "rawValue": 1307504
+            },
+            {
+              "label": "≥ 5.0%",
+              "displayPct": 5.121478251045506,
+              "rawValue": 325485
+            }
+          ]
+        },
+        {
+          "period": "2022-06-30",
+          "filing_date": "2022-08-04",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "≤ 2.5%",
+              "displayPct": 5.988675948007164,
+              "rawValue": 512388
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 13.957062385138386,
+              "rawValue": 1194159
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 40.78936664879216,
+              "rawValue": 3489917
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 31.905055991457637,
+              "rawValue": 2729780
+            },
+            {
+              "label": "≥ 5.0%",
+              "displayPct": 7.35983902660465,
+              "rawValue": 629704
+            }
+          ]
+        },
+        {
+          "period": "2022-09-30",
+          "filing_date": "2022-11-09",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "3.5%",
+              "displayPct": 12.14080104174797,
+              "rawValue": 1165053
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 35.35445722719428,
+              "rawValue": 3392677
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 28.955472798079317,
+              "rawValue": 2778619
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 22.74337525383801,
+              "rawValue": 2182495
+            },
+            {
+              "label": "≥ 5.5%",
+              "displayPct": 0.8058936791404162,
+              "rawValue": 77335
+            }
+          ]
+        },
+        {
+          "period": "2023-03-31",
+          "filing_date": "2023-05-02",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "4.0%",
+              "displayPct": 6.218228205891967,
+              "rawValue": 535465
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 34.33655993956718,
+              "rawValue": 2956795
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 33.04983094720083,
+              "rawValue": 2845992
+            },
+            {
+              "label": "≥ 5.5%",
+              "displayPct": 26.395380907340023,
+              "rawValue": 2272963
+            }
+          ]
+        },
+        {
+          "period": "2023-06-30",
+          "filing_date": "2023-08-01",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "≤ 2.5%",
+              "displayPct": 2.834689221004041,
+              "rawValue": 248359
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 0.9170318187042533,
+              "rawValue": 80345
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 6.015406865029512,
+              "rawValue": 527035
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 32.97122304046867,
+              "rawValue": 2888747
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 31.880155486228883,
+              "rawValue": 2793154
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 16.02992620259344,
+              "rawValue": 1404449
+            },
+            {
+              "label": "6.0%",
+              "displayPct": 9.24387933050571,
+              "rawValue": 809895
+            },
+            {
+              "label": "≥ 6.5%",
+              "displayPct": 0.10768803546548796,
+              "rawValue": 9435
+            }
+          ]
+        },
+        {
+          "period": "2023-09-30",
+          "filing_date": "2023-10-31",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "≤ 2.5%",
+              "displayPct": 4.749857611118862,
+              "rawValue": 427654
+            },
+            {
+              "label": "3.0%",
+              "displayPct": 2.6971141927727755,
+              "rawValue": 242835
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 0.8728038569838081,
+              "rawValue": 78583
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 5.721622851171854,
+              "rawValue": 515147
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 31.318967531780935,
+              "rawValue": 2819807
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 30.409911154669423,
+              "rawValue": 2737960
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 15.332827900934657,
+              "rawValue": 1380493
+            },
+            {
+              "label": "6.0%",
+              "displayPct": 8.797589207411507,
+              "rawValue": 792092
+            },
+            {
+              "label": "≥ 6.5%",
+              "displayPct": 0.09930569315618172,
+              "rawValue": 8941
+            }
+          ]
+        },
+        {
+          "period": "2024-03-31",
+          "filing_date": "2024-04-30",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "≤ 2.5%",
+              "displayPct": 5.342583290075915,
+              "rawValue": 414571
+            },
+            {
+              "label": "3.0%",
+              "displayPct": 3.015510297499352,
+              "rawValue": 233996
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 0.8462001601082921,
+              "rawValue": 65663
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 6.37899581275062,
+              "rawValue": 494994
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 29.486150838918995,
+              "rawValue": 2288051
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 24.34688600712291,
+              "rawValue": 1889257
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 15.691514724447236,
+              "rawValue": 1217622
+            },
+            {
+              "label": "6.0%",
+              "displayPct": 14.790158134001258,
+              "rawValue": 1147679
+            },
+            {
+              "label": "≥ 6.5%",
+              "displayPct": 0.1020007350754174,
+              "rawValue": 7915
+            }
+          ]
+        },
+        {
+          "period": "2024-06-30",
+          "filing_date": "2024-07-31",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "3.0%",
+              "displayPct": 2.961282172819192,
+              "rawValue": 229783
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 0.8240009959304487,
+              "rawValue": 63939
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 7.882451854984897,
+              "rawValue": 611645
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 28.8042983780819,
+              "rawValue": 2235092
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 23.77271032007153,
+              "rawValue": 1844662
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 15.385617619927269,
+              "rawValue": 1193859
+            },
+            {
+              "label": "6.0%",
+              "displayPct": 14.423400344709467,
+              "rawValue": 1119195
+            },
+            {
+              "label": "≥ 6.5%",
+              "displayPct": 5.946238313475295,
+              "rawValue": 461403
+            }
+          ]
+        },
+        {
+          "period": "2024-09-30",
+          "filing_date": "2024-10-29",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "3.0%",
+              "displayPct": 2.8605832132784834,
+              "rawValue": 225307
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 0.7869723971818608,
+              "rawValue": 61984
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 7.599646583575634,
+              "rawValue": 598568
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 27.638329913140257,
+              "rawValue": 2176867
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 22.863069164416974,
+              "rawValue": 1800755
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 14.855881489960781,
+              "rawValue": 1170088
+            },
+            {
+              "label": "6.0%",
+              "displayPct": 13.859114115187396,
+              "rawValue": 1091580
+            },
+            {
+              "label": "≥ 6.5%",
+              "displayPct": 9.536403123258612,
+              "rawValue": 751112
+            }
+          ]
+        },
+        {
+          "period": "2025-03-31",
+          "filing_date": "2025-04-29",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "3.5%",
+              "displayPct": 0.6060027567273352,
+              "rawValue": 47997
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 5.738068480319019,
+              "rawValue": 454470
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 22.188208191623985,
+              "rawValue": 1757364
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 21.406112753102455,
+              "rawValue": 1695420
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 17.33771147188205,
+              "rawValue": 1373192
+            },
+            {
+              "label": "6.0%",
+              "displayPct": 22.157716772212428,
+              "rawValue": 1754949
+            },
+            {
+              "label": "≥ 6.5%",
+              "displayPct": 10.566179574132722,
+              "rawValue": 836869
+            }
+          ]
+        },
+        {
+          "period": "2025-06-30",
+          "filing_date": "2025-07-29",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "4.0%",
+              "displayPct": 2.5155562345239555,
+              "rawValue": 193317
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 22.39201203509081,
+              "rawValue": 1720795
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 20.835289018239887,
+              "rawValue": 1601163
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 16.821384277477495,
+              "rawValue": 1292700
+            },
+            {
+              "label": "6.0%",
+              "displayPct": 32.121036411719096,
+              "rawValue": 2468457
+            },
+            {
+              "label": "≥ 6.5%",
+              "displayPct": 5.314722022948756,
+              "rawValue": 408429
+            }
+          ]
+        },
+        {
+          "period": "2025-09-30",
+          "filing_date": "2025-10-28",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "4.0%",
+              "displayPct": 3.353366726859761,
+              "rawValue": 188876
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 19.825212177552526,
+              "rawValue": 1116641
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 26.048015873790863,
+              "rawValue": 1467136
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 14.480608632616585,
+              "rawValue": 815610
+            },
+            {
+              "label": "6.0%",
+              "displayPct": 28.156253722860953,
+              "rawValue": 1585881
+            },
+            {
+              "label": "≥ 6.5%",
+              "displayPct": 8.136542866319308,
+              "rawValue": 458285
+            }
+          ]
+        }
+      ],
+      "allLabels": [
+        "≤ 2.5%",
+        "3.0%",
+        "3.5%",
+        "4.0%",
+        "4.5%",
+        "≥ 5.0%",
+        "5.0%",
+        "≥ 5.5%",
+        "5.5%",
+        "6.0%",
+        "≥ 6.5%"
+      ],
+      "latestPeriod": {
+        "period": "2025-09-30",
+        "filing_date": "2025-10-28",
+        "filing_type": "10-Q",
+        "slices": [
+          {
+            "label": "4.0%",
+            "displayPct": 3.353366726859761,
+            "rawValue": 188876
+          },
+          {
+            "label": "4.5%",
+            "displayPct": 19.825212177552526,
+            "rawValue": 1116641
+          },
+          {
+            "label": "5.0%",
+            "displayPct": 26.048015873790863,
+            "rawValue": 1467136
+          },
+          {
+            "label": "5.5%",
+            "displayPct": 14.480608632616585,
+            "rawValue": 815610
+          },
+          {
+            "label": "6.0%",
+            "displayPct": 28.156253722860953,
+            "rawValue": 1585881
+          },
+          {
+            "label": "≥ 6.5%",
+            "displayPct": 8.136542866319308,
+            "rawValue": 458285
+          }
+        ]
+      }
+    },
+    {
+      "ticker": "ADAM",
+      "dataMode": "pct",
+      "hasShorts": false,
+      "periods": [
+        {
+          "period": "2021-03-31",
+          "filing_date": "2021-05-07",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "3.00% or less",
+              "displayPct": 7.1,
+              "rawValue": null
+            },
+            {
+              "label": "3.01% - 4.00%",
+              "displayPct": 16.3,
+              "rawValue": null
+            },
+            {
+              "label": "4.01% - 5.00%",
+              "displayPct": 25.9,
+              "rawValue": null
+            },
+            {
+              "label": "5.01% - 6.00%",
+              "displayPct": 10.1,
+              "rawValue": null
+            },
+            {
+              "label": "6.01% and over",
+              "displayPct": 40.6,
+              "rawValue": null
+            }
+          ]
+        },
+        {
+          "period": "2021-06-30",
+          "filing_date": "2021-08-06",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "3.00% or less",
+              "displayPct": 9.2,
+              "rawValue": null
+            },
+            {
+              "label": "3.01% - 4.00%",
+              "displayPct": 16.3,
+              "rawValue": null
+            },
+            {
+              "label": "4.01% - 5.00%",
+              "displayPct": 24,
+              "rawValue": null
+            },
+            {
+              "label": "5.01% - 6.00%",
+              "displayPct": 9.4,
+              "rawValue": null
+            },
+            {
+              "label": "6.01% and over",
+              "displayPct": 41.1,
+              "rawValue": null
+            }
+          ]
+        },
+        {
+          "period": "2021-09-30",
+          "filing_date": "2021-11-04",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "3.00% or less",
+              "displayPct": 9.7,
+              "rawValue": null
+            },
+            {
+              "label": "3.01% - 4.00%",
+              "displayPct": 15.4,
+              "rawValue": null
+            },
+            {
+              "label": "4.01% - 5.00%",
+              "displayPct": 21.7,
+              "rawValue": null
+            },
+            {
+              "label": "5.01% - 6.00%",
+              "displayPct": 8.2,
+              "rawValue": null
+            },
+            {
+              "label": "6.01% - 7.00%",
+              "displayPct": 6.2,
+              "rawValue": null
+            },
+            {
+              "label": "7.01% - 8.00%",
+              "displayPct": 9.4,
+              "rawValue": null
+            },
+            {
+              "label": "8.01% and over",
+              "displayPct": 29.4,
+              "rawValue": null
+            }
+          ]
+        },
+        {
+          "period": "2022-03-31",
+          "filing_date": "2022-05-05",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "3.00% or less",
+              "displayPct": 8.5,
+              "rawValue": null
+            },
+            {
+              "label": "3.01% - 4.00%",
+              "displayPct": 14.6,
+              "rawValue": null
+            },
+            {
+              "label": "4.01% - 5.00%",
+              "displayPct": 18.2,
+              "rawValue": null
+            },
+            {
+              "label": "5.01% - 6.00%",
+              "displayPct": 7.2,
+              "rawValue": null
+            },
+            {
+              "label": "6.01% - 7.00%",
+              "displayPct": 6.3,
+              "rawValue": null
+            },
+            {
+              "label": "7.01% - 8.00%",
+              "displayPct": 17.1,
+              "rawValue": null
+            },
+            {
+              "label": "8.01% and over",
+              "displayPct": 28.1,
+              "rawValue": null
+            }
+          ]
+        },
+        {
+          "period": "2022-06-30",
+          "filing_date": "2022-08-04",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "3.00% or less",
+              "displayPct": 7.5,
+              "rawValue": null
+            },
+            {
+              "label": "3.01% - 4.00%",
+              "displayPct": 14,
+              "rawValue": null
+            },
+            {
+              "label": "4.01% - 5.00%",
+              "displayPct": 16.4,
+              "rawValue": null
+            },
+            {
+              "label": "5.01% - 6.00%",
+              "displayPct": 6.6,
+              "rawValue": null
+            },
+            {
+              "label": "6.01% - 7.00%",
+              "displayPct": 7.9,
+              "rawValue": null
+            },
+            {
+              "label": "7.01% - 8.00%",
+              "displayPct": 19.4,
+              "rawValue": null
+            },
+            {
+              "label": "8.01% and over",
+              "displayPct": 28.2,
+              "rawValue": null
+            }
+          ]
+        },
+        {
+          "period": "2022-09-30",
+          "filing_date": "2022-11-04",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "3.00% or less",
+              "displayPct": 7.2,
+              "rawValue": null
+            },
+            {
+              "label": "3.01% - 4.00%",
+              "displayPct": 14.8,
+              "rawValue": null
+            },
+            {
+              "label": "4.01% - 5.00%",
+              "displayPct": 17.5,
+              "rawValue": null
+            },
+            {
+              "label": "5.01% - 6.00%",
+              "displayPct": 7,
+              "rawValue": null
+            },
+            {
+              "label": "6.01% - 7.00%",
+              "displayPct": 7.8,
+              "rawValue": null
+            },
+            {
+              "label": "7.01% - 8.00%",
+              "displayPct": 18.5,
+              "rawValue": null
+            },
+            {
+              "label": "8.01% and over",
+              "displayPct": 27.2,
+              "rawValue": null
+            }
+          ]
+        },
+        {
+          "period": "2023-03-31",
+          "filing_date": "2023-05-05",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "3.00% or less",
+              "displayPct": 7.4,
+              "rawValue": null
+            },
+            {
+              "label": "3.01% - 4.00%",
+              "displayPct": 16.2,
+              "rawValue": null
+            },
+            {
+              "label": "4.01% - 5.00%",
+              "displayPct": 21,
+              "rawValue": null
+            },
+            {
+              "label": "5.01% - 6.00%",
+              "displayPct": 8.5,
+              "rawValue": null
+            },
+            {
+              "label": "6.01% - 7.00%",
+              "displayPct": 7.8,
+              "rawValue": null
+            },
+            {
+              "label": "7.01% - 8.00%",
+              "displayPct": 14.7,
+              "rawValue": null
+            },
+            {
+              "label": "8.01% and over",
+              "displayPct": 24.4,
+              "rawValue": null
+            }
+          ]
+        },
+        {
+          "period": "2023-06-30",
+          "filing_date": "2023-08-04",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "3.00% or less",
+              "displayPct": 7.7,
+              "rawValue": null
+            },
+            {
+              "label": "3.01% - 4.00%",
+              "displayPct": 16.7,
+              "rawValue": null
+            },
+            {
+              "label": "4.01% - 5.00%",
+              "displayPct": 22.1,
+              "rawValue": null
+            },
+            {
+              "label": "5.01% - 6.00%",
+              "displayPct": 9.3,
+              "rawValue": null
+            },
+            {
+              "label": "6.01% - 7.00%",
+              "displayPct": 7.6,
+              "rawValue": null
+            },
+            {
+              "label": "7.01% - 8.00%",
+              "displayPct": 12.4,
+              "rawValue": null
+            },
+            {
+              "label": "8.01% and over",
+              "displayPct": 24.2,
+              "rawValue": null
+            }
+          ]
+        },
+        {
+          "period": "2023-09-30",
+          "filing_date": "2023-11-03",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "3.00% or less",
+              "displayPct": 7.8,
+              "rawValue": null
+            },
+            {
+              "label": "3.01% - 4.00%",
+              "displayPct": 16.9,
+              "rawValue": null
+            },
+            {
+              "label": "4.01% - 5.00%",
+              "displayPct": 21.8,
+              "rawValue": null
+            },
+            {
+              "label": "5.01% - 6.00%",
+              "displayPct": 9.7,
+              "rawValue": null
+            },
+            {
+              "label": "6.01% - 7.00%",
+              "displayPct": 7.4,
+              "rawValue": null
+            },
+            {
+              "label": "7.01% - 8.00%",
+              "displayPct": 10.3,
+              "rawValue": null
+            },
+            {
+              "label": "8.01% and over",
+              "displayPct": 26.1,
+              "rawValue": null
+            }
+          ]
+        },
+        {
+          "period": "2024-03-31",
+          "filing_date": "2024-05-03",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "3.00% or less",
+              "displayPct": 7.2,
+              "rawValue": null
+            },
+            {
+              "label": "3.01% - 4.00%",
+              "displayPct": 15.7,
+              "rawValue": null
+            },
+            {
+              "label": "4.01% - 5.00%",
+              "displayPct": 19.9,
+              "rawValue": null
+            },
+            {
+              "label": "5.01% - 6.00%",
+              "displayPct": 8.7,
+              "rawValue": null
+            },
+            {
+              "label": "6.01% - 7.00%",
+              "displayPct": 7.2,
+              "rawValue": null
+            },
+            {
+              "label": "7.01% - 8.00%",
+              "displayPct": 7,
+              "rawValue": null
+            },
+            {
+              "label": "8.01% and over",
+              "displayPct": 34.3,
+              "rawValue": null
+            }
+          ]
+        },
+        {
+          "period": "2024-06-30",
+          "filing_date": "2024-08-02",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "3.00% or less",
+              "displayPct": 6.6,
+              "rawValue": null
+            },
+            {
+              "label": "3.01% - 4.00%",
+              "displayPct": 14.6,
+              "rawValue": null
+            },
+            {
+              "label": "4.01% - 5.00%",
+              "displayPct": 18.5,
+              "rawValue": null
+            },
+            {
+              "label": "5.01% - 6.00%",
+              "displayPct": 7.7,
+              "rawValue": null
+            },
+            {
+              "label": "6.01% - 7.00%",
+              "displayPct": 6.6,
+              "rawValue": null
+            },
+            {
+              "label": "7.01% - 8.00%",
+              "displayPct": 7.1,
+              "rawValue": null
+            },
+            {
+              "label": "8.01% and over",
+              "displayPct": 38.9,
+              "rawValue": null
+            }
+          ]
+        },
+        {
+          "period": "2024-09-30",
+          "filing_date": "2024-11-01",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "3.00% or less",
+              "displayPct": 5.8,
+              "rawValue": null
+            },
+            {
+              "label": "3.01% - 4.00%",
+              "displayPct": 12.6,
+              "rawValue": null
+            },
+            {
+              "label": "4.01% - 5.00%",
+              "displayPct": 15.3,
+              "rawValue": null
+            },
+            {
+              "label": "5.01% - 6.00%",
+              "displayPct": 6.4,
+              "rawValue": null
+            },
+            {
+              "label": "6.01% - 7.00%",
+              "displayPct": 5.1,
+              "rawValue": null
+            },
+            {
+              "label": "7.01% - 8.00%",
+              "displayPct": 9.4,
+              "rawValue": null
+            },
+            {
+              "label": "8.01% and over",
+              "displayPct": 45.4,
+              "rawValue": null
+            }
+          ]
+        },
+        {
+          "period": "2025-03-31",
+          "filing_date": "2025-05-02",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "3.00% or less",
+              "displayPct": 5.2,
+              "rawValue": null
+            },
+            {
+              "label": "3.01% - 4.00%",
+              "displayPct": 11.3,
+              "rawValue": null
+            },
+            {
+              "label": "4.01% - 5.00%",
+              "displayPct": 13.7,
+              "rawValue": null
+            },
+            {
+              "label": "5.01% - 6.00%",
+              "displayPct": 5.8,
+              "rawValue": null
+            },
+            {
+              "label": "6.01% - 7.00%",
+              "displayPct": 8.5,
+              "rawValue": null
+            },
+            {
+              "label": "7.01% - 8.00%",
+              "displayPct": 14.2,
+              "rawValue": null
+            },
+            {
+              "label": "8.01% and over",
+              "displayPct": 41.3,
+              "rawValue": null
+            }
+          ]
+        }
+      ],
+      "allLabels": [
+        "3.00% or less",
+        "3.01% - 4.00%",
+        "4.01% - 5.00%",
+        "5.01% - 6.00%",
+        "6.01% - 7.00%",
+        "6.01% and over",
+        "7.01% - 8.00%",
+        "8.01% and over"
+      ],
+      "latestPeriod": {
+        "period": "2025-03-31",
+        "filing_date": "2025-05-02",
+        "filing_type": "10-Q",
+        "slices": [
+          {
+            "label": "3.00% or less",
+            "displayPct": 5.2,
+            "rawValue": null
+          },
+          {
+            "label": "3.01% - 4.00%",
+            "displayPct": 11.3,
+            "rawValue": null
+          },
+          {
+            "label": "4.01% - 5.00%",
+            "displayPct": 13.7,
+            "rawValue": null
+          },
+          {
+            "label": "5.01% - 6.00%",
+            "displayPct": 5.8,
+            "rawValue": null
+          },
+          {
+            "label": "6.01% - 7.00%",
+            "displayPct": 8.5,
+            "rawValue": null
+          },
+          {
+            "label": "7.01% - 8.00%",
+            "displayPct": 14.2,
+            "rawValue": null
+          },
+          {
+            "label": "8.01% and over",
+            "displayPct": 41.3,
+            "rawValue": null
+          }
+        ]
+      }
+    },
+    {
+      "ticker": "REFI",
+      "dataMode": "value",
+      "hasShorts": false,
+      "periods": [
+        {
+          "period": "2022-03-31",
+          "filing_date": "2022-05-12",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "Fixed-rate",
+              "displayPct": 24.214185512526896,
+              "rawValue": 5000000
+            },
+            {
+              "label": "Floating-rate",
+              "displayPct": 75.7858144874731,
+              "rawValue": 15649053
+            }
+          ]
+        },
+        {
+          "period": "2022-06-30",
+          "filing_date": "2022-08-09",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "Fixed-rate",
+              "displayPct": 24.234202825834068,
+              "rawValue": 5000000
+            },
+            {
+              "label": "Floating-rate",
+              "displayPct": 75.76579717416593,
+              "rawValue": 15631997
+            }
+          ]
+        },
+        {
+          "period": "2022-09-30",
+          "filing_date": "2022-11-09",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "Fixed-rate",
+              "displayPct": 35.85840319805321,
+              "rawValue": 5000000
+            },
+            {
+              "label": "Floating-rate",
+              "displayPct": 64.1415968019468,
+              "rawValue": 8943733
+            }
+          ]
+        },
+        {
+          "period": "2023-03-31",
+          "filing_date": "2023-05-09",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "Fixed-rate",
+              "displayPct": 23.64682572070197,
+              "rawValue": 20567900
+            },
+            {
+              "label": "Floating-rate",
+              "displayPct": 76.35317427929803,
+              "rawValue": 66411639
+            }
+          ]
+        },
+        {
+          "period": "2023-06-30",
+          "filing_date": "2023-08-09",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "Fixed-rate",
+              "displayPct": 20.166688051744867,
+              "rawValue": 20732430
+            },
+            {
+              "label": "Floating-rate",
+              "displayPct": 79.83331194825513,
+              "rawValue": 82072899
+            }
+          ]
+        },
+        {
+          "period": "2023-09-30",
+          "filing_date": "2023-11-08",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "Fixed-rate",
+              "displayPct": 2.8656100056624347,
+              "rawValue": 2466705
+            },
+            {
+              "label": "Floating-rate",
+              "displayPct": 97.13438999433757,
+              "rawValue": 83612873
+            }
+          ]
+        },
+        {
+          "period": "2024-03-31",
+          "filing_date": "2024-05-07",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "Fixed-rate",
+              "displayPct": 1.9199526976670072,
+              "rawValue": 2466705
+            },
+            {
+              "label": "Floating-rate",
+              "displayPct": 98.080047302333,
+              "rawValue": 126010679
+            }
+          ]
+        },
+        {
+          "period": "2024-06-30",
+          "filing_date": "2024-08-07",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "Fixed-rate",
+              "displayPct": 1.9070667173804523,
+              "rawValue": 2466705
+            },
+            {
+              "label": "Floating-rate",
+              "displayPct": 98.09293328261954,
+              "rawValue": 126878796
+            }
+          ]
+        },
+        {
+          "period": "2024-09-30",
+          "filing_date": "2024-11-07",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "8.50%",
+              "displayPct": 7.6963870795158424,
+              "rawValue": 19600000
+            },
+            {
+              "label": "8.00%",
+              "displayPct": 0.6596903211013581,
+              "rawValue": 1680000
+            },
+            {
+              "label": "7.75%",
+              "displayPct": 8.272335211772727,
+              "rawValue": 21066738
+            },
+            {
+              "label": "7.50%",
+              "displayPct": 6.030227654496273,
+              "rawValue": 15356876
+            },
+            {
+              "label": "7.00%",
+              "displayPct": 20.001540769572582,
+              "rawValue": 50936913
+            },
+            {
+              "label": "6.25%",
+              "displayPct": 9.955938733711706,
+              "rawValue": 25354286
+            },
+            {
+              "label": "5.85%",
+              "displayPct": 10.614231924954446,
+              "rawValue": 27030728
+            },
+            {
+              "label": "5.50%",
+              "displayPct": 0.25916405471839066,
+              "rawValue": 660000
+            },
+            {
+              "label": "3.25%",
+              "displayPct": 31.40573771782474,
+              "rawValue": 79979405
+            },
+            {
+              "label": "0.00%",
+              "displayPct": 5.104746532331937,
+              "rawValue": 13000000
+            }
+          ]
+        },
+        {
+          "period": "2025-03-31",
+          "filing_date": "2025-05-07",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "8.50%",
+              "displayPct": 21.208144239883676,
+              "rawValue": 50469178
+            },
+            {
+              "label": "8.00%",
+              "displayPct": 3.134839169156514,
+              "rawValue": 7460000
+            },
+            {
+              "label": "7.75%",
+              "displayPct": 7.141646459805745,
+              "rawValue": 16995029
+            },
+            {
+              "label": "7.50%",
+              "displayPct": 19.273462278289077,
+              "rawValue": 45865201
+            },
+            {
+              "label": "7.00%",
+              "displayPct": 31.77540763299132,
+              "rawValue": 75616173
+            },
+            {
+              "label": "6.25%",
+              "displayPct": 8.091631735516595,
+              "rawValue": 19255716
+            },
+            {
+              "label": "5.50%",
+              "displayPct": 0.21851425843986425,
+              "rawValue": 520000
+            },
+            {
+              "label": "0.00%",
+              "displayPct": 9.15635422591721,
+              "rawValue": 21789444
+            }
+          ]
+        },
+        {
+          "period": "2025-06-30",
+          "filing_date": "2025-08-07",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "8.50%",
+              "displayPct": 12.119831530493238,
+              "rawValue": 50469178
+            },
+            {
+              "label": "8.00%",
+              "displayPct": 1.741038433320154,
+              "rawValue": 7250000
+            },
+            {
+              "label": "7.75%",
+              "displayPct": 5.168646732466617,
+              "rawValue": 21523183
+            },
+            {
+              "label": "7.50%",
+              "displayPct": 11.540728287375218,
+              "rawValue": 48057687
+            },
+            {
+              "label": "7.00%",
+              "displayPct": 20.562140101540436,
+              "rawValue": 85624483
+            },
+            {
+              "label": "6.25%",
+              "displayPct": 4.607598418116974,
+              "rawValue": 19186876
+            },
+            {
+              "label": "5.50%",
+              "displayPct": 0.1104658868037615,
+              "rawValue": 460000
+            },
+            {
+              "label": "4.00%",
+              "displayPct": 0.056033340794743654,
+              "rawValue": 233333
+            },
+            {
+              "label": "0.00%",
+              "displayPct": 4.17849223996837,
+              "rawValue": 17400000
+            },
+            {
+              "label": "Fixed-rate",
+              "displayPct": 39.915025029120486,
+              "rawValue": 166213408
+            }
+          ]
+        },
+        {
+          "period": "2025-09-30",
+          "filing_date": "2025-11-04",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "8.50%",
+              "displayPct": 12.18852551643075,
+              "rawValue": 48747824
+            },
+            {
+              "label": "8.00%",
+              "displayPct": 0.36004636317018546,
+              "rawValue": 1440000
+            },
+            {
+              "label": "7.50%",
+              "displayPct": 14.880109611714701,
+              "rawValue": 59512774
+            },
+            {
+              "label": "7.00%",
+              "displayPct": 22.351495952133757,
+              "rawValue": 89394471
+            },
+            {
+              "label": "6.25%",
+              "displayPct": 3.966224480726383,
+              "rawValue": 15862855
+            },
+            {
+              "label": "5.50%",
+              "displayPct": 0.10001287865838485,
+              "rawValue": 400000
+            },
+            {
+              "label": "4.00%",
+              "displayPct": 5.058984695459234,
+              "rawValue": 20233333
+            },
+            {
+              "label": "0.00%",
+              "displayPct": 4.35056022163974,
+              "rawValue": 17400000
+            },
+            {
+              "label": "Fixed-rate",
+              "displayPct": 36.74404028006686,
+              "rawValue": 146957235
+            }
+          ]
+        }
+      ],
+      "allLabels": [
+        "Fixed-rate",
+        "Floating-rate",
+        "0.00%",
+        "3.25%",
+        "4.00%",
+        "5.50%",
+        "5.85%",
+        "6.25%",
+        "7.00%",
+        "7.50%",
+        "7.75%",
+        "8.00%",
+        "8.50%"
+      ],
+      "latestPeriod": {
+        "period": "2025-09-30",
+        "filing_date": "2025-11-04",
+        "filing_type": "10-Q",
+        "slices": [
+          {
+            "label": "8.50%",
+            "displayPct": 12.18852551643075,
+            "rawValue": 48747824
+          },
+          {
+            "label": "8.00%",
+            "displayPct": 0.36004636317018546,
+            "rawValue": 1440000
+          },
+          {
+            "label": "7.50%",
+            "displayPct": 14.880109611714701,
+            "rawValue": 59512774
+          },
+          {
+            "label": "7.00%",
+            "displayPct": 22.351495952133757,
+            "rawValue": 89394471
+          },
+          {
+            "label": "6.25%",
+            "displayPct": 3.966224480726383,
+            "rawValue": 15862855
+          },
+          {
+            "label": "5.50%",
+            "displayPct": 0.10001287865838485,
+            "rawValue": 400000
+          },
+          {
+            "label": "4.00%",
+            "displayPct": 5.058984695459234,
+            "rawValue": 20233333
+          },
+          {
+            "label": "0.00%",
+            "displayPct": 4.35056022163974,
+            "rawValue": 17400000
+          },
+          {
+            "label": "Fixed-rate",
+            "displayPct": 36.74404028006686,
+            "rawValue": 146957235
+          }
+        ]
+      }
+    },
+    {
+      "ticker": "ARR",
+      "dataMode": "value",
+      "hasShorts": false,
+      "periods": [
+        {
+          "period": "2022-09-30",
+          "filing_date": "2022-10-26",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.5% to 6.0%",
+              "displayPct": 14.735745754153417,
+              "rawValue": 475094
+            },
+            {
+              "label": "2.0%",
+              "displayPct": 16.78736214723401,
+              "rawValue": 541240
+            },
+            {
+              "label": "2.5%",
+              "displayPct": 40.1281663178346,
+              "rawValue": 1293769
+            },
+            {
+              "label": "3.0%",
+              "displayPct": 11.307524723239908,
+              "rawValue": 364565
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 7.902379956899493,
+              "rawValue": 254780
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 2.609820067169299,
+              "rawValue": 84143
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 6.529001033469268,
+              "rawValue": 210501
+            }
+          ]
+        },
+        {
+          "period": "2023-03-31",
+          "filing_date": "2023-04-26",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "3.5% to 6.0%",
+              "displayPct": 0.16374196772983768,
+              "rawValue": 14264
+            },
+            {
+              "label": "2.0%",
+              "displayPct": 4.478728524794384,
+              "rawValue": 390154
+            },
+            {
+              "label": "2.5%",
+              "displayPct": 6.982463056177707,
+              "rawValue": 608261
+            },
+            {
+              "label": "3.0%",
+              "displayPct": 11.125431007911937,
+              "rawValue": 969166
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 14.119300900775972,
+              "rawValue": 1229970
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 13.977541958018277,
+              "rawValue": 1217621
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 17.323564987733704,
+              "rawValue": 1509102
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 19.901169370655268,
+              "rawValue": 1733644
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 11.928058226202916,
+              "rawValue": 1039085
+            }
+          ]
+        },
+        {
+          "period": "2023-06-30",
+          "filing_date": "2023-07-26",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "3.5% to 6.0%",
+              "displayPct": 0.16374196772983768,
+              "rawValue": 14264
+            },
+            {
+              "label": "2.0%",
+              "displayPct": 4.478728524794384,
+              "rawValue": 390154
+            },
+            {
+              "label": "2.5%",
+              "displayPct": 6.982463056177707,
+              "rawValue": 608261
+            },
+            {
+              "label": "3.0%",
+              "displayPct": 11.125431007911937,
+              "rawValue": 969166
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 14.119300900775972,
+              "rawValue": 1229970
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 13.977541958018277,
+              "rawValue": 1217621
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 17.323564987733704,
+              "rawValue": 1509102
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 19.901169370655268,
+              "rawValue": 1733644
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 11.928058226202916,
+              "rawValue": 1039085
+            }
+          ]
+        },
+        {
+          "period": "2023-09-30",
+          "filing_date": "2023-10-25",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "3.5% to 6.0%",
+              "displayPct": 0.16374196772983768,
+              "rawValue": 14264
+            },
+            {
+              "label": "2.0%",
+              "displayPct": 4.478728524794384,
+              "rawValue": 390154
+            },
+            {
+              "label": "2.5%",
+              "displayPct": 6.982463056177707,
+              "rawValue": 608261
+            },
+            {
+              "label": "3.0%",
+              "displayPct": 11.125431007911937,
+              "rawValue": 969166
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 14.119300900775972,
+              "rawValue": 1229970
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 13.977541958018277,
+              "rawValue": 1217621
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 17.323564987733704,
+              "rawValue": 1509102
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 19.901169370655268,
+              "rawValue": 1733644
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 11.928058226202916,
+              "rawValue": 1039085
+            }
+          ]
+        },
+        {
+          "period": "2024-03-31",
+          "filing_date": "2024-04-25",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "3.0%",
+              "displayPct": 2.6565797954797876,
+              "rawValue": 288176
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 10.696574146320598,
+              "rawValue": 1160325
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 10.241119905247523,
+              "rawValue": 1110919
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 9.586599176668235,
+              "rawValue": 1039919
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 14.74436079690019,
+              "rawValue": 1599414
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 28.316382782896767,
+              "rawValue": 3071657
+            },
+            {
+              "label": "6.0%",
+              "displayPct": 21.81334138178729,
+              "rawValue": 2366231
+            },
+            {
+              "label": "6.5%",
+              "displayPct": 1.9450420146996137,
+              "rawValue": 210991
+            }
+          ]
+        },
+        {
+          "period": "2024-06-30",
+          "filing_date": "2024-07-24",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.5%",
+              "displayPct": 5.491986349349404,
+              "rawValue": 508586
+            },
+            {
+              "label": "3.0%",
+              "displayPct": 4.275239238957764,
+              "rawValue": 395909
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 9.277986927503244,
+              "rawValue": 859189
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 11.742127405280335,
+              "rawValue": 1087381
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 10.987730590676907,
+              "rawValue": 1017520
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 10.828387331973364,
+              "rawValue": 1002764
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 21.40088165761047,
+              "rawValue": 1981831
+            },
+            {
+              "label": "6.0%",
+              "displayPct": 19.46333199107479,
+              "rawValue": 1802404
+            },
+            {
+              "label": "6.5%",
+              "displayPct": 6.532328507573718,
+              "rawValue": 604927
+            }
+          ]
+        },
+        {
+          "period": "2024-09-30",
+          "filing_date": "2024-10-23",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.5%",
+              "displayPct": 4.107813994890662,
+              "rawValue": 500977
+            },
+            {
+              "label": "3.0%",
+              "displayPct": 9.140822328642175,
+              "rawValue": 1114788
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 11.005232332555027,
+              "rawValue": 1342166
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 8.684333865651753,
+              "rawValue": 1059116
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 8.13465688092893,
+              "rawValue": 992079
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 14.6909470118504,
+              "rawValue": 1791665
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 19.354431903420448,
+              "rawValue": 2360410
+            },
+            {
+              "label": "6.0%",
+              "displayPct": 20.13241871648616,
+              "rawValue": 2455291
+            },
+            {
+              "label": "6.5%",
+              "displayPct": 4.749342965574447,
+              "rawValue": 579216
+            }
+          ]
+        },
+        {
+          "period": "2025-03-31",
+          "filing_date": "2025-04-23",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.5%",
+              "displayPct": 2.0627764844887366,
+              "rawValue": 293300
+            },
+            {
+              "label": "3.0%",
+              "displayPct": 5.136383776294598,
+              "rawValue": 730327
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 9.122113836004699,
+              "rawValue": 1297046
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 7.188020001828578,
+              "rawValue": 1022043
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 6.731318615625901,
+              "rawValue": 957106
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 13.468411317490347,
+              "rawValue": 1915033
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 22.957513696751462,
+              "rawValue": 3264260
+            },
+            {
+              "label": "6.0%",
+              "displayPct": 28.740911616392495,
+              "rawValue": 4086584
+            },
+            {
+              "label": "6.5%",
+              "displayPct": 4.5925506551231825,
+              "rawValue": 653001
+            }
+          ]
+        },
+        {
+          "period": "2025-06-30",
+          "filing_date": "2025-07-23",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.5%",
+              "displayPct": 2.048220433675833,
+              "rawValue": 288946
+            },
+            {
+              "label": "3.0%",
+              "displayPct": 5.779719295992187,
+              "rawValue": 815355
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 8.986088141117996,
+              "rawValue": 1267683
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 7.09670888703215,
+              "rawValue": 1001145
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 6.629648619181178,
+              "rawValue": 935256
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 14.781544112346252,
+              "rawValue": 2085258
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 28.50037353337908,
+              "rawValue": 4020597
+            },
+            {
+              "label": "6.0%",
+              "displayPct": 21.794359507748293,
+              "rawValue": 3074568
+            },
+            {
+              "label": "6.5%",
+              "displayPct": 4.383337469527027,
+              "rawValue": 618365
+            }
+          ]
+        },
+        {
+          "period": "2025-09-30",
+          "filing_date": "2025-10-22",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.5%",
+              "displayPct": 1.686472799983646,
+              "rawValue": 283796
+            },
+            {
+              "label": "3.0%",
+              "displayPct": 4.756722572621564,
+              "rawValue": 800451
+            },
+            {
+              "label": "3.5%",
+              "displayPct": 7.3785116329042495,
+              "rawValue": 1241640
+            },
+            {
+              "label": "4.0%",
+              "displayPct": 5.8013223844565625,
+              "rawValue": 976234
+            },
+            {
+              "label": "4.5%",
+              "displayPct": 5.403313947932776,
+              "rawValue": 909258
+            },
+            {
+              "label": "5.0%",
+              "displayPct": 17.526847266401806,
+              "rawValue": 2949380
+            },
+            {
+              "label": "5.5%",
+              "displayPct": 30.609877093739733,
+              "rawValue": 5150964
+            },
+            {
+              "label": "6.0%",
+              "displayPct": 22.19525755738248,
+              "rawValue": 3734970
+            },
+            {
+              "label": "6.5%",
+              "displayPct": 4.641674744577182,
+              "rawValue": 781091
+            }
+          ]
+        }
+      ],
+      "allLabels": [
+        "2.0%",
+        "2.5%",
+        "2.5% to 6.0%",
+        "3.0%",
+        "3.5%",
+        "3.5% to 6.0%",
+        "4.0%",
+        "4.5%",
+        "5.0%",
+        "5.5%",
+        "6.0%",
+        "6.5%"
+      ],
+      "latestPeriod": {
+        "period": "2025-09-30",
+        "filing_date": "2025-10-22",
+        "filing_type": "10-Q",
+        "slices": [
+          {
+            "label": "2.5%",
+            "displayPct": 1.686472799983646,
+            "rawValue": 283796
+          },
+          {
+            "label": "3.0%",
+            "displayPct": 4.756722572621564,
+            "rawValue": 800451
+          },
+          {
+            "label": "3.5%",
+            "displayPct": 7.3785116329042495,
+            "rawValue": 1241640
+          },
+          {
+            "label": "4.0%",
+            "displayPct": 5.8013223844565625,
+            "rawValue": 976234
+          },
+          {
+            "label": "4.5%",
+            "displayPct": 5.403313947932776,
+            "rawValue": 909258
+          },
+          {
+            "label": "5.0%",
+            "displayPct": 17.526847266401806,
+            "rawValue": 2949380
+          },
+          {
+            "label": "5.5%",
+            "displayPct": 30.609877093739733,
+            "rawValue": 5150964
+          },
+          {
+            "label": "6.0%",
+            "displayPct": 22.19525755738248,
+            "rawValue": 3734970
+          },
+          {
+            "label": "6.5%",
+            "displayPct": 4.641674744577182,
+            "rawValue": 781091
+          }
+        ]
+      }
+    },
+    {
+      "ticker": "MFA",
+      "dataMode": "value",
+      "hasShorts": false,
+      "periods": [
+        {
+          "period": "2023-03-31",
+          "filing_date": "2023-05-04",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "5.00 % Coupon",
+              "displayPct": 26.475085807390787,
+              "rawValue": 79295
+            },
+            {
+              "label": "5.50 % Coupon",
+              "displayPct": 73.52491419260922,
+              "rawValue": 220213
+            }
+          ]
+        },
+        {
+          "period": "2023-06-30",
+          "filing_date": "2023-08-03",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "5.00 % Coupon",
+              "displayPct": 19.49009835144014,
+              "rawValue": 77662
+            },
+            {
+              "label": "5.50 % Coupon",
+              "displayPct": 72.82323091633226,
+              "rawValue": 290178
+            },
+            {
+              "label": "6.00 % Coupon",
+              "displayPct": 7.6866707322276016,
+              "rawValue": 30629
+            }
+          ]
+        },
+        {
+          "period": "2023-09-30",
+          "filing_date": "2023-11-07",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "5.00 % Coupon",
+              "displayPct": 14.267497533864255,
+              "rawValue": 77090
+            },
+            {
+              "label": "5.50 % Coupon",
+              "displayPct": 52.32982737975159,
+              "rawValue": 282748
+            },
+            {
+              "label": "6.00 % Coupon",
+              "displayPct": 33.40267508638416,
+              "rawValue": 180481
+            }
+          ]
+        },
+        {
+          "period": "2024-03-31",
+          "filing_date": "2024-05-06",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "5.00 % Coupon",
+              "displayPct": 13.871840511335467,
+              "rawValue": 75830
+            },
+            {
+              "label": "5.50 % Coupon",
+              "displayPct": 50.25784464197187,
+              "rawValue": 274733
+            },
+            {
+              "label": "6.00 % Coupon",
+              "displayPct": 32.068409778156656,
+              "rawValue": 175301
+            },
+            {
+              "label": "6.50 % Coupon",
+              "displayPct": 3.8019050685360023,
+              "rawValue": 20783
+            }
+          ]
+        },
+        {
+          "period": "2024-06-30",
+          "filing_date": "2024-08-08",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "5.00 % Coupon",
+              "displayPct": 10.50365435290608,
+              "rawValue": 73941
+            },
+            {
+              "label": "5.50 % Coupon",
+              "displayPct": 37.959954826657956,
+              "rawValue": 267221
+            },
+            {
+              "label": "6.00 % Coupon",
+              "displayPct": 47.20756298342934,
+              "rawValue": 332320
+            },
+            {
+              "label": "6.50 % Coupon",
+              "displayPct": 4.328827837006627,
+              "rawValue": 30473
+            }
+          ]
+        },
+        {
+          "period": "2024-09-30",
+          "filing_date": "2024-11-06",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "5.00 % Coupon",
+              "displayPct": 7.420762622981014,
+              "rawValue": 72522
+            },
+            {
+              "label": "5.50 % Coupon",
+              "displayPct": 56.140429864369146,
+              "rawValue": 548652
+            },
+            {
+              "label": "6.00 % Coupon",
+              "displayPct": 33.336437170323904,
+              "rawValue": 325792
+            },
+            {
+              "label": "6.50 % Coupon",
+              "displayPct": 3.102370342325934,
+              "rawValue": 30319
+            }
+          ]
+        },
+        {
+          "period": "2025-03-31",
+          "filing_date": "2025-05-06",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "5.00 % Coupon",
+              "displayPct": 4.340658604524267,
+              "rawValue": 71277
+            },
+            {
+              "label": "5.50 % Coupon",
+              "displayPct": 75.64811172185487,
+              "rawValue": 1242201
+            },
+            {
+              "label": "6.00 % Coupon",
+              "displayPct": 18.525003075371572,
+              "rawValue": 304195
+            },
+            {
+              "label": "6.50 % Coupon",
+              "displayPct": 1.4862265982492915,
+              "rawValue": 24405
+            }
+          ]
+        },
+        {
+          "period": "2025-06-30",
+          "filing_date": "2025-08-06",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "5.00 % Coupon",
+              "displayPct": 3.966608012534371,
+              "rawValue": 68912
+            },
+            {
+              "label": "5.50 % Coupon",
+              "displayPct": 77.59003466867898,
+              "rawValue": 1347974
+            },
+            {
+              "label": "6.00 % Coupon",
+              "displayPct": 17.09793858641814,
+              "rawValue": 297043
+            },
+            {
+              "label": "6.50 % Coupon",
+              "displayPct": 1.3454187323685045,
+              "rawValue": 23374
+            }
+          ]
+        },
+        {
+          "period": "2025-09-30",
+          "filing_date": "2025-11-06",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "5.00 % Coupon",
+              "displayPct": 11.995044833016355,
+              "rawValue": 258145
+            },
+            {
+              "label": "5.50 % Coupon",
+              "displayPct": 74.33637981931112,
+              "rawValue": 1599791
+            },
+            {
+              "label": "6.00 % Coupon",
+              "displayPct": 13.397305047123806,
+              "rawValue": 288323
+            },
+            {
+              "label": "6.50 % Coupon",
+              "displayPct": 0.2712703005487206,
+              "rawValue": 5838
+            }
+          ]
+        }
+      ],
+      "allLabels": [
+        "5.00 % Coupon",
+        "5.50 % Coupon",
+        "6.00 % Coupon",
+        "6.50 % Coupon"
+      ],
+      "latestPeriod": {
+        "period": "2025-09-30",
+        "filing_date": "2025-11-06",
+        "filing_type": "10-Q",
+        "slices": [
+          {
+            "label": "5.00 % Coupon",
+            "displayPct": 11.995044833016355,
+            "rawValue": 258145
+          },
+          {
+            "label": "5.50 % Coupon",
+            "displayPct": 74.33637981931112,
+            "rawValue": 1599791
+          },
+          {
+            "label": "6.00 % Coupon",
+            "displayPct": 13.397305047123806,
+            "rawValue": 288323
+          },
+          {
+            "label": "6.50 % Coupon",
+            "displayPct": 0.2712703005487206,
+            "rawValue": 5838
+          }
+        ]
+      }
+    },
+    {
+      "ticker": "CMTG",
+      "dataMode": "value",
+      "hasShorts": false,
+      "periods": [
+        {
+          "period": "2021-09-30",
+          "filing_date": "2021-12-16",
+          "filing_type": "10-Q",
+          "slices": [
+            {
+              "label": "2.25% - 2.50%",
+              "displayPct": 12.98066866273054,
+              "rawValue": 788093
+            },
+            {
+              "label": "2.00% - 2.24%",
+              "displayPct": 14.86643183433087,
+              "rawValue": 902583
+            },
+            {
+              "label": "1.75% - 1.99%",
+              "displayPct": 21.650089717460002,
+              "rawValue": 1314438
+            },
+            {
+              "label": "1.50% - 1.74%",
+              "displayPct": 7.28663237846636,
+              "rawValue": 442392
+            },
+            {
+              "label": "1.25% - 1.49%",
+              "displayPct": 13.486904413268894,
+              "rawValue": 818828
+            },
+            {
+              "label": "1.00% - 1.24%",
+              "displayPct": 5.870654665686753,
+              "rawValue": 356424
+            },
+            {
+              "label": "<1.00%",
+              "displayPct": 23.858618328056576,
+              "rawValue": 1448524
+            }
+          ]
+        }
+      ],
+      "allLabels": [
+        "<1.00%",
+        "1.00% - 1.24%",
+        "1.25% - 1.49%",
+        "1.50% - 1.74%",
+        "1.75% - 1.99%",
+        "2.00% - 2.24%",
+        "2.25% - 2.50%"
+      ],
+      "latestPeriod": {
+        "period": "2021-09-30",
+        "filing_date": "2021-12-16",
+        "filing_type": "10-Q",
+        "slices": [
+          {
+            "label": "2.25% - 2.50%",
+            "displayPct": 12.98066866273054,
+            "rawValue": 788093
+          },
+          {
+            "label": "2.00% - 2.24%",
+            "displayPct": 14.86643183433087,
+            "rawValue": 902583
+          },
+          {
+            "label": "1.75% - 1.99%",
+            "displayPct": 21.650089717460002,
+            "rawValue": 1314438
+          },
+          {
+            "label": "1.50% - 1.74%",
+            "displayPct": 7.28663237846636,
+            "rawValue": 442392
+          },
+          {
+            "label": "1.25% - 1.49%",
+            "displayPct": 13.486904413268894,
+            "rawValue": 818828
+          },
+          {
+            "label": "1.00% - 1.24%",
+            "displayPct": 5.870654665686753,
+            "rawValue": 356424
+          },
+          {
+            "label": "<1.00%",
+            "displayPct": 23.858618328056576,
+            "rawValue": 1448524
+          }
+        ]
+      }
+    }
+  ],
+  "generatedAt": "2026-03-24T03:28:54.013Z"
+}

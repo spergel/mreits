@@ -1,5 +1,5 @@
 {
-  "buildCommand": "tsx scripts/build-data.ts && next build",
+  "buildCommand": "next build",
   "outputDirectory": ".next",
   "installCommand": "npm install",
   "framework": "nextjs"
