@@ -25,21 +25,20 @@ function CustomTooltip({ active, payload, label, dataMode }: any) {
   if (!active || !payload?.length) return null;
   return (
     <div style={{
-      background: "#000033",
-      border: "1px solid #00ff00",
-      padding: "4px 8px",
-      fontFamily: '"Courier New", monospace',
+      background: "#f7f8fa",
+      border: "1px solid #9aa7bc",
+      padding: "6px 8px",
+      fontFamily: '"Tahoma", "Verdana", Arial, sans-serif',
       fontSize: "11px",
-      boxShadow: "2px 2px 4px #000000",
+      boxShadow: "2px 2px 0 #c2c8d6",
       maxWidth: "280px",
-      color: "#ccffcc",
+      color: "#1f2a44",
     }}>
       <div style={{
         fontWeight: "bold",
         marginBottom: "3px",
         paddingBottom: "2px",
-        borderBottom: "1px solid #006600",
-        color: "#ffff00",
+        borderBottom: "1px solid #c2c8d6",
       }}>
         {label}
       </div>
@@ -65,10 +64,10 @@ function CustomTooltip({ active, payload, label, dataMode }: any) {
                 {entry.name}
               </span>
             </span>
-            <span style={{ fontFamily: "Courier New, monospace", whiteSpace: "nowrap" }}>
+            <span style={{ fontFamily: '"Courier New", monospace', whiteSpace: "nowrap" }}>
               {formatPct(entry.value)}
               {dataMode === "value" && rawVal != null && (
-                <span style={{ color: "#666" }}> ({formatLargeValue(rawVal)})</span>
+                <span style={{ color: "#6b7486" }}> ({formatLargeValue(rawVal)})</span>
               )}
             </span>
           </div>
@@ -93,35 +92,35 @@ export default function CouponChart({ periods, allLabels, dataMode }: Props) {
   });
 
   return (
-    <div style={{ background: "#000011", padding: "8px" }}>
+    <div style={{ background: "#ffffff", padding: "8px" }}>
       <ResponsiveContainer width="100%" height={320}>
         <BarChart data={chartData} margin={{ top: 8, right: 16, left: 0, bottom: 4 }}>
-          <CartesianGrid stroke="#003300" strokeWidth={1} vertical={false} />
+          <CartesianGrid stroke="#d5dbe7" strokeWidth={1} vertical={false} />
           <XAxis
             dataKey="period"
-            tick={{ fill: "#aaaaaa", fontSize: 11, fontFamily: '"Courier New", monospace' }}
-            axisLine={{ stroke: "#006600" }}
-            tickLine={{ stroke: "#006600" }}
+            tick={{ fill: "#5c667d", fontSize: 11, fontFamily: '"Tahoma", "Verdana", Arial, sans-serif' }}
+            axisLine={{ stroke: "#b9c2d4" }}
+            tickLine={{ stroke: "#b9c2d4" }}
           />
           <YAxis
             tickFormatter={(v) => `${v}%`}
-            tick={{ fill: "#aaaaaa", fontSize: 11, fontFamily: '"Courier New", monospace' }}
-            axisLine={{ stroke: "#006600" }}
-            tickLine={{ stroke: "#006600" }}
+            tick={{ fill: "#5c667d", fontSize: 11, fontFamily: '"Tahoma", "Verdana", Arial, sans-serif' }}
+            axisLine={{ stroke: "#b9c2d4" }}
+            tickLine={{ stroke: "#b9c2d4" }}
             domain={[0, 100]}
             width={44}
           />
           <Tooltip
             content={<CustomTooltip dataMode={dataMode} />}
-            cursor={{ fill: "rgba(0,255,0,0.05)" }}
+            cursor={{ fill: "rgba(61, 86, 138, 0.08)" }}
           />
           <Legend
             wrapperStyle={{
               fontSize: "11px",
-              fontFamily: '"Courier New", monospace',
+              fontFamily: '"Tahoma", "Verdana", Arial, sans-serif',
               paddingTop: "6px",
             }}
-            formatter={(value) => <span style={{ color: "#ccffcc" }}>{value}</span>}
+            formatter={(value) => <span style={{ color: "#1f2a44" }}>{value}</span>}
             iconType="square"
             iconSize={10}
           />

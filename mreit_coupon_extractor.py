@@ -306,7 +306,8 @@ def _score_table(rows: List[List[str]]) -> int:
     # Only the label column matters — matching on data columns (like 5.20% appearing
     # as a time-series value) causes false positives on market-rate context tables.
     bucket_hits = sum(
-        1 for row in rows if row and _BUCKET_RE.search(row[0])
+        1 for row in rows
+        if row and row[0] and "%" in row[0] and _BUCKET_RE.search(row[0])
     )
     score += bucket_hits * 3
 
@@ -317,7 +318,10 @@ def _score_table(rows: List[List[str]]) -> int:
         cell = row[0].strip() if row else ""
         m = re.match(r'^[≤≥<>]?\s*([\d.]+)\s*%?$', cell)
         if m:
-            label_pcts.append(float(m.group(1)))
+            try:
+                label_pcts.append(float(m.group(1)))
+            except ValueError:
+                continue
     if len(label_pcts) >= 3:
         # Check if they look like a monotonic coupon range (0-10% range)
         in_range = [p for p in label_pcts if 0.5 <= p <= 10.0]
@@ -331,15 +335,20 @@ def _score_table(rows: List[List[str]]) -> int:
         cell = row[0].strip() if row else ""
         if _BUCKET_RE.search(cell):
             for pct_val in re.findall(r'([\d.]+)\s*%', cell):
-                if float(pct_val) > 15.0:
-                    return -100
+                try:
+                    if float(pct_val) > 15.0:
+                        return -100
+                except ValueError:
+                    # Some legacy filings have malformed tokens like "10.23.3%".
+                    # Ignore those fragments rather than failing table scoring.
+                    continue
 
     # Penalize tables where bucket label cells are long (>40 chars average).
     # Real coupon buckets have short labels like "≤3.5%" or "3.0% - 3.5%".
     # Long labels indicate preferred-stock descriptions or similar, not rate buckets.
     bucket_label_cells = [
         row[0].strip() for row in rows
-        if row and _BUCKET_RE.search(row[0]) and not _MBS_STRUCTURE_RE.search(row[0])
+        if row and row[0] and "%" in row[0] and _BUCKET_RE.search(row[0]) and not _MBS_STRUCTURE_RE.search(row[0])
     ]
     if bucket_label_cells:
         avg_label_len = sum(len(c) for c in bucket_label_cells) / len(bucket_label_cells)
@@ -449,6 +458,7 @@ def _extract_buckets_from_rows(
 
         is_bucket = (
             _BUCKET_RE.search(label_cell)
+            and "%" in label_cell
             and not _MBS_STRUCTURE_RE.search(label_cell)
         )
 
@@ -582,6 +592,320 @@ def _extract_coupon_type_buckets(rows: List[List[str]]) -> List[CouponBucket]:
     ]
 
 
+def _extract_cmtg_aggregate_yield_bucket(rows: List[List[str]]) -> List[CouponBucket]:
+    """
+    Claros (CMTG): consolidated CRE loan table with a single
+    'Senior and subordinate loans' row and portfolio yield (e.g. 6.2%).
+    """
+    if not rows:
+        return []
+    flat = " ".join(" ".join(r) for r in rows[:30]).lower()
+    if "yield to maturity" not in flat and "senior and subordinate loans" not in flat:
+        return []
+
+    for row in rows:
+        if not row or not row[0].strip():
+            continue
+        lab = row[0].strip().lower()
+        if lab != "senior and subordinate loans":
+            continue
+        rates: List[float] = []
+        for cell in row[1:]:
+            m = _PERCENT_RE.search(cell)
+            if m:
+                rates.append(float(m.group(1)))
+        if not rates:
+            joined = " | ".join(row)
+            m = _PERCENT_RE.search(joined)
+            if m:
+                rates = [float(m.group(1))]
+        nums_all = [v for c in row[1:] if (v := _parse_num(c)) is not None]
+        rate = next((r for r in rates if 2.0 <= r <= 25.0), None)
+        if rate is None:
+            # Yield often split across "6.2" | "%" cells — use small fractional values only (not loan counts like 33).
+            for r in reversed(nums_all):
+                if 2.0 <= r <= 25.0 and abs(r - round(r)) > 1e-6:
+                    rate = r
+                    break
+        if rate is None:
+            continue
+        try:
+            rate_i = nums_all.index(rate)
+        except ValueError:
+            rate_i = len(nums_all)
+        big_before = [v for v in nums_all[:rate_i] if v > 100_000]
+        nums = [v for v in nums_all if v > 100_000]
+        if not nums:
+            continue
+        # Prefer carrying value (often the smallest of UPB / fair / carrying triple).
+        val = min(big_before) if big_before else max(nums)
+        return [CouponBucket(label=f"{rate}%", value=val)]
+
+    return []
+
+
+def _extract_cmtg_fixed_floating_buckets(scored_tables: List[Tuple[int, List[List[str]]]]) -> List[CouponBucket]:
+    """
+    CMTG fallback for color/detail:
+    derive a fixed-vs-floating breakdown from separate loan portfolio tables.
+
+    Typical pattern:
+      - fixed rows in one table:
+        "Fixed rate non-consolidated senior loans"
+        "Retained fixed rate subordinate loans"
+      - floating row in another table:
+        "Floating rate loans receivable"
+    """
+    fixed_total = 0.0
+    floating_total: Optional[float] = None
+
+    for _, rows in scored_tables:
+        for row in rows:
+            if not row or not row[0].strip():
+                continue
+            label = row[0].strip().lower()
+
+            # Fixed buckets are split across two rows; sum carrying values.
+            if "fixed rate non-consolidated senior loans" in label or "retained fixed rate subordinate loans" in label:
+                nums = [v for c in row[1:] if (v := _parse_num(c)) is not None and v > 0]
+                if nums:
+                    fixed_total += max(nums)
+
+            # Floating row is usually a single line.
+            if label == "floating rate loans receivable":
+                nums = [v for c in row[1:] if (v := _parse_num(c)) is not None and v > 0]
+                if nums:
+                    floating_total = max(nums)
+
+    buckets: List[CouponBucket] = []
+    if fixed_total > 0:
+        buckets.append(CouponBucket(label="Fixed rate loans", value=fixed_total))
+    if floating_total is not None and floating_total > 0:
+        buckets.append(CouponBucket(label="Floating rate loans", value=floating_total))
+    return buckets
+
+
+def _maybe_replace_nly_with_wac_from_soup(
+    soup: BeautifulSoup,
+    buckets: List[CouponBucket],
+) -> List[CouponBucket]:
+    """
+    NLY/REFI: when the best-matching coupon table provides coupon-type buckets
+    (e.g. ARM / Fixed-rate / Floating-rate) without explicit '%' coupon labels,
+    derive WAC from the narrative "Weighted average coupon rate X%".
+    """
+    if not buckets:
+        return buckets
+
+    # If we already have mostly numeric '%' coupon labels, don't replace the
+    # distribution (downstream computeWAC can handle those).
+    total = sum(b.value for b in buckets if b.value is not None)
+    if total <= 0:
+        return buckets
+    parsed_total = 0.0
+    for b in buckets:
+        if b.value is None:
+            continue
+        if _PERCENT_RE.search(b.label):
+            parsed_total += b.value
+    if parsed_total / total >= 0.5:
+        return buckets
+
+    text = soup.get_text(" ", strip=True)
+    patterns = [
+        # "Weighted average coupon rate was 5.09%"
+        r"weighted\s*[- ]\s*average\s+coupon\s+rate(?:s)?(?:\s+(?:of|was|is))?\s*([\d.]+)\s*%",
+        # Allow extra words / line breaks between "rate" and the number.
+        r"weighted\s+average\s+coupon\s+rate(?:s)?[^0-9]*([\d.]+)\s*%",
+        # Some filings omit the literal "rate" word.
+        r"weighted\s*[- ]\s*average\s+coupon(?:\s+rate)?(?:s)?[^0-9]*([\d.]+)\s*%",
+        # Fallback: weighted average + coupon + number nearby.
+        r"weighted\s+average[^0-9]{0,60}coupon[^0-9]{0,60}([\d.]+)\s*%",
+        # Variants where the percent sign is written as a word ("percent") instead.
+        r"weighted\s*[- ]\s*average\s+coupon\s+rate(?:s)?(?:\s+(?:of|was|is))?\s*([\d.]+)\s*(?:%|percent)",
+        r"weighted\s*[- ]\s*average\s+coupon(?:\s+rate)?(?:s)?[^0-9]*([\d.]+)\s*(?:%|percent)",
+        # Worst-case: sometimes the narrative says "... coupon rate was X" and %/percent is omitted.
+        # We still require "coupon" near "weighted average".
+        r"weighted\s*[- ]\s*average[^0-9]{0,60}coupon[^0-9]{0,60}([\d.]+)\s*(?:%|percent)?\b",
+    ]
+
+    rate: Optional[float] = None
+    for pat in patterns:
+        m = re.search(pat, text, re.IGNORECASE)
+        if not m:
+            continue
+        try:
+            rate = float(m.group(1))
+        except ValueError:
+            rate = None
+        if rate is not None:
+            break
+
+    if rate is None:
+        return buckets
+
+    return [CouponBucket(label=f"{rate:g}%", value=total)]
+
+
+def _mitt_row_coupon_pct_from_cells(row: List[str]) -> Optional[float]:
+    """
+    MITT 'Non-Agency RMBS by collateral type' rows carry Current Face, Fair Value,
+    then a coupon column (e.g. '1.47' adjacent to '%'). Return the rightmost plausible
+    coupon as a *percent* (2–15 typical; allow 0.3–25 for odd tranches).
+    """
+    joined = " ".join(c.strip() for c in row if c and c.strip())
+    pcts: List[float] = []
+    for m in re.finditer(r"(\d+\.?\d*)\s*%", joined):
+        pcts.append(float(m.group(1)))
+    pcts = [p for p in pcts if 0.3 <= p <= 25]
+    if pcts:
+        return pcts[-1]
+    # Cells sometimes split number and percent across columns.
+    for i, cell in enumerate(row[:-1]):
+        v = _parse_num(cell)
+        if v is None or not (0.3 <= v <= 25):
+            continue
+        if "%" in (row[i + 1] or ""):
+            return v
+
+    # Numeric-only fallback:
+    # Sometimes extraction drops the '%' symbol and the coupon column becomes
+    # a plain decimal (e.g. "1.47" instead of "1.47%").
+    candidates: List[Tuple[int, float]] = []
+    big_indices: List[int] = []
+    for i, cell in enumerate(row):
+        v = _parse_num(cell)
+        if v is None:
+            continue
+        if v > 100:
+            big_indices.append(i)
+        if 0.3 <= v <= 25:
+            candidates.append((i, v))
+
+    if candidates:
+        last_big = max(big_indices) if big_indices else -1
+        after = [(i, v) for (i, v) in candidates if i > last_big]
+        chosen = max(after or candidates, key=lambda x: x[0])
+        return chosen[1]
+
+    return None
+
+
+def _extract_mitt_collateral_buckets(rows: List[List[str]]) -> List[CouponBucket]:
+    """
+    MITT-specific fallback:
+    Extract collateral-type rows from the table that contains
+    "Non-Agency RMBS by collateral type" with Current Face / Fair Value / Coupon.
+
+    MITT often does not publish classic coupon-range buckets in recent filings.
+    This pulls a stable collateral breakdown with numeric values so MITT can be
+    tracked alongside the rest of the universe.
+    """
+    if not rows:
+        return []
+
+    flat = " ".join(" ".join(r) for r in rows).lower()
+    if "non-agency rmbs by collateral type" not in flat:
+        return []
+    if "current face" not in flat or "fair value" not in flat or "coupon" not in flat:
+        return []
+
+    start_idx = None
+    for i, row in enumerate(rows):
+        if row and "non-agency rmbs by collateral type" in row[0].strip().lower():
+            start_idx = i + 1
+            break
+    if start_idx is None:
+        return []
+
+    buckets: List[CouponBucket] = []
+    for row in rows[start_idx:]:
+        if not row:
+            continue
+        label = row[0].strip()
+        low = label.lower()
+        if not label:
+            continue
+        if low.startswith("total non-agency rmbs"):
+            break
+        if low.startswith("legacy wmc cmbs") or low.startswith("agency rmbs"):
+            continue
+
+        numeric_cells = []
+        for cell in row[1:]:
+            v = _parse_num(cell)
+            if v is not None and v > 100:
+                numeric_cells.append(v)
+        # Most rows expose Current Face then Fair Value.
+        # Prefer Fair Value when present.
+        value = numeric_cells[1] if len(numeric_cells) >= 2 else (numeric_cells[0] if numeric_cells else None)
+        if value is None or value <= 0:
+            continue
+
+        cpn = _mitt_row_coupon_pct_from_cells(row)
+        if cpn is not None:
+            label = f"{label} ({cpn:g}%)"
+        buckets.append(CouponBucket(label=label, value=value))
+
+    return buckets
+
+
+_RATE_STRUCTURE_LABEL_RE = re.compile(
+    r"""(
+        fixed[\s-]*rate |
+        floating |
+        \barm\b |
+        hybrid\s+arm |
+        interest[\s-]*only |
+        inverse\s+interest[\s-]*only |
+        \bio\b |
+        cmo
+    )""",
+    re.IGNORECASE | re.VERBOSE,
+)
+
+
+def _extract_legacy_rate_structure_buckets(rows: List[List[str]]) -> List[CouponBucket]:
+    """
+    Legacy filings (notably older IVR/MITT) often provide a holdings breakdown by
+    rate structure labels (e.g. 15 year fixed-rate, ARM, Hybrid ARM, IO) with
+    principal/fair-value columns rather than coupon-% buckets.
+    """
+    if not rows:
+        return []
+
+    flat = " ".join(" ".join(r) for r in rows).lower()
+    if "agency rmbs" not in flat and "instrument" not in flat:
+        return []
+    if "fair value" not in flat and "principal" not in flat and "current face" not in flat:
+        return []
+
+    buckets: List[CouponBucket] = []
+    for row in rows:
+        if not row or not row[0].strip():
+            continue
+        label = row[0].strip()
+        low = label.lower()
+        if low.startswith("total"):
+            continue
+        if not _RATE_STRUCTURE_LABEL_RE.search(low):
+            continue
+        if "total agency" in low:
+            continue
+
+        nums = [v for c in row[1:] if (v := _parse_num(c)) is not None and v > 0]
+        if not nums:
+            continue
+        # Fair value is typically among the right-most positive numerics and is
+        # generally closest to principal/current face; max() is stable enough here.
+        value = max(nums)
+        buckets.append(CouponBucket(label=label, value=value))
+
+    if len(buckets) < 2:
+        return []
+    return buckets
+
+
 def _extract_wac_from_rows(rows: List[List[str]]) -> Optional[CouponBucket]:
     """
     Look for a 'Weighted average coupon rate' line and return it as a single bucket.
@@ -618,11 +942,23 @@ def _extract_from_text(text: str) -> List[CouponBucket]:
         if not _BUCKET_RE.search(line):
             continue
         # Try to pull out numbers from the same line
-        nums = [float(x.replace(",", "")) for x in re.findall(r"[\d,]+(?:\.\d+)?", line)]
+        nums = []
+        for x in re.findall(r"\d[\d,]*(?:\.\d+)?", line):
+            try:
+                nums.append(float(x.replace(",", "")))
+            except ValueError:
+                continue
         pct_m = _PERCENT_RE.findall(line)
         # Heuristic: if there are 2+ numbers, first is often value, last percent-ish is pct
         val = nums[0] if nums else None
-        pct = float(pct_m[-1]) if pct_m and float(pct_m[-1]) <= 100 else None
+        pct = None
+        if pct_m:
+            try:
+                pct_candidate = float(pct_m[-1])
+                if pct_candidate <= 100:
+                    pct = pct_candidate
+            except ValueError:
+                pct = None
         label_m = _BUCKET_RE.search(line)
         label = label_m.group(0).strip() if label_m else line[:40].strip()
         if val or pct:
@@ -660,28 +996,54 @@ def _parse_html_tables(
     best_buckets: List[CouponBucket] = []
     raw_table_text = ""
     best_score = -1
+    nly_type_buckets = False
+
+    # Pass 0: CMTG fixed-vs-floating split when available.
+    if ticker.upper() == "CMTG":
+        cmtg_split = _extract_cmtg_fixed_floating_buckets(scored_tables)
+        if len(cmtg_split) >= 2:
+            best_buckets = cmtg_split
+            raw_table_text = "(CMTG fixed/floating split)"
+            best_score = 40
+
+    # Pass 0b: CMTG commercial loan portfolio yield (fallback if split unavailable)
+    if ticker.upper() == "CMTG":
+        if not best_buckets:
+            for score, rows in sorted(scored_tables, key=lambda x: x[0], reverse=True):
+                cg = _extract_cmtg_aggregate_yield_bucket(rows)
+                if cg:
+                    best_buckets = cg
+                    raw_table_text = "\n".join(" | ".join(r) for r in rows[:20])
+                    best_score = max(score, 35)
+                    break
 
     # Pass 1: numeric bucket table (3.0% – 3.5%, etc.)
-    for score, rows in sorted(scored_tables, key=lambda x: x[0], reverse=True):
-        if score < 5:
-            break
-        buckets = _extract_buckets_from_rows(rows, period_end_date=period_end_date)
-        if buckets:
-            # Discard all-TBA results (MITT-style tables with only TBA positions)
-            if all(re.search(r'\bTBA\b', b.label, re.IGNORECASE) for b in buckets):
-                continue
-            # Discard single-generic-label results (NREF/RC "Fixed" or "Fixed rate" alone)
-            _GENERIC_LABELS = re.compile(r'^(fixed|floating|variable|fixed\s+rate|floating\s+rate)$', re.IGNORECASE)
-            if len(buckets) <= 1 and all(_GENERIC_LABELS.match(b.label.strip()) for b in buckets):
-                continue
-            # Discard single-numeric-bucket results with negative or suspiciously small
-            # values — these are likely individual TBA/swap positions, not a distribution.
-            if len(buckets) == 1 and buckets[0].value is not None and buckets[0].value <= 0:
-                continue
-            best_score = score
-            best_buckets = buckets
-            raw_table_text = "\n".join(" | ".join(r) for r in rows[:20])
-            break
+    if not best_buckets:
+        for score, rows in sorted(scored_tables, key=lambda x: x[0], reverse=True):
+            if score < 5 and ticker.upper() != "REFI":
+                break
+            buckets = _extract_buckets_from_rows(rows, period_end_date=period_end_date)
+            if buckets:
+                # REFI (early periods) sometimes has coupon-type tables like
+                # "Fixed-rate"/"Floating-rate" without explicit '%' labels.
+                # For WAC computation we need real coupon-rate buckets.
+                if ticker.upper() == "REFI" and not any(_PERCENT_RE.search(b.label) for b in buckets):
+                    continue
+                # Discard all-TBA results (MITT-style tables with only TBA positions)
+                if all(re.search(r'\bTBA\b', b.label, re.IGNORECASE) for b in buckets):
+                    continue
+                # Discard single-generic-label results (NREF/RC "Fixed" or "Fixed rate" alone)
+                _GENERIC_LABELS = re.compile(r'^(fixed|floating|variable|fixed\s+rate|floating\s+rate)$', re.IGNORECASE)
+                if len(buckets) <= 1 and all(_GENERIC_LABELS.match(b.label.strip()) for b in buckets):
+                    continue
+                # Discard single-numeric-bucket results with negative or suspiciously small
+                # values — these are likely individual TBA/swap positions, not a distribution.
+                if len(buckets) == 1 and buckets[0].value is not None and buckets[0].value <= 0:
+                    continue
+                best_score = score
+                best_buckets = buckets
+                raw_table_text = "\n".join(" | ".join(r) for r in rows[:20])
+                break
 
     # Pass 2: coupon-type breakdown (ARM/Fixed/Floater NLY-style)
     if not best_buckets:
@@ -690,6 +1052,8 @@ def _parse_html_tables(
                 break
             ct_buckets = _extract_coupon_type_buckets(rows)
             if ct_buckets:
+                if ticker.upper() == "REFI" and not any(_PERCENT_RE.search(b.label) for b in ct_buckets):
+                    continue
                 # Discard single-generic-label results
                 _GENERIC_LABELS = re.compile(r'^(fixed|floating|variable|fixed\s+rate|floating\s+rate)$', re.IGNORECASE)
                 if len(ct_buckets) <= 1 and all(_GENERIC_LABELS.match(b.label.strip()) for b in ct_buckets):
@@ -697,6 +1061,8 @@ def _parse_html_tables(
                 best_score = score
                 best_buckets = ct_buckets
                 raw_table_text = "\n".join(" | ".join(r) for r in rows[:20])
+                if ticker.upper() == "NLY":
+                    nly_type_buckets = True
                 break
 
     # Pass 3: weighted-average coupon summary
@@ -708,6 +1074,34 @@ def _parse_html_tables(
                 raw_table_text = "(WAC summary)"
                 best_score = score
                 break
+
+    # Pass 4: ticker-specific fallback (MITT collateral-type table)
+    if not best_buckets and ticker.upper() == "MITT":
+        for score, rows in sorted(scored_tables, key=lambda x: x[0], reverse=True):
+            custom = _extract_mitt_collateral_buckets(rows)
+            if custom:
+                best_buckets = custom
+                raw_table_text = "\n".join(" | ".join(r) for r in rows[:20])
+                best_score = score
+                break
+
+    # Pass 5: legacy rate-structure tables (older filing systems across issuers).
+    # Keep this as a late fallback so primary coupon-bucket logic still wins.
+    if not best_buckets:
+        for score, rows in sorted(scored_tables, key=lambda x: x[0], reverse=True):
+            legacy = _extract_legacy_rate_structure_buckets(rows)
+            if legacy:
+                best_buckets = legacy
+                raw_table_text = "\n".join(" | ".join(r) for r in rows[:20])
+                best_score = max(score, 18)
+                break
+
+    # Keep NLY coupon-type slices (ARM/Fixed/Floater/IO) for chart color/detail.
+    # We still compute WAC downstream from these buckets.
+    # (REFI keeps the WAC replacement fallback below.)
+
+    if ticker.upper() == "REFI" and best_buckets:
+        best_buckets = _maybe_replace_nly_with_wac_from_soup(soup, best_buckets)
 
     return best_buckets, raw_table_text, best_score
 
@@ -995,6 +1389,8 @@ def main():
                         help="End date for historical range YYYY-MM-DD (default: today)")
     parser.add_argument("--append", action="store_true",
                         help="Append to existing CSV, skipping already-collected periods")
+    parser.add_argument("--replace", action="store_true",
+                        help="Replace existing (ticker,period) rows in --output (useful after improving extraction)")
     args = parser.parse_args()
 
     tickers = [t.upper() for t in args.tickers] if args.tickers else MREIT_TICKERS
@@ -1049,7 +1445,50 @@ def main():
             logger.error(f"[{ticker}] Unhandled error: {e}", exc_info=True)
 
     if args.output:
-        if args.append and os.path.exists(args.output):
+        if args.replace and os.path.exists(args.output):
+            replaced_keys = {(r.ticker.upper(), r.period) for r in results}
+
+            with open(args.output, newline="", encoding="utf-8") as f:
+                reader = csv.DictReader(f)
+                fieldnames = reader.fieldnames or [
+                    "ticker",
+                    "filing_type",
+                    "period",
+                    "filing_date",
+                    "coupon_label",
+                    "value",
+                    "pct_of_portfolio",
+                ]
+                existing_rows = []
+                for row in reader:
+                    t = (row.get("ticker") or "").upper()
+                    per = (row.get("period") or "").strip()
+                    if (t, per) in replaced_keys:
+                        continue
+                    existing_rows.append(row)
+
+            new_rows: List[Dict[str, Optional[float] | str]] = []
+            for r in results:
+                for b in r.buckets:
+                    new_rows.append({
+                        "ticker": r.ticker,
+                        "filing_type": r.filing_type,
+                        "period": r.period,
+                        "filing_date": r.filing_date,
+                        "coupon_label": b.label,
+                        "value": b.value,
+                        "pct_of_portfolio": b.pct_of_portfolio,
+                    })
+
+            with open(args.output, "w", newline="", encoding="utf-8") as f:
+                writer = csv.DictWriter(f, fieldnames=fieldnames)
+                writer.writeheader()
+                writer.writerows(existing_rows)
+                writer.writerows(new_rows)
+
+            logger.info(f"Replaced {len(replaced_keys)} (ticker,period) period(s) in {args.output}")
+
+        elif args.append and os.path.exists(args.output):
             # Append new rows to the existing file
             new_rows = []
             for r in results:

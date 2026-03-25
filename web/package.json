@@ -7,7 +7,16 @@
     "build": "next build",
     "dev": "tsx scripts/build-data.ts && next dev --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "fetch-bvps": "tsx scripts/fetch-bvps.ts",
+    "fetch-preferred-liq": "python scripts/fetch-preferred-liquidation-preference.py",
+    "fetch-preferred-equity-xbrl": "python scripts/fetch-preferred-equity-from-xbrl.py",
+    "fetch-fundamentals": "tsx scripts/fetch-fundamentals.ts",
+    "fetch-fundamentals-html": "python scripts/fetch-fundamentals-html.py",
+    "fetch-prices": "tsx scripts/fetch-prices.ts",
+    "fetch-core-data": "npm run fetch-preferred-liq && npm run fetch-bvps && npm run fetch-fundamentals && npm run fetch-preferred-equity-xbrl && npm run fetch-prices && npm run prebuild",
+    "fetch-all-data": "npm run fetch-preferred-liq && npm run fetch-bvps && npm run fetch-fundamentals && npm run fetch-preferred-equity-xbrl && npm run fetch-prices && npm run fetch-fundamentals-html && npm run prebuild",
+    "check-data-coverage": "python scripts/check-data-coverage.py"
   },
   "dependencies": {
     "next": "16.2.1",

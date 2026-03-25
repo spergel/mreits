@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getAllTickers } from "@/lib/data";
 import MiniBar from "@/components/MiniBar";
-import { formatPeriod, formatPct } from "@/lib/formatters";
+import { formatPeriod, formatPct, formatWAC, formatBVPS } from "@/lib/formatters";
 
 export default function Home() {
   const tickers = getAllTickers();
@@ -12,49 +12,41 @@ export default function Home() {
 
   return (
     <>
-      <h2 className="section-hd">★ COUPON DISTRIBUTION TRACKER ★</h2>
+      <h2 className="section-hd">Portfolio Coupon Dashboard</h2>
 
-      {/* Summary bar */}
       <div className="info-bar">
         <div className="info-bar-item">
-          <span className="info-bar-label">TICKERS TRACKED</span>
+          <span className="info-bar-label">Tickers Tracked</span>
           <span className="info-bar-val">{tickers.length}</span>
         </div>
         <div className="info-bar-item">
-          <span className="info-bar-label">LATEST PERIOD</span>
+          <span className="info-bar-label">Latest Period</span>
           <span className="info-bar-val">{formatPeriod(latestPeriod)}</span>
         </div>
         <div className="info-bar-item">
-          <span className="info-bar-label">DATA SOURCE</span>
+          <span className="info-bar-label">Data Source</span>
           <span className="info-bar-val">SEC EDGAR</span>
         </div>
         <div className="info-bar-item">
-          <span className="info-bar-label">FILING TYPES</span>
+          <span className="info-bar-label">Filing Types</span>
           <span className="info-bar-val">10-Q / 10-K</span>
         </div>
       </div>
 
-      <p style={{
-        fontFamily: '"Comic Sans MS", cursive',
-        fontSize: "12px",
-        color: "#aaaaaa",
-        textAlign: "center",
-        margin: "4px 0 10px",
-      }}>
-        Click any ticker name below to view the full historical coupon breakdown and chart.
-      </p>
+      <p className="page-note">Select a ticker to view historical coupon mix and filing-level details.</p>
 
-      {/* Main ticker table */}
       <table className="ticker-tbl">
         <thead>
           <tr>
-            <th>TICKER</th>
-            <th>PERIOD</th>
-            <th>MODE</th>
-            <th>DISTRIBUTION</th>
+            <th>Ticker</th>
+            <th>Period</th>
+            <th>Mode</th>
+            <th>Distribution</th>
+            <th className="r">WAC</th>
+            <th className="r">BVPS</th>
             <th className="r">QTR</th>
-            <th className="r">TOP BUCKET</th>
-            <th>NOTES</th>
+            <th className="r">Top Bucket</th>
+            <th>Notes</th>
           </tr>
         </thead>
         <tbody>
@@ -64,7 +56,7 @@ export default function Home() {
             return (
               <tr key={td.ticker}>
                 <td className="td-ticker">
-                  <Link href={`/${td.ticker.toLowerCase()}`} style={{ color: "#00ffff", textDecoration: "underline" }}>
+                  <Link href={`/${td.ticker.toLowerCase()}`}>
                     {td.ticker}
                   </Link>
                 </td>
@@ -77,12 +69,14 @@ export default function Home() {
                     <MiniBar slices={latest.slices} allLabels={td.allLabels} />
                   </div>
                 </td>
+                <td className="td-num">{formatWAC(latest.wac)}</td>
+                <td className="td-num">{formatBVPS(latest.bvps)}</td>
                 <td className="td-num">{td.periods.length}</td>
                 <td className="td-num" style={{ fontSize: "11px" }}>
                   {top ? `${top.label}: ${formatPct(top.displayPct)}` : "—"}
                 </td>
                 <td className="td-warn">
-                  {td.hasShorts ? "⚠ shorts excl." : ""}
+                  {td.hasShorts ? "shorts excluded" : ""}
                 </td>
               </tr>
             );
@@ -90,15 +84,7 @@ export default function Home() {
         </tbody>
       </table>
 
-      <p style={{
-        fontFamily: '"Comic Sans MS", cursive',
-        fontSize: "11px",
-        color: "#557755",
-        textAlign: "center",
-        marginTop: "8px",
-      }}>
-        ★ All data extracted directly from SEC EDGAR public filings. Not investment advice. ★
-      </p>
+      <p className="page-footnote">Data extracted from SEC EDGAR filings. Not investment advice.</p>
     </>
   );
 }
