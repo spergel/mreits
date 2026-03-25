@@ -43,7 +43,11 @@ export default function CapitalStackChart({ data }: Props) {
           <XAxis dataKey="period" tick={{ fill: "#5c667d", fontSize: 11 }} />
           <YAxis width={72} tick={{ fill: "#5c667d", fontSize: 11 }} tickFormatter={(v) => formatUsdCompact(Number(v))} />
           <Tooltip
-            formatter={(value: number | null) => formatUsdFull(value)}
+            formatter={(value) => {
+              const raw = Array.isArray(value) ? value[0] : value;
+              const num = typeof raw === "number" ? raw : Number(raw);
+              return formatUsdFull(Number.isFinite(num) ? num : null);
+            }}
             labelFormatter={(label) => {
               const [y, m] = String(label).split("-");
               const q = m === "03" ? "Q1" : m === "06" ? "Q2" : m === "09" ? "Q3" : "Q4";
