@@ -71,6 +71,22 @@ def parse_all_ratios_to_one(text: str) -> List[float]:
     return vals
 
 
+def best_row_amount(cells: List[str]) -> Optional[float]:
+    # Prefer data cells over the label cell; pick the largest absolute amount.
+    # Cash-flow tables often show one value per period plus tiny footnote numbers.
+    candidates: List[float] = []
+    for c in cells[1:] if len(cells) > 1 else cells:
+        v = parse_num(c)
+        if v is None:
+            continue
+        if abs(v) <= 1:
+            continue
+        candidates.append(v)
+    if not candidates:
+        return None
+    return max(candidates, key=lambda x: abs(x))
+
+
 def first_percent_from_row(row_text: str) -> Optional[float]:
     # Handles rows like "0.97 | %", "(0.26 | %)", and "5.4 %"
     m = re.search(r"\(?\s*(-?\d+(?:\.\d+)?)\s*\)?\s*(?:\|\s*)?%", row_text)
@@ -234,6 +250,7 @@ def extract_metrics_from_html(html: bytes, period: str) -> Dict[str, Optional[fl
         "common_pref_equity_ratio": None,
         "buybacks": None,
         "issuance": None,
+        "preferred_issuance": None,
         "common_equity": None,
         "preferred_equity": None,
         "total_liabilities": None,
@@ -253,18 +270,22 @@ def extract_metrics_from_html(html: bytes, period: str) -> Dict[str, Optional[fl
                     metrics[k] = first_matching_metric(cells, k)
 
             row_text = " | ".join(cells).lower()
-            if metrics["buybacks"] is None and re.search(r"repurchase of common stock|buyback", row_text):
-                for c in cells:
-                    v = parse_num(c)
-                    if v is not None:
-                        metrics["buybacks"] = v
-                        break
-            if metrics["issuance"] is None and re.search(r"issuance of common stock|proceeds from issuance", row_text):
-                for c in cells:
-                    v = parse_num(c)
-                    if v is not None:
-                        metrics["issuance"] = v
-                        break
+            if metrics["buybacks"] is None and re.search(
+                r"payments?\s+for\s+repurchase|repurchases?\s+of\s+common\s+stock|buybacks?|treasury\s+stock\s+purchased",
+                row_text,
+            ):
+                metrics["buybacks"] = best_row_amount(cells)
+            if metrics["issuance"] is None and re.search(
+                r"proceeds?\s+from\s+issuance\s+of\s+common\s+stock|issuance\s+of\s+common\s+stock|proceeds?\s+from\s+issuance",
+                row_text,
+            ):
+                if "preferred" not in row_text and "preference" not in row_text:
+                    metrics["issuance"] = best_row_amount(cells)
+            if metrics["preferred_issuance"] is None and re.search(
+                r"proceeds?\s+from\s+issuance\s+of\s+(preferred|preference)\s+stock|issuance\s+of\s+(preferred|preference)\s+stock",
+                row_text,
+            ):
+                metrics["preferred_issuance"] = best_row_amount(cells)
 
         # TWO-style leverage table:
         # header includes "Economic Debt-to-Equity Ratio", rows include period labels and multiple X:1.0 values.
@@ -388,6 +409,7 @@ def main() -> None:
                         "common_pref_equity_ratio": None,
                         "buybacks": m["buybacks"],
                         "issuance": m["issuance"],
+                        "preferred_issuance": m["preferred_issuance"],
                         "common_equity": m["common_equity"],
                         "preferred_equity": m["preferred_equity"],
                         "total_liabilities": m["total_liabilities"],
@@ -415,6 +437,7 @@ def main() -> None:
                 "common_pref_equity_ratio",
                 "buybacks",
                 "issuance",
+                "preferred_issuance",
                 "common_equity",
                 "preferred_equity",
                 "total_liabilities",

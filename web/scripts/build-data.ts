@@ -303,7 +303,7 @@ function loadFundamentalsHtmlFallback(): Map<string, FundamentalsSnapshot> {
       commonPrefEquityRatio: parseNum(row.common_pref_equity_ratio ?? ""),
       buybacks: parseNum(row.buybacks ?? ""),
       issuance: parseNum(row.issuance ?? ""),
-      preferredIssuance: null,
+      preferredIssuance: parseNum(row.preferred_issuance ?? ""),
       commonEquity: parseNum(row.common_equity ?? ""),
       preferredEquity: parseNum(row.preferred_equity ?? ""),
       totalLiabilities: parseNum(row.total_liabilities ?? ""),
@@ -510,22 +510,6 @@ function buildTickerData(
 
   // Sort periods ascending
   periods.sort((a, b) => a.period.localeCompare(b.period));
-
-  // Carry forward balance-sheet style fields to smooth occasional reporting gaps.
-  // We do NOT forward-fill flow metrics like buybacks/issuance.
-  let lastCommonEquity: number | null = null;
-  let lastPreferredEquity: number | null = null;
-  let lastTotalLiabilities: number | null = null;
-  for (const p of periods) {
-    if (p.commonEquity !== null) lastCommonEquity = p.commonEquity;
-    else if (lastCommonEquity !== null) p.commonEquity = lastCommonEquity;
-
-    if (p.preferredEquity !== null) lastPreferredEquity = p.preferredEquity;
-    else if (lastPreferredEquity !== null) p.preferredEquity = lastPreferredEquity;
-
-    if (p.totalLiabilities !== null) lastTotalLiabilities = p.totalLiabilities;
-    else if (lastTotalLiabilities !== null) p.totalLiabilities = lastTotalLiabilities;
-  }
 
   // Gap-fill missing WAC when coupon buckets exist but don't include parseable
   // '%' labels (extractor false-negatives). Interpolate between known WAC

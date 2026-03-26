@@ -435,7 +435,7 @@
           "priceToBook": null,
           "commonEquity": null,
           "preferredEquity": null,
-          "totalLiabilities": 8175716000
+          "totalLiabilities": null
         },
         {
           "period": "2016-06-30",
@@ -994,8 +994,8 @@
           "preferredIssuance": null,
           "marketPrice": 13.4579,
           "priceToBook": 1.8335013623978202,
-          "commonEquity": 890538000,
-          "preferredEquity": 289755000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 16175689000
         },
         {
@@ -1042,8 +1042,8 @@
           "preferredIssuance": 16101000,
           "marketPrice": 14.141,
           "priceToBook": 1.9531767955801105,
-          "commonEquity": 890538000,
-          "preferredEquity": 289755000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 16737802000
         },
         {
@@ -1090,8 +1090,8 @@
           "preferredIssuance": 30490000,
           "marketPrice": 14.3586,
           "priceToBook": 2.042475106685633,
-          "commonEquity": 890538000,
-          "preferredEquity": 289755000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 17912250000
         },
         {
@@ -3326,8 +3326,8 @@
           "preferredIssuance": 315000000,
           "marketPrice": 12.446,
           "priceToBook": 0.5538940809968848,
-          "commonEquity": 7409000000,
-          "preferredEquity": 336000000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 56699000000
         },
         {
@@ -3379,8 +3379,8 @@
           "preferredIssuance": 315000000,
           "marketPrice": 11.9016,
           "priceToBook": 0.5320339740724184,
-          "commonEquity": 7409000000,
-          "preferredEquity": 336000000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 61622000000
         },
         {
@@ -3432,8 +3432,8 @@
           "preferredIssuance": 0,
           "marketPrice": 11.4755,
           "priceToBook": 0.5385030502111685,
-          "commonEquity": 7409000000,
-          "preferredEquity": 336000000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 60883000000
         },
         {
@@ -3485,8 +3485,8 @@
           "preferredIssuance": 0,
           "marketPrice": 11.601,
           "priceToBook": 0.55693710993759,
-          "commonEquity": 7409000000,
-          "preferredEquity": 336000000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 64096000000
         },
         {
@@ -3538,8 +3538,8 @@
           "preferredIssuance": 0,
           "marketPrice": 11.8491,
           "priceToBook": 0.588044665012407,
-          "commonEquity": 7409000000,
-          "preferredEquity": 336000000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 82404000000
         },
         {
@@ -5513,8 +5513,8 @@
           "preferredIssuance": 0,
           "marketPrice": 9.91859,
           "priceToBook": 1.0069634517766497,
-          "commonEquity": 382367000,
-          "preferredEquity": 109658000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 3100289000
         },
         {
@@ -5546,8 +5546,8 @@
           "preferredIssuance": 0,
           "marketPrice": 10.3488,
           "priceToBook": 1.03488,
-          "commonEquity": 382367000,
-          "preferredEquity": 109658000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 2977547000
         },
         {
@@ -5579,8 +5579,8 @@
           "preferredIssuance": 0,
           "marketPrice": 11.4115,
           "priceToBook": 1.1332174776564052,
-          "commonEquity": 382367000,
-          "preferredEquity": 109658000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 2848637000
         },
         {
@@ -7966,8 +7966,8 @@
           "preferredIssuance": null,
           "marketPrice": 48.8723,
           "priceToBook": 2.268909006499536,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 18338662000
         },
         {
@@ -8014,8 +8014,8 @@
           "preferredIssuance": 149896000,
           "marketPrice": 49.4321,
           "priceToBook": 2.306677554829678,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 18592167000
         },
         {
@@ -8062,8 +8062,8 @@
           "preferredIssuance": null,
           "marketPrice": 51.094,
           "priceToBook": 2.3491494252873566,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 18840460000
         },
         {
@@ -8110,8 +8110,8 @@
           "preferredIssuance": null,
           "marketPrice": 48.492,
           "priceToBook": 2.309142857142857,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 18604208000
         },
         {
@@ -8158,8 +8158,8 @@
           "preferredIssuance": null,
           "marketPrice": 42.6952,
           "priceToBook": 2.1230830432620587,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 18351979000
         },
         {
@@ -8206,8 +8206,8 @@
           "preferredIssuance": null,
           "marketPrice": 44.5462,
           "priceToBook": 2.232892230576441,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 14500401000
         },
         {
@@ -8254,8 +8254,8 @@
           "preferredIssuance": null,
           "marketPrice": 45.2269,
           "priceToBook": 2.3604853862212942,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 13730497000
         },
         {
@@ -8302,8 +8302,8 @@
           "preferredIssuance": null,
           "marketPrice": 52.3133,
           "priceToBook": 2.654150177574835,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 14436131000
         },
         {
@@ -8350,8 +8350,8 @@
           "preferredIssuance": null,
           "marketPrice": 59.6892,
           "priceToBook": 2.8821438918396907,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 14575868000
         },
         {
@@ -8398,8 +8398,8 @@
           "preferredIssuance": null,
           "marketPrice": 58.7649,
           "priceToBook": 2.889129793510324,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 13436054000
         },
         {
@@ -8446,8 +8446,8 @@
           "preferredIssuance": null,
           "marketPrice": 63.7015,
           "priceToBook": 3.098321984435798,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 14383657000
         },
         {
@@ -8494,8 +8494,8 @@
           "preferredIssuance": null,
           "marketPrice": 70.6819,
           "priceToBook": 3.38514846743295,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 14313837000
         },
         {
@@ -8542,8 +8542,8 @@
           "preferredIssuance": null,
           "marketPrice": 74.2384,
           "priceToBook": 3.1523736730360934,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 16147430000
         },
         {
@@ -8590,8 +8590,8 @@
           "preferredIssuance": null,
           "marketPrice": 79.0897,
           "priceToBook": 3.323096638655462,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 16000378000
         },
         {
@@ -8638,8 +8638,8 @@
           "preferredIssuance": null,
           "marketPrice": 74.5877,
           "priceToBook": 3.301801682160248,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 15799688000
         },
         {
@@ -8686,8 +8686,8 @@
           "preferredIssuance": null,
           "marketPrice": 74.3149,
           "priceToBook": 3.302884444444444,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 15503052000
         },
         {
@@ -8734,8 +8734,8 @@
           "preferredIssuance": null,
           "marketPrice": 75.8904,
           "priceToBook": 3.4092722371967654,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 16737464000
         },
         {
@@ -8782,8 +8782,8 @@
           "preferredIssuance": null,
           "marketPrice": 71.5102,
           "priceToBook": 3.490004880429478,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 15526808000
         },
         {
@@ -8830,8 +8830,8 @@
           "preferredIssuance": null,
           "marketPrice": 80.2627,
           "priceToBook": 3.853226116178589,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 18827673000
         },
         {
@@ -8878,8 +8878,8 @@
           "preferredIssuance": null,
           "marketPrice": 84.2359,
           "priceToBook": 4.063478051133623,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 19367977000
         },
         {
@@ -8921,8 +8921,8 @@
           "preferredIssuance": null,
           "marketPrice": 82.3448,
           "priceToBook": 4.038489455615498,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 21150291000
         },
         {
@@ -8964,8 +8964,8 @@
           "preferredIssuance": null,
           "marketPrice": 92.2259,
           "priceToBook": 4.538676181102362,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 19414646000
         },
         {
@@ -9007,8 +9007,8 @@
           "preferredIssuance": null,
           "marketPrice": 21.0232,
           "priceToBook": 2.45885380116959,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 8366866000
         },
         {
@@ -9045,8 +9045,8 @@
           "preferredIssuance": null,
           "marketPrice": 27.3772,
           "priceToBook": 4.284381846635368,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 791680000
         },
         {
@@ -9088,8 +9088,8 @@
           "preferredIssuance": null,
           "marketPrice": 19.9444,
           "priceToBook": 2.985688622754491,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 5264855000
         },
         {
@@ -9131,8 +9131,8 @@
           "preferredIssuance": null,
           "marketPrice": 25.3271,
           "priceToBook": 3.7633135215453195,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 7265693000
         },
         {
@@ -9169,8 +9169,8 @@
           "preferredIssuance": null,
           "marketPrice": 30.7603,
           "priceToBook": 5.1181863560732115,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 8280904000
         },
         {
@@ -9207,8 +9207,8 @@
           "preferredIssuance": null,
           "marketPrice": 30.5942,
           "priceToBook": 6.454472573839662,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 7903321000
         },
         {
@@ -9250,8 +9250,8 @@
           "preferredIssuance": null,
           "marketPrice": 25.3004,
           "priceToBook": 5.417644539614561,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 7922877000
         },
         {
@@ -9298,8 +9298,8 @@
           "preferredIssuance": null,
           "marketPrice": 22.9631,
           "priceToBook": 0.5401811338508586,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 7041706000
         },
         {
@@ -9341,8 +9341,8 @@
           "preferredIssuance": null,
           "marketPrice": 19.4174,
           "priceToBook": 5.677602339181287,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 5954671000
         },
         {
@@ -9399,8 +9399,8 @@
           "preferredIssuance": null,
           "marketPrice": 13.0456,
           "priceToBook": 0.4490740103270224,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 3344968000
         },
         {
@@ -9462,8 +9462,8 @@
           "preferredIssuance": null,
           "marketPrice": 10.4649,
           "priceToBook": 0.4860613098002787,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 3924496000
         },
         {
@@ -9520,8 +9520,8 @@
           "preferredIssuance": null,
           "marketPrice": 12.73,
           "priceToBook": 0.6129032258064516,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 4293320000
         },
         {
@@ -9578,8 +9578,8 @@
           "preferredIssuance": null,
           "marketPrice": 11.09,
           "priceToBook": 0.5536694957563654,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 4873257000
         },
         {
@@ -9631,8 +9631,8 @@
           "preferredIssuance": null,
           "marketPrice": 11.47,
           "priceToBook": 0.6081654294803818,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 5025345000
         },
         {
@@ -9679,8 +9679,8 @@
           "preferredIssuance": null,
           "marketPrice": 10.01,
           "priceToBook": 0.6179012345679012,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 5046318000
         },
         {
@@ -9727,8 +9727,8 @@
           "preferredIssuance": null,
           "marketPrice": 8.86,
           "priceToBook": 0.5486068111455108,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 4501544000
         },
         {
@@ -9775,8 +9775,8 @@
           "preferredIssuance": null,
           "marketPrice": 9.68,
           "priceToBook": 0.6016159105034182,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 4445901000
         },
         {
@@ -9823,8 +9823,8 @@
           "preferredIssuance": null,
           "marketPrice": 9.37,
           "priceToBook": 0.6250833889259506,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 4307313000
         },
         {
@@ -9871,8 +9871,8 @@
           "preferredIssuance": null,
           "marketPrice": 9.39,
           "priceToBook": 0.6654854712969526,
-          "commonEquity": 2440521000,
-          "preferredEquity": 135356000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 5225227000
         },
         {
@@ -9972,8 +9972,8 @@
           "preferredIssuance": null,
           "marketPrice": 7.89,
           "priceToBook": 0.8955732122587967,
-          "commonEquity": 556448000,
-          "preferredEquity": 174281000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 5399598000
         },
         {
@@ -11715,8 +11715,8 @@
           "preferredIssuance": null,
           "marketPrice": 10.3982,
           "priceToBook": 2.1264212678936607,
-          "commonEquity": 171227000,
-          "preferredEquity": 238478000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 1487295000
         },
         {
@@ -12600,18 +12600,18 @@
           "wac": 65.3,
           "bvps": 13.26,
           "leverage": 5.13692227883934,
-          "financingRate": null,
+          "financingRate": 6,
           "netInterestMargin": null,
-          "swapNotional": null,
+          "swapNotional": 3.1,
           "unrestrictedCash": 924197000,
-          "commonPrefEquityRatio": null,
+          "commonPrefEquityRatio": 89.2622689223807,
           "buybacks": null,
-          "issuance": null,
+          "issuance": 260700,
           "preferredIssuance": null,
           "marketPrice": 16.3132,
           "priceToBook": 1.2302564102564102,
-          "commonEquity": null,
-          "preferredEquity": null,
+          "commonEquity": 81501718000,
+          "preferredEquity": 913059000,
           "totalLiabilities": 69850065000
         },
         {
@@ -12628,18 +12628,18 @@
           "wac": 65.3,
           "bvps": 14.19,
           "leverage": 5.232555716931599,
-          "financingRate": null,
-          "netInterestMargin": null,
-          "swapNotional": null,
+          "financingRate": 7,
+          "netInterestMargin": 98,
+          "swapNotional": 74.3,
           "unrestrictedCash": 1320666000,
-          "commonPrefEquityRatio": null,
+          "commonPrefEquityRatio": 94.44941235998988,
           "buybacks": null,
-          "issuance": null,
+          "issuance": 260700,
           "preferredIssuance": null,
           "marketPrice": 17.4435,
           "priceToBook": 1.2292811839323468,
-          "commonEquity": null,
-          "preferredEquity": null,
+          "commonEquity": 86237886000,
+          "preferredEquity": 913059000,
           "totalLiabilities": 73702026000
         },
         {
@@ -12657,17 +12657,17 @@
           "bvps": 13.84,
           "leverage": 5.309358407950364,
           "financingRate": null,
-          "netInterestMargin": null,
-          "swapNotional": null,
+          "netInterestMargin": 1.64,
+          "swapNotional": 73.3,
           "unrestrictedCash": 1178621000,
-          "commonPrefEquityRatio": null,
+          "commonPrefEquityRatio": 94.70902427992057,
           "buybacks": null,
-          "issuance": null,
+          "issuance": 260700,
           "preferredIssuance": null,
           "marketPrice": 16.7463,
           "priceToBook": 1.209992774566474,
-          "commonEquity": null,
-          "preferredEquity": null,
+          "commonEquity": 86474927000,
+          "preferredEquity": 913059000,
           "totalLiabilities": 74277038000
         },
         {
@@ -12684,18 +12684,18 @@
           "wac": 65.3,
           "bvps": 14.07,
           "leverage": 5.351964757783257,
-          "financingRate": null,
-          "netInterestMargin": null,
-          "swapNotional": null,
+          "financingRate": 98,
+          "netInterestMargin": 1.52,
+          "swapNotional": 2014,
           "unrestrictedCash": 1741244000,
-          "commonPrefEquityRatio": null,
-          "buybacks": null,
-          "issuance": null,
+          "commonPrefEquityRatio": 15.194472646345965,
+          "buybacks": 397050,
+          "issuance": 260700,
           "preferredIssuance": null,
           "marketPrice": 17.4108,
           "priceToBook": 1.2374413646055435,
-          "commonEquity": null,
-          "preferredEquity": null,
+          "commonEquity": 13873450000,
+          "preferredEquity": 913059000,
           "totalLiabilities": 75021586000
         },
         {
@@ -12712,18 +12712,18 @@
           "wac": 65.3,
           "bvps": 13.85,
           "leverage": 4.607944171970324,
-          "financingRate": null,
-          "netInterestMargin": null,
-          "swapNotional": null,
+          "financingRate": 96,
+          "netInterestMargin": 1.26,
+          "swapNotional": 64.6,
           "unrestrictedCash": 2099408000,
-          "commonPrefEquityRatio": null,
+          "commonPrefEquityRatio": 15.195138539787681,
           "buybacks": null,
-          "issuance": null,
+          "issuance": 1267914,
           "preferredIssuance": null,
           "marketPrice": 17.2285,
           "priceToBook": 1.2439350180505415,
-          "commonEquity": null,
-          "preferredEquity": null,
+          "commonEquity": 13874058000,
+          "preferredEquity": 913059000,
           "totalLiabilities": 65551087000
         },
         {
@@ -12740,18 +12740,18 @@
           "wac": 65.3,
           "bvps": 13.29,
           "leverage": 4.562162891763707,
-          "financingRate": null,
-          "netInterestMargin": null,
-          "swapNotional": null,
+          "financingRate": 1.73,
+          "netInterestMargin": 2.01,
+          "swapNotional": 2.6,
           "unrestrictedCash": 1785158000,
-          "commonPrefEquityRatio": null,
+          "commonPrefEquityRatio": 15.19684708217103,
           "buybacks": null,
-          "issuance": null,
+          "issuance": 2382810,
           "preferredIssuance": null,
           "marketPrice": 15.7055,
           "priceToBook": 1.1817531978931528,
-          "commonEquity": null,
-          "preferredEquity": null,
+          "commonEquity": 13875618000,
+          "preferredEquity": 913059000,
           "totalLiabilities": 62950875000
         },
         {
@@ -12768,18 +12768,18 @@
           "wac": 65.3,
           "bvps": 12.96,
           "leverage": 4.595232317456715,
-          "financingRate": null,
-          "netInterestMargin": null,
-          "swapNotional": null,
+          "financingRate": 1.75,
+          "netInterestMargin": 1.24,
+          "swapNotional": 8,
           "unrestrictedCash": 2237423000,
-          "commonPrefEquityRatio": null,
+          "commonPrefEquityRatio": 15.197551308294425,
           "buybacks": null,
-          "issuance": null,
+          "issuance": 2382810,
           "preferredIssuance": null,
           "marketPrice": 17.3665,
           "priceToBook": 1.3400077160493824,
-          "commonEquity": null,
-          "preferredEquity": null,
+          "commonEquity": 13876261000,
+          "preferredEquity": 913059000,
           "totalLiabilities": 63054354000
         },
         {
@@ -12811,18 +12811,18 @@
           "wac": 65.3,
           "bvps": 12.72,
           "leverage": 4.7229319997224914,
-          "financingRate": null,
-          "netInterestMargin": null,
-          "swapNotional": null,
+          "financingRate": 100,
+          "netInterestMargin": 1.61,
+          "swapNotional": 2015,
           "unrestrictedCash": 1769258000,
-          "commonPrefEquityRatio": null,
+          "commonPrefEquityRatio": 15.073186946298103,
           "buybacks": 114260000,
           "issuance": 0,
           "preferredIssuance": null,
           "marketPrice": 17.0292,
           "priceToBook": 1.3387735849056603,
-          "commonEquity": null,
-          "preferredEquity": null,
+          "commonEquity": 13762709000,
+          "preferredEquity": 913059000,
           "totalLiabilities": 63284971000
         },
         {
@@ -12855,17 +12855,17 @@
           "bvps": 12.61,
           "leverage": 4.67045018929908,
           "financingRate": null,
-          "netInterestMargin": null,
+          "netInterestMargin": 0.79,
           "swapNotional": null,
           "unrestrictedCash": 2416136000,
-          "commonPrefEquityRatio": null,
+          "commonPrefEquityRatio": 14.961465797938578,
           "buybacks": 102712000,
-          "issuance": null,
+          "issuance": 1381640,
           "preferredIssuance": null,
           "marketPrice": 19.1812,
           "priceToBook": 1.5211102299762094,
-          "commonEquity": null,
-          "preferredEquity": null,
+          "commonEquity": 13660701000,
+          "preferredEquity": 913059000,
           "totalLiabilities": 65785958000
         },
         {
@@ -12898,17 +12898,17 @@
           "bvps": 12.5,
           "leverage": 4.659140002662198,
           "financingRate": null,
-          "netInterestMargin": null,
-          "swapNotional": null,
+          "netInterestMargin": 1.15,
+          "swapNotional": 200,
           "unrestrictedCash": 2735250000,
-          "commonPrefEquityRatio": null,
+          "commonPrefEquityRatio": 14.963290433586439,
           "buybacks": 102712000,
-          "issuance": null,
+          "issuance": 2382810,
           "preferredIssuance": null,
           "marketPrice": 21.2742,
           "priceToBook": 1.7019360000000001,
-          "commonEquity": null,
-          "preferredEquity": null,
+          "commonEquity": 13662367000,
+          "preferredEquity": 913059000,
           "totalLiabilities": 66154597000
         },
         {
@@ -12941,17 +12941,17 @@
           "bvps": 13.02,
           "leverage": 4.658802502193706,
           "financingRate": null,
-          "netInterestMargin": null,
-          "swapNotional": null,
+          "netInterestMargin": 1.4,
+          "swapNotional": 30,
           "unrestrictedCash": 2382188000,
-          "commonPrefEquityRatio": null,
+          "commonPrefEquityRatio": 11.976186093311533,
           "buybacks": 102712000,
-          "issuance": null,
+          "issuance": 2382810,
           "preferredIssuance": null,
           "marketPrice": 20.7501,
           "priceToBook": 1.5937096774193549,
-          "commonEquity": null,
-          "preferredEquity": null,
+          "commonEquity": 14378118000,
+          "preferredEquity": 1200559000,
           "totalLiabilities": 73647503000
         },
         {
@@ -12984,17 +12984,17 @@
           "bvps": 12.34,
           "leverage": 5.18574707386435,
           "financingRate": null,
-          "netInterestMargin": null,
-          "swapNotional": null,
+          "netInterestMargin": 1.48,
+          "swapNotional": 31,
           "unrestrictedCash": 1539746000,
-          "commonPrefEquityRatio": null,
+          "commonPrefEquityRatio": 11.976740001949093,
           "buybacks": 102712000,
           "issuance": 2362000,
           "preferredIssuance": null,
           "marketPrice": 20.2997,
           "priceToBook": 1.645032414910859,
-          "commonEquity": null,
-          "preferredEquity": null,
+          "commonEquity": 14378783000,
+          "preferredEquity": 1200559000,
           "totalLiabilities": 75329074000
         },
         {
@@ -13027,17 +13027,17 @@
           "bvps": 12.41,
           "leverage": 4.959069841434754,
           "financingRate": null,
-          "netInterestMargin": null,
+          "netInterestMargin": 1.47,
           "swapNotional": null,
           "unrestrictedCash": 819421000,
-          "commonPrefEquityRatio": null,
-          "buybacks": null,
+          "commonPrefEquityRatio": 11.97731973189156,
+          "buybacks": 102711,
           "issuance": 596000,
           "preferredIssuance": null,
           "marketPrice": 23.2362,
           "priceToBook": 1.8723771152296536,
-          "commonEquity": null,
-          "preferredEquity": null,
+          "commonEquity": 14379479000,
+          "preferredEquity": 1200559000,
           "totalLiabilities": 72011608000
         },
         {
@@ -13070,17 +13070,17 @@
           "bvps": 12.37,
           "leverage": 4.956403642513437,
           "financingRate": null,
-          "netInterestMargin": null,
+          "netInterestMargin": 1.23,
           "swapNotional": null,
           "unrestrictedCash": 700692000,
-          "commonPrefEquityRatio": null,
-          "buybacks": null,
+          "commonPrefEquityRatio": 11.978754063731978,
+          "buybacks": 102712,
           "issuance": 1270000,
           "preferredIssuance": null,
           "marketPrice": 25.8286,
           "priceToBook": 2.08800323362975,
-          "commonEquity": null,
-          "preferredEquity": null,
+          "commonEquity": 14381201000,
+          "preferredEquity": 1200559000,
           "totalLiabilities": 72367153000
         },
         {
@@ -13113,17 +13113,17 @@
           "bvps": 13.01,
           "leverage": 4.904923965141335,
           "financingRate": null,
-          "netInterestMargin": null,
+          "netInterestMargin": 1.33,
           "swapNotional": null,
           "unrestrictedCash": 867840000,
-          "commonPrefEquityRatio": null,
-          "buybacks": null,
+          "commonPrefEquityRatio": 8.51987088906469,
+          "buybacks": 102712,
           "issuance": 1503013000,
-          "preferredIssuance": null,
+          "preferredIssuance": 696910,
           "marketPrice": 26.7745,
           "priceToBook": 2.0579938508839355,
-          "commonEquity": null,
-          "preferredEquity": null,
+          "commonEquity": 14657424000,
+          "preferredEquity": 1720381000,
           "totalLiabilities": 83418963000
         },
         {
@@ -13156,13 +13156,13 @@
           "bvps": 12.82,
           "leverage": 5.224487214634255,
           "financingRate": null,
-          "netInterestMargin": null,
+          "netInterestMargin": 1.38,
           "swapNotional": null,
           "unrestrictedCash": 706589000,
           "commonPrefEquityRatio": 7.644348548373878,
           "buybacks": 0,
           "issuance": 2347058000,
-          "preferredIssuance": null,
+          "preferredIssuance": 696910,
           "marketPrice": 26.7766,
           "priceToBook": 2.0886583463338533,
           "commonEquity": 13151192000,
@@ -13199,17 +13199,17 @@
           "bvps": 12.02,
           "leverage": 5.595337782181442,
           "financingRate": null,
-          "netInterestMargin": null,
+          "netInterestMargin": 1.94,
           "swapNotional": null,
           "unrestrictedCash": 984275000,
-          "commonPrefEquityRatio": null,
+          "commonPrefEquityRatio": 8.992171976266969,
           "buybacks": null,
           "issuance": 412081000,
-          "preferredIssuance": null,
+          "preferredIssuance": 411335,
           "marketPrice": 24.1746,
           "priceToBook": 2.011198003327787,
-          "commonEquity": 13151192000,
-          "preferredEquity": 1720381000,
+          "commonEquity": 15495023000,
+          "preferredEquity": 1723168000,
           "totalLiabilities": 86439298000
         },
         {
@@ -13242,17 +13242,17 @@
           "bvps": 11.83,
           "leverage": 5.5003228580290076,
           "financingRate": null,
-          "netInterestMargin": null,
-          "swapNotional": null,
+          "netInterestMargin": 1.53,
+          "swapNotional": 30,
           "unrestrictedCash": 1135329000,
-          "commonPrefEquityRatio": null,
+          "commonPrefEquityRatio": 9.021423331909599,
           "buybacks": null,
           "issuance": 461044000,
-          "preferredIssuance": null,
+          "preferredIssuance": 411335,
           "marketPrice": 24.5488,
           "priceToBook": 2.0751310228233306,
-          "commonEquity": 13151192000,
-          "preferredEquity": 1720381000,
+          "commonEquity": 15545428000,
+          "preferredEquity": 1723168000,
           "totalLiabilities": 85059141000
         },
         {
@@ -13285,8 +13285,8 @@
           "bvps": 11.48,
           "leverage": 5.287094633700672,
           "financingRate": null,
-          "netInterestMargin": null,
-          "swapNotional": null,
+          "netInterestMargin": 1.49,
+          "swapNotional": 30,
           "unrestrictedCash": 1082747000,
           "commonPrefEquityRatio": 7.4108228243900465,
           "buybacks": 0,
@@ -13328,8 +13328,8 @@
           "bvps": 10.75,
           "leverage": 5.745645090194996,
           "financingRate": null,
-          "netInterestMargin": null,
-          "swapNotional": null,
+          "netInterestMargin": 1.57,
+          "swapNotional": 31,
           "unrestrictedCash": 1735749000,
           "commonPrefEquityRatio": 6.939520337785856,
           "buybacks": 0,
@@ -13371,7 +13371,7 @@
           "bvps": 10.9,
           "leverage": 5.611284366627034,
           "financingRate": null,
-          "netInterestMargin": null,
+          "netInterestMargin": 1.25,
           "swapNotional": null,
           "unrestrictedCash": 1522605000,
           "commonPrefEquityRatio": 7.875114162441344,
@@ -13414,7 +13414,7 @@
           "bvps": 10.79,
           "leverage": 6.696282906529384,
           "financingRate": null,
-          "netInterestMargin": null,
+          "netInterestMargin": 0.87,
           "swapNotional": null,
           "unrestrictedCash": 1982311000,
           "commonPrefEquityRatio": 6.443048201574529,
@@ -13457,8 +13457,8 @@
           "bvps": 10.59,
           "leverage": 6.744883111232325,
           "financingRate": null,
-          "netInterestMargin": null,
-          "swapNotional": null,
+          "netInterestMargin": 0.75,
+          "swapNotional": 130,
           "unrestrictedCash": 1793921000,
           "commonPrefEquityRatio": 6.680880069181736,
           "buybacks": 155304000,
@@ -13500,7 +13500,7 @@
           "bvps": 11.05,
           "leverage": 6.440776929142592,
           "financingRate": null,
-          "netInterestMargin": null,
+          "netInterestMargin": 1.13,
           "swapNotional": null,
           "unrestrictedCash": 1850729000,
           "commonPrefEquityRatio": 6.969796561699998,
@@ -13542,8 +13542,8 @@
           "wac": 65.3,
           "bvps": 8.88,
           "leverage": 5.7115885620573,
-          "financingRate": null,
-          "netInterestMargin": null,
+          "financingRate": 31,
+          "netInterestMargin": 18,
           "swapNotional": null,
           "unrestrictedCash": 2823521000,
           "commonPrefEquityRatio": 5.411384108987471,
@@ -13585,8 +13585,8 @@
           "wac": 65.3,
           "bvps": 9.8,
           "leverage": 4.867772902293246,
-          "financingRate": null,
-          "netInterestMargin": null,
+          "financingRate": 17,
+          "netInterestMargin": 1.89,
           "swapNotional": null,
           "unrestrictedCash": 1393910000,
           "commonPrefEquityRatio": 5.961363271722974,
@@ -13629,7 +13629,7 @@
           "bvps": 10.12,
           "leverage": 4.553359669036382,
           "financingRate": null,
-          "netInterestMargin": null,
+          "netInterestMargin": 2.15,
           "swapNotional": null,
           "unrestrictedCash": 1239982000,
           "commonPrefEquityRatio": 6.161698181557659,
@@ -13672,7 +13672,7 @@
           "bvps": 10.03,
           "leverage": 4.623176588790765,
           "financingRate": null,
-          "netInterestMargin": null,
+          "netInterestMargin": 1.46,
           "swapNotional": null,
           "unrestrictedCash": 1243703000,
           "commonPrefEquityRatio": 8.125393002201658,
@@ -15124,8 +15124,8 @@
           "preferredIssuance": 416966000,
           "marketPrice": 36.7198,
           "priceToBook": 1.5506672297297297,
-          "commonEquity": 3645237000,
-          "preferredEquity": 138872000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 23672393000
         },
         {
@@ -15200,8 +15200,8 @@
           "preferredIssuance": 13000,
           "marketPrice": 36.2715,
           "priceToBook": 1.834673748103187,
-          "commonEquity": 2868887000,
-          "preferredEquity": 702537000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 20609480000
         },
         {
@@ -15238,8 +15238,8 @@
           "preferredIssuance": 13000,
           "marketPrice": 38.4173,
           "priceToBook": 1.937332324760464,
-          "commonEquity": 2868887000,
-          "preferredEquity": 702537000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 18795743000
         },
         {
@@ -18090,8 +18090,8 @@
           "preferredIssuance": null,
           "marketPrice": 4.8856,
           "priceToBook": 1.125714285714286,
-          "commonEquity": 3383872000,
-          "preferredEquity": 80000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 8689662000
         },
         {
@@ -18123,8 +18123,8 @@
           "preferredIssuance": null,
           "marketPrice": 9.92,
           "priceToBook": 0.6547854785478547,
-          "commonEquity": 3383872000,
-          "preferredEquity": 80000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 7293001000
         },
         {
@@ -18161,8 +18161,8 @@
           "preferredIssuance": null,
           "marketPrice": 11.24,
           "priceToBook": 0.7794729542302358,
-          "commonEquity": 3383872000,
-          "preferredEquity": 80000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 7791462000
         },
         {
@@ -18199,8 +18199,8 @@
           "preferredIssuance": null,
           "marketPrice": 9.61,
           "priceToBook": 0.7129080118694361,
-          "commonEquity": 3383872000,
-          "preferredEquity": 80000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 8256284000
         },
         {
@@ -18242,8 +18242,8 @@
           "preferredIssuance": 0,
           "marketPrice": 11.27,
           "priceToBook": 0.8061516452074391,
-          "commonEquity": 3383872000,
-          "preferredEquity": 80000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 8872775000
         },
         {
@@ -18285,8 +18285,8 @@
           "preferredIssuance": null,
           "marketPrice": 11.41,
           "priceToBook": 0.8268115942028985,
-          "commonEquity": 3383872000,
-          "preferredEquity": 80000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 8989943000
         },
         {
@@ -18328,8 +18328,8 @@
           "preferredIssuance": null,
           "marketPrice": 10.64,
           "priceToBook": 0.7710144927536232,
-          "commonEquity": 3383872000,
-          "preferredEquity": 80000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 9193683000
         },
         {
@@ -18371,8 +18371,8 @@
           "preferredIssuance": 0,
           "marketPrice": 12.72,
           "priceToBook": 0.9237472766884532,
-          "commonEquity": 3383872000,
-          "preferredEquity": 80000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 9279378000
         },
         {
@@ -18414,8 +18414,8 @@
           "preferredIssuance": 0,
           "marketPrice": 10.19,
           "priceToBook": 0.7610156833457804,
-          "commonEquity": 3383872000,
-          "preferredEquity": 80000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 9567812000
         },
         {
@@ -18457,8 +18457,8 @@
           "preferredIssuance": null,
           "marketPrice": 10.26,
           "priceToBook": 0.7725903614457832,
-          "commonEquity": 3383872000,
-          "preferredEquity": 80000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 9681102000
         },
         {
@@ -18500,8 +18500,8 @@
           "preferredIssuance": null,
           "marketPrice": 9.46,
           "priceToBook": 0.7210365853658538,
-          "commonEquity": 3383872000,
-          "preferredEquity": 80000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 9852560000
         },
         {
@@ -18543,8 +18543,8 @@
           "preferredIssuance": 4532000,
           "marketPrice": 9.19,
           "priceToBook": 0.6999238385376998,
-          "commonEquity": 3383872000,
-          "preferredEquity": 80000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 10275970000
         },
         {
@@ -18586,8 +18586,8 @@
           "preferredIssuance": 9311000,
           "marketPrice": 9.31,
           "priceToBook": 0.7053030303030304,
-          "commonEquity": 3383872000,
-          "preferredEquity": 80000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 11218754000
         }
       ],
@@ -18641,8 +18641,8 @@
         "preferredIssuance": 9311000,
         "marketPrice": 9.31,
         "priceToBook": 0.7053030303030304,
-        "commonEquity": 3383872000,
-        "preferredEquity": 80000,
+        "commonEquity": null,
+        "preferredEquity": null,
         "totalLiabilities": 11218754000
       }
     },
@@ -18753,8 +18753,8 @@
           "preferredIssuance": null,
           "marketPrice": 15.2916,
           "priceToBook": 0.8212459720730397,
-          "commonEquity": 2726190000,
-          "preferredEquity": 0,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 4851004000
         },
         {
@@ -18781,8 +18781,8 @@
           "preferredIssuance": null,
           "marketPrice": 11.74,
           "priceToBook": 0.6436403508771931,
-          "commonEquity": 2716376000,
-          "preferredEquity": 0,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 5522719000
         },
         {
@@ -18809,8 +18809,8 @@
           "preferredIssuance": null,
           "marketPrice": 14.71,
           "priceToBook": 0.8287323943661973,
-          "commonEquity": 2712316000,
-          "preferredEquity": 0,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 5785042000
         },
         {
@@ -18837,8 +18837,8 @@
           "preferredIssuance": null,
           "marketPrice": 11.65,
           "priceToBook": 0.659682899207248,
-          "commonEquity": 2715725000,
-          "preferredEquity": 0,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 6040266000
         },
         {
@@ -18865,8 +18865,8 @@
           "preferredIssuance": null,
           "marketPrice": 11.34,
           "priceToBook": 0.6536023054755042,
-          "commonEquity": 2720168000,
-          "preferredEquity": 0,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 6000178000
         },
         {
@@ -18893,8 +18893,8 @@
           "preferredIssuance": null,
           "marketPrice": 11.08,
           "priceToBook": 0.6690821256038648,
-          "commonEquity": 2720688000,
-          "preferredEquity": 0,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 5751761000
         },
         {
@@ -18921,8 +18921,8 @@
           "preferredIssuance": null,
           "marketPrice": 13.63,
           "priceToBook": 0.822074788902292,
-          "commonEquity": 2725217000,
-          "preferredEquity": 0,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 5769461000
         },
         {
@@ -18949,8 +18949,8 @@
           "preferredIssuance": null,
           "marketPrice": 9.76,
           "priceToBook": 0.6111458985597996,
-          "commonEquity": 2729617000,
-          "preferredEquity": 0,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 5539934000
         },
         {
@@ -18977,8 +18977,8 @@
           "preferredIssuance": null,
           "marketPrice": 7.49,
           "priceToBook": 0.4960264900662252,
-          "commonEquity": 2735189000,
-          "preferredEquity": 0,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 5204114000
         },
         {
@@ -19005,8 +19005,8 @@
           "preferredIssuance": null,
           "marketPrice": 4.52,
           "priceToBook": 0.3136710617626648,
-          "commonEquity": 2740014000,
-          "preferredEquity": 0,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 4958869000
         },
         {
@@ -19033,8 +19033,8 @@
           "preferredIssuance": null,
           "marketPrice": 3.73,
           "priceToBook": 0.2687319884726225,
-          "commonEquity": 2745136000,
-          "preferredEquity": 0,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 4721631000
         },
         {
@@ -19066,8 +19066,8 @@
           "preferredIssuance": null,
           "marketPrice": 2.85,
           "priceToBook": 0.22673031026252982,
-          "commonEquity": 2749284000,
-          "preferredEquity": 0,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 4066092000
         },
         {
@@ -19099,8 +19099,8 @@
           "preferredIssuance": null,
           "marketPrice": 3.32,
           "priceToBook": 0.26623897353648757,
-          "commonEquity": 2750589000,
-          "preferredEquity": 0,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 3692716000
         },
         {
@@ -19132,8 +19132,8 @@
           "preferredIssuance": null,
           "marketPrice": 3.06,
           "priceToBook": 0.2799634034766697,
-          "commonEquity": 2752884000,
-          "preferredEquity": 0,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 3189864000
         }
       ],
@@ -19192,8 +19192,8 @@
         "preferredIssuance": null,
         "marketPrice": 3.06,
         "priceToBook": 0.2799634034766697,
-        "commonEquity": 2752884000,
-        "preferredEquity": 0,
+        "commonEquity": null,
+        "preferredEquity": null,
         "totalLiabilities": 3189864000
       }
     },
@@ -19891,8 +19891,8 @@
           "preferredIssuance": null,
           "marketPrice": 17.1,
           "priceToBook": 0.8272859216255443,
-          "commonEquity": 1361408000,
-          "preferredEquity": 7000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 13793048000
         },
         {
@@ -19959,8 +19959,8 @@
           "preferredIssuance": null,
           "marketPrice": 16.81,
           "priceToBook": 0.8917771883289123,
-          "commonEquity": 1361408000,
-          "preferredEquity": 7000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 14580765000
         },
         {
@@ -20027,8 +20027,8 @@
           "preferredIssuance": null,
           "marketPrice": 14.94,
           "priceToBook": 0.7854889589905363,
-          "commonEquity": 1361408000,
-          "preferredEquity": 7000,
+          "commonEquity": null,
+          "preferredEquity": null,
           "totalLiabilities": 17228450000
         },
         {
@@ -20973,5 +20973,5 @@
       "dgs10": 4.18
     }
   ],
-  "generatedAt": "2026-03-26T12:21:58.025Z"
+  "generatedAt": "2026-03-26T12:47:03.384Z"
 }
